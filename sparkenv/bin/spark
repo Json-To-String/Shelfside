@@ -1,3 +1,0 @@
-#!/mnt/c/Users/nicka/Desktop/Shelfside/sparkenv/bin/python3
-from spark import spark_admin
-spark_admin.main()
