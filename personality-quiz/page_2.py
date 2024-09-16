@@ -3,29 +3,71 @@ import pandas as pd
 import numpy as np
 
 
+##################
+# Question page #
+##################
 
-question_options = [
-        'Highly Disagree',
-        'Disagree',
-        'Slightly Disagree',
-        'Neutral',
-        'Slightly Agree',
-        'Agree',
-        'Highly Agree'
-        ]
+class Handler():
 
-question_values = [1, 2, 3, 4, 5, 6, 7]
+    def __init__(self):
+        self.personas = ['Blue', 'Red', 'Clear', 'Black', 'White', 'Green',
+                        'Yellow', 'Purple', 'Natural', 'Parchment']
 
-question_mapping = dict(map(lambda i,j : (i,j) , question_options, question_values))
+        self.question_options = [
+                                'Highly Disagree',
+                                'Disagree',
+                                'Slightly Disagree',
+                                'Neutral',
+                                'Slightly Agree',
+                                'Agree',
+                                'Highly Agree'
+                                ]
 
-#print(question_mapping)
+        self.question_values = [1, 2, 3, 4, 5, 6, 7]
+        self.question_mapping = dict(map(lambda i,j : (i,j),
+                                self.question_options, self.question_values))
+
+        self.question_dict = {}
+        self.question_list = []
+
+        ## playing with the idea of list of dictionaries for weights
+        self.question_weights = []
+
+    def get_questions(self):
+
+        with open('questions.txt', 'r') as q:
+            for ind, line in enumerate(q):
+                if ind % 2 == 0:
+                    self.question_list.append(line)
+                else:
+                    self.question_weights.append(line)
+
+        self.question_dict = dict(map(lambda i,j : (i,j),
+                                self.question_list, self.question_weights))
+
 
 st.title('ShelfSide - What kind of Board Gamer are you?')
 
-#st.radio('Question 1 Text', question_options, horizontal = True)
-#st.radio('Question 2 Text', question_options, horizontal = True)
-#
-#st.selectbox("Pick one", ["cats", "dogs"], horizontal=st.session_state.horizontal)
+page_handler = Handler()
+for persona in page_handler.personas:
+    if persona not in st.session_state:
+        st.session_state[persona] = 0
+
+st.session_state
+
+page_handler.get_questions()
+
+for i in range(5):
+    quest = page_handler.question_list[i]
+    weight = page_handler.question_weights[i]
+    answer = st.radio(f'Question {i}: {quest}', page_handler.question_options)
+
+    ## TODO: parse weights and update session attributes here
+
+
+
+
+
 
 st.markdown(
     """<style>
@@ -37,15 +79,6 @@ div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
 
 st.session_state
 
-# with open('questions.txt', 'r') as q:
-#     for line in q:
-#         st.radio(f'Question {line}', question_options)
-#         answer = st.select_slider(
-#                 f'Question {line}',
-#                 options = question_options,
-#                 )
-#
-#
 #         ## This seems like not amazing practice but it'll change the radio labelsize
 #         st.markdown(
 #         """<style>
