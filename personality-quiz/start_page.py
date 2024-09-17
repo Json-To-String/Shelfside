@@ -18,4 +18,4 @@ with st.container(border=True):
             ''')
     st.text('< TODO: Art and Recommending Some Games >')
     st.image('res/shelfside_logo.png')
-    st.page_link("personality_quiz/question_page1.py", label="Start!")
+    st.page_link("personality-quiz/question_page1.py", label="Start!")
