@@ -17,5 +17,5 @@ with st.container(border=True):
         -Are you likely to come up with a wacky new strategy?
             ''')
     st.text('< TODO: Art and Recommending Some Games >')
-    st.image('../res/shelfside_logo.png')
+    st.image('res/shelfside_logo.png')
     st.page_link("question_page1.py", label="Start!")

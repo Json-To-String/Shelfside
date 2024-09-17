@@ -98,7 +98,7 @@ page_handler = Handler()
 
 # st.session_state
 
-page_handler.get_questions('questions2_during_games_mechanical.txt')
+page_handler.get_questions('personality_quiz/questions2_during_games_mechanical.txt')
 
 ## Main Question Loop
 for i in range(len(page_handler.question_list)):
@@ -128,7 +128,7 @@ div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
 
 ## On click, move to next page:
 # st.button('Calculate my results', on_click=st.switch_page("results_page.py"))
-st.page_link("question_page3.py", label="Next Page!")
+st.page_link("personality_quiz/question_page3.py", label="Next Page!")
 
 st.write('for testing: ')
 st.session_state
