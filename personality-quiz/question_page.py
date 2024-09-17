@@ -89,23 +89,35 @@ class Handler():
 st.title('ShelfSide - What kind of Board Gamer are you?')
 
 page_handler = Handler()
+
+# initialized personas in streamlit state
 for persona in page_handler.personas:
-    if persona not in st.session_state:
-        st.session_state[persona] = 0
+    # if persona not in st.session_state:
+    st.session_state[persona] = 0
 
 st.session_state
 
 page_handler.get_questions()
 
+## Main Question Loop
 for i in range(5):
     quest = page_handler.question_list[i]
     weight = page_handler.question_weights[i]
-    answer = st.radio(f'Question {i}: {quest}', page_handler.question_options)
+    answer = st.radio(f'Question {i}: {quest}',
+                        page_handler.question_options,
+                        horizontal = True,
+                        index = None)
 
-    ## TODO: parse weights and update session attributes here(?)
+    for key in weight:
+        try:
+
+
+        ## use weights to update session attributes here
+        st.session_state[key] = weight[key] * page_handler.question_mapping[answer]
+
     st.divider()
 
-
+## Hacky css solution to get question labels bigger
 st.markdown(
     """<style>
 div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
@@ -114,13 +126,6 @@ div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
     </style>
     """, unsafe_allow_html=True)
 
-st.session_state
 
-#         ## This seems like not amazing practice but it'll change the radio labelsize
-#         st.markdown(
-#         """<style>
-#         div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
-#         font-size: 22px;
-# }
-#     </style>
-#     """, unsafe_allow_html=True)
+
+st.session_state
