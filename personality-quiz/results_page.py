@@ -11,7 +11,6 @@ df = st.session_state
 # self.personas = ['Blue', 'Red', 'Clear', 'Black', 'White', 'Green', 'Yellow', 'Purple', 'Natural', 'Parchment']
 
 
-
 ### tendencies
 # how likely this persona is to host
 hosting = {
