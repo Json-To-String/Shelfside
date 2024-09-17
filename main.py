@@ -10,6 +10,7 @@ pg = st.navigation([
                    st.Page('personality-quiz/question_page2.py'),
                    st.Page('personality-quiz/question_page3.py'),
                    st.Page('personality-quiz/question_page4.py'),
+                   st.Page('personality-quiz/question_page5.py'),
                    st.Page('personality-quiz/results_page.py')
                ])
 

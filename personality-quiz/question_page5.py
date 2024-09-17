@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 ##################
-# Question page 3 #
+# Question page 4 #
 ##################
 
 # class Question():
@@ -87,7 +87,7 @@ class Handler():
 
 
 st.title('ShelfSide - The 10 Board Game Personalities Test')
-st.header('Let’s throw your friends in the mix and see how you answer!')
+st.header('Almost there! We’ll end with 5 questions solely about hanging out with your buddies on game night.')
 
 page_handler = Handler()
 
@@ -98,7 +98,7 @@ page_handler = Handler()
 
 # st.session_state
 
-page_handler.get_questions('personality-quiz/questions3_mechanical_sociala.txt')
+page_handler.get_questions('personality-quiz/questions5_during_games_social.txt')
 
 ## Main Question Loop
 for i in range(len(page_handler.question_list)):
@@ -128,7 +128,7 @@ div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
 
 ## On click, move to next page:
 # st.button('Calculate my results', on_click=st.switch_page("results_page.py"))
-st.page_link("personality-quiz/question_page4.py", label="Next Page!")
+st.page_link("personality-quiz/results_page.py", label="Calculate My Results!")
 
 st.write('for testing: ')
 st.session_state
