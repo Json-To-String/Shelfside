@@ -7,5 +7,7 @@ from streamlit_extras.switch_page_button import switch_page
 ##############
 # Start page #
 ##############
-st.title('ShelfSide - What kind of Board Gamer are you?')
-st.image('../res/shelfside_logo.png')
+with st.container(border=True):
+
+    st.title('ShelfSide - What kind of Board Gamer are you?')
+    st.image('../res/shelfside_logo.png')

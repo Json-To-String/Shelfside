@@ -8,6 +8,7 @@ pg = st.navigation([
                     st.Page('question_page.py'),
                     st.Page('results_page.py'),
                 ])
+
 pg.run()
 
 

@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-
 ##################
 # Question page #
 ##################
@@ -109,8 +108,6 @@ for i in range(5):
                         index = None)
 
     for key in weight:
-        try:
-
 
         ## use weights to update session attributes here
         st.session_state[key] = weight[key] * page_handler.question_mapping[answer]
@@ -125,6 +122,12 @@ div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
 }
     </style>
     """, unsafe_allow_html=True)
+
+## On click, move to next page:
+# st.button('Calculate my results', on_click=st.switch_page("results_page.py"))
+
+
+
 
 
 
