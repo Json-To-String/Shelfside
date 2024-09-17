@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 ##################
-# Question page #
+# Question page 2 #
 ##################
 
 # class Question():
@@ -30,7 +30,8 @@ class Handler():
                                 'Highly Agree'
                                 ]
 
-        self.question_values = [1, 2, 3, 4, 5, 6, 7]
+        # self.question_values = [1, 2, 3, 4, 5, 6, 7]
+        self.question_values = [-3, -2, -1, 0, 1, 2, 3]
 
         # creates dict = {options : values}
         self.question_mapping = dict(map(lambda i,j : (i,j),
@@ -42,12 +43,12 @@ class Handler():
         ## playing with the idea of list of dictionaries for weights
         self.question_weights = []
 
-    def get_questions(self):
+    def get_questions(self, textfile):
         """
         Called when needing to access questions
         """
 
-        with open('questions.txt', 'r') as q:
+        with open(textfile, 'r') as q:
 
             for ind, line in enumerate(q):
 
@@ -85,32 +86,33 @@ class Handler():
                                 self.question_list, self.question_weights))
 
 
-st.title('ShelfSide - What kind of Board Gamer are you?')
+st.title('ShelfSide - The 10 Board Game Personalities Test')
+st.header('Now it’s time for game night! What is your mental approach?')
 
 page_handler = Handler()
 
-# initialized personas in streamlit state
-for persona in page_handler.personas:
-    # if persona not in st.session_state:
-    st.session_state[persona] = 0
+# # initialized personas in streamlit state
+# for persona in page_handler.personas:
+#     # if persona not in st.session_state:
+#     st.session_state[persona] = 0
 
-st.session_state
+# st.session_state
 
-page_handler.get_questions()
+page_handler.get_questions('questions2_during_games_mechanical.txt')
 
 ## Main Question Loop
-for i in range(5):
+for i in range(len(page_handler.question_list)):
     quest = page_handler.question_list[i]
     weight = page_handler.question_weights[i]
-    answer = st.radio(f'Question {i}: {quest}',
+    answer = st.radio(f'Question {i + 1}: {quest}',
                         page_handler.question_options,
                         horizontal = True,
-                        index = None)
+                        index = len(page_handler.question_options)//2)
 
     for key in weight:
 
         ## use weights to update session attributes here
-        st.session_state[key] = weight[key] * page_handler.question_mapping[answer]
+        st.session_state[key] += weight[key] * page_handler.question_mapping[answer]
 
     st.divider()
 
@@ -123,12 +125,10 @@ div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
     </style>
     """, unsafe_allow_html=True)
 
+
 ## On click, move to next page:
 # st.button('Calculate my results', on_click=st.switch_page("results_page.py"))
+st.page_link("question_page3.py", label="Next Page!")
 
-
-
-
-
-
+st.write('for testing: ')
 st.session_state
