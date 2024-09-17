@@ -9,7 +9,8 @@ st.session_state
 df = st.session_state
 
 # self.personas = ['Blue', 'Red', 'Clear', 'Black', 'White', 'Green', 'Yellow', 'Purple', 'Natural', 'Parchment']
-#
+
+
 
 ### tendencies
 # how likely this persona is to host
@@ -96,9 +97,10 @@ with st.container(border=True):
     st.metric('Your top two personas: ', top2[0], top2[1])
     st.bar_chart(df)
     st.write('TODO: 1) Strengths and Weaknesses from your top two AND quotes AND tendencies')
-    st.write('TODO: 2) Who you get along with and who you dont get along with ')
-    st.write('TODO: 3) Based off of your top two, ShelfSide recommends these games ')
-    st.write('TODO: 4) Who are you like from the industry/ShelfSide (plug socials/YT) + share with your friends ')
+
+    # st.write('TODO: 2) Who you get along with and who you dont get along with ')
+    # st.write('TODO: 3) Based off of your top two, ShelfSide recommends these games ')
+    # st.write('TODO: 4) Who are you like from the industry/ShelfSide (plug socials/YT) + share with your friends ')
 
     # for key in st.session_state:
     #     print(key)
