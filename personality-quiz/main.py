@@ -4,8 +4,8 @@ import numpy as np
 
 ## here is where the user can switch between pages (only run in home/main.py)
 pg = st.navigation([
-                    st.Page('page_1.py'),
-                    st.Page('page_2.py')])
+                    st.Page('start_page.py'),
+                    st.Page('question_page.py')])
 pg.run()
 
 

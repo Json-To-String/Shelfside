@@ -1,6 +1,6 @@
 How likely are you to host board game night?
 (Blue 3, Red 0, Clear 0, Black -1, White 1.5, Green 1.5, Yellow 0.5, Purple 1, Natural 2.5, Parchment 1.5)
-How likely are you to read the rules while someone is eplaining?
+How likely are you to read the rules while someone is explaining?
 (Blue -3, Red 2, Clear -1, Black 1.5, White -3, Green 1.5, Yellow -2, Purple -3, Natural 3, Parchment 2)
 I find myself reaching for the rulebook mid-game
 (Blue 1.5, Red 3, Clear 1, Black 2, White -1, Green 0, Yellow -2, Purple -3, Natural 3, Parchment 2.5)
@@ -50,7 +50,7 @@ Keeping a game organized during and after the game is important to me
 (Blue 2.5, Red -1, Clear 2.5, Black -2, White 1.5, Green 2, Yellow -2.5, Purple -2, Natural 3, Parchment 0)
 If a decision sounds fun, I’ll go with it even if it might not end up perfect
 (Blue 2.5, Red -2.5, Clear 0, Black 2, White 0, Green 1, Yellow 2.5, Purple 2, Natural 0, Parchment 3)
-I like to play board games to rela
+I like to play board games to relax
 (Blue 0, Red -2, Clear 2, Black -2, White 2, Green 3, Yellow 1, Purple -3, Natural -1, Parchment 1)
 It takes a long time for a game to feel old to me
 (Blue -2, Red 2, Clear 0, Black -2.5, White 0, Green 1.5, Yellow 0, Purple -2, Natural 0, Parchment 1)

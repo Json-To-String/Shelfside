@@ -24,6 +24,8 @@ class Handler():
                                 ]
 
         self.question_values = [1, 2, 3, 4, 5, 6, 7]
+
+        # creates dict = {options : values}
         self.question_mapping = dict(map(lambda i,j : (i,j),
                                 self.question_options, self.question_values))
 
@@ -34,14 +36,23 @@ class Handler():
         self.question_weights = []
 
     def get_questions(self):
+        """
+        Called when needing to access questions
+        """
 
         with open('questions.txt', 'r') as q:
+
             for ind, line in enumerate(q):
+
+                # Questions are on even indices in the .txt
                 if ind % 2 == 0:
                     self.question_list.append(line)
+
+                # weights are on odd indices
                 else:
                     self.question_weights.append(line)
 
+        # creates dict = {question : weights}
         self.question_dict = dict(map(lambda i,j : (i,j),
                                 self.question_list, self.question_weights))
 
@@ -62,7 +73,7 @@ for i in range(5):
     weight = page_handler.question_weights[i]
     answer = st.radio(f'Question {i}: {quest}', page_handler.question_options)
 
-    ## TODO: parse weights and update session attributes here
+    ## TODO: parse weights and update session attributes here(?)
 
 
 
