@@ -7,6 +7,14 @@ import numpy as np
 # Question page #
 ##################
 
+# class Question():
+# """
+# Plan for Question object to have text and weights for each
+# """
+#     def __init__(self):
+#         self.text = ''
+#         self.weights = {}
+
 class Handler():
 
     def __init__(self):
@@ -49,8 +57,29 @@ class Handler():
                     self.question_list.append(line)
 
                 # weights are on odd indices
+
+                # want to make ex question weight: {Blue : 3, Red: 0, ...}
                 else:
-                    self.question_weights.append(line)
+                    # start weight dictionary using comprehension
+                    weights = {persona: None for persona in self.personas}
+
+                    # strip off parentheses
+                    # text = line[1:-1]
+                    text = line.replace('(', '').replace(')', '')
+
+                    text = text.split(',')
+
+                    for item in text:
+                        item = item.split(' ')
+
+                        # text after split on whitespace looks like:
+                        # ['', 'Blue', '-2']
+                        # ['', 'Red', '2']
+
+                        color, number = str(item[1]), float(item[-1])
+                        weights[color] = number
+
+                    self.question_weights.append(weights)
 
         # creates dict = {question : weights}
         self.question_dict = dict(map(lambda i,j : (i,j),
@@ -74,10 +103,7 @@ for i in range(5):
     answer = st.radio(f'Question {i}: {quest}', page_handler.question_options)
 
     ## TODO: parse weights and update session attributes here(?)
-
-
-
-
+    st.divider()
 
 
 st.markdown(
