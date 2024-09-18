@@ -14,7 +14,8 @@
       "“Let’s play at my place this weekend!”",
       "“I found a great new board game snack!”",
       "“Oh, I know the perfect board game for you!”"
-    ]
+    ],
+    "Blurb": "Well-connected planner who spreads their gaming enthusiasm to all."
   },
   "Red": {
     "Strengths": [
@@ -32,7 +33,8 @@
       "“The best defense is a good offense.”",
       "“So when’s the part I get to kill stuff?”",
       "“You should have seen their face when I knocked them out!”"
-    ]
+    ],
+    "Blurb": "Focused competitor who energizes themselves and others from any challenge."
   },
   "Clear": {
     "Strengths": [
@@ -49,7 +51,8 @@
       "“Oh, I just got a shipment notification.”",
       "“Ehh, don’t worry, I’ll just resell it on eBay!”",
       "“My shelf of shame weirdly keeps getting bigger.”"
-    ]
+    ],
+    "Blurb": "Always looking for new games, when you can just look at your bookshelf."
   },
   "Black": {
     "Strengths": [
@@ -67,7 +70,9 @@
       "“The rules don’t explicitly say I can’t do that!”",
       "“What do you mean it’s against the spirit of the game?”",
       "“BAHHAHAHAHAHA”"
-    ]
+    ],
+    "Blurb": "An agent of chaos who would like to play by their mantra… for fun of course!"
+
   },
   "White": {
     "Strengths": [
@@ -84,7 +89,8 @@
       "“We can do it if we all work together!”",
       "“Pay attention, he’s talking!”",
       "“That was so mean!”"
-    ]
+    ],
+    "Blurb": "Caring, thoughtful supporter of others, who can try to make every game cooperative."
   },
   "Green": {
     "Strengths": [
@@ -102,7 +108,8 @@
       "“Awww, these are so cute together!”",
       "“Well I thought it worked like that because that’s nature!”",
       "“Oh I’m not sure who’s winning, but my board is so good this game!”"
-    ]
+    ],
+    "Blurb": "Immersed relaxer who just wants to take in the sights and sounds of the game."
   },
   "Yellow": {
     "Strengths": [
@@ -120,7 +127,8 @@
       "“Why don’t you pick my card for me?”",
       "“Your mom plays a 2 player game with me.”",
       "“Bruh, are you joking? Cause I am!”"
-    ]
+    ],
+    "Blurb": "Effortlessly hilarious whether it's their turn or not."
   },
   "Purple": {
     "Strengths": [
@@ -137,7 +145,9 @@
       "“I can play on someone’s team if need be!”",
       "“How’s it going? Any plans for the weekend?”",
       "“Oh, is there anyone else coming?”"
-    ]
+    ],
+    "Blurb":"Energized through their many friends, new and old, around the table"
+
   },
   "Natural": {
     "Strengths": [
@@ -154,7 +164,9 @@
       "“This game was one of the first to ever do this mechanic!”",
       "“Yeah I just don’t play games like that, sorry.”",
       "“Can I see the rulebook again?”"
-    ]
+    ],
+    "Blurb": "A well-researched, focused player who seems to know about every game already."
+
   },
   "Parchment": {
     "Strengths": [
@@ -170,6 +182,8 @@
       "“Splendid, this is exactly how they would have fought.”",
       "“Oh I’m definitely picking them, they look cool.”",
       "“”"
-    ]
+    ],
+    "Blurb": "Narrative and how it adds onto story keeps you thinking well after game night. "
+
   }
 }

@@ -107,13 +107,15 @@ with st.container(border=True):
     st.bar_chart(df)
     # st.write('TODO: 1) Strengths and Weaknesses from your top two AND quotes AND tendencies')
 
-    st.title(f'Your top three personas are: {top3[0]}, {top3[1]}, and {top3[2]}')
+    st.title(f'You are a: {top3[0]}! with elements of {top3[1]} and {top3[2]}')
     with open('personality-quiz/personas.json', 'r') as f:
         data = json.load(f)
         for i in range(3):
             persona = top3[i]
+            blurb = data[persona]['Blurb']
 
             st.header(f'Persona {i+1}: {persona}')
+            st.write(f'{blurb}')
 
             st.subheader('Strengths: ')
             for strength in data[persona]['Strengths']:
