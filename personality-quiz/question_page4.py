@@ -128,7 +128,7 @@ div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
 
 ## On click, move to next page:
 # st.button('Calculate my results', on_click=st.switch_page("results_page.py"))
-st.page_link("personality-quiz/questions_page5.py", label="Calculate My Results!")
+st.page_link("personality-quiz/question_page5.py", label="Next Page!")
 
 st.write('for testing: ')
 st.session_state
