@@ -87,7 +87,7 @@ class Handler():
 
 
 st.title('ShelfSide - The 10 Board Game Personalities Test')
-st.header('Almost there! We’ll end with 5 questions solely about hanging out with your buddies on game night.')
+st.header('Ok! Now let’s make the questions trickier for the home stretch!')
 
 page_handler = Handler()
 
