@@ -78,6 +78,12 @@ new_strategy = {
 def get_top_two(A):
     return(sorted(A, key=A.get, reverse=True)[:2])
 
+def get_top_three(A):
+    '''
+    Podium???
+    '''
+    return(sorted(A, key=A.get, reverse=True)[:3])
+
 with st.container(border=True):
 
     # st.button("Calculate my results!")
@@ -92,8 +98,10 @@ with st.container(border=True):
     my_bar.empty()
     st.balloons()
     top2 = get_top_two(df)
+    top3 = get_top_three(df)
 
     st.metric('Your top two personas: ', top2[0], top2[1])
+    st.metric('Your top three personas: ', top2[0], top2[1], top3[2])
     st.bar_chart(df)
     st.write('TODO: 1) Strengths and Weaknesses from your top two AND quotes AND tendencies')
 

@@ -7,6 +7,18 @@ from streamlit_extras.switch_page_button import switch_page
 ##############
 # Start page #
 ##############
+
+st.set_page_config(
+    page_title="ShelfSide - The 10 Board Game Personalities Test",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+    menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# "
+    }
+)
 with st.container(border=True):
 
     st.title('ShelfSide - The 10 Board Game Personalities Test')
