@@ -3,14 +3,16 @@ import pandas as pd
 import numpy as np
 import time
 import plotly.express as px
+import json
 
+# with open('test.json', 'r') as f:
+#     data = json.load(f)
+#     print(data['Blue']['Strengths'])
 
 st.session_state
 df = st.session_state
 
 # self.personas = ['Blue', 'Red', 'Clear', 'Black', 'White', 'Green', 'Yellow', 'Purple', 'Natural', 'Parchment']
-
-
 ### tendencies
 # how likely this persona is to host
 hosting = {
@@ -97,13 +99,34 @@ with st.container(border=True):
     time.sleep(1)
     my_bar.empty()
     st.balloons()
+
     top2 = get_top_two(df)
     top3 = get_top_three(df)
 
-    st.metric('Your top two personas: ', top2[0], top2[1])
-    st.metric('Your top three personas: ', top2[0], top2[1], top3[2])
+    # st.metric('Your top two personas: ', top2[0], top2[1])
     st.bar_chart(df)
-    st.write('TODO: 1) Strengths and Weaknesses from your top two AND quotes AND tendencies')
+    # st.write('TODO: 1) Strengths and Weaknesses from your top two AND quotes AND tendencies')
+
+    st.title(f'Your top three personas are: {top3[0]}, {top3[1]}, and {top3[2]}')
+    with open('personality-quiz/personas.json', 'r') as f:
+        data = json.load(f)
+        for i in range(3):
+            persona = top3[i]
+
+            st.header(f'Persona {i+1}: {persona}')
+
+            st.subheader('Strengths: ')
+            for strength in data[persona]['Strengths']:
+                st.write(f'{strength}')
+
+            st.subheader('Weaknesses: ')
+            for weakness in data[persona]['Weaknesses']:
+                st.write(f'{weakness}')
+
+            st.subheader(f'Quotes from a {persona}')
+            for quote in data[persona]['Quotes']:
+                st.write(f'{quote}')
+
 
     # st.write('TODO: 2) Who you get along with and who you dont get along with ')
     # st.write('TODO: 3) Based off of your top two, ShelfSide recommends these games ')

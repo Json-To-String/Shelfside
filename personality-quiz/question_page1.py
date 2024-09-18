@@ -87,7 +87,7 @@ class Handler():
 st.set_page_config(
     page_title="ShelfSide - The 10 Board Game Personalities Test",
     page_icon="🧊",
-    layout="wide",
+    # layout="wide",
     initial_sidebar_state="collapsed",
     menu_items={
         'Get Help': 'https://www.extremelycoolapp.com/help',
@@ -134,10 +134,8 @@ div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
     </style>
     """, unsafe_allow_html=True)
 
-
-## On click, move to next page:
-# st.button('Calculate my results', on_click=st.switch_page("results_page.py"))
-st.page_link("personality-quiz/question_page2.py", label="Next Page!")
+with st.container(border=True):
+    st.page_link("personality-quiz/question_page2.py", label="Next Page!")
 
 st.write('for testing: ')
 st.session_state

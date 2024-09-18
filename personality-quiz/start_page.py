@@ -11,7 +11,7 @@ from streamlit_extras.switch_page_button import switch_page
 st.set_page_config(
     page_title="ShelfSide - The 10 Board Game Personalities Test",
     page_icon="🧊",
-    layout="wide",
+    # layout="wide",
     initial_sidebar_state="collapsed",
     menu_items={
         'Get Help': 'https://www.extremelycoolapp.com/help',
@@ -21,6 +21,7 @@ st.set_page_config(
 )
 with st.container(border=True):
 
+    st.image('res/shelfside_logo.png', width=100)
     st.title('ShelfSide - The 10 Board Game Personalities Test')
     st.header('Find out your enemies and allies during game night!')
     st.text('''
@@ -28,6 +29,5 @@ with st.container(border=True):
         -How much of a sore loser are you?
         -Are you likely to come up with a wacky new strategy?
             ''')
-    st.text('< TODO: Art and Recommending Some Games >')
-    st.image('res/shelfside_logo.png')
+    st.text('< Coming Soon: Art and Game Recommendations >')
     st.page_link("personality-quiz/question_page1.py", label="Start!")
