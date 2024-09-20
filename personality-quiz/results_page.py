@@ -4,6 +4,7 @@ import numpy as np
 import time
 import plotly.express as px
 import json
+import utils.utils as ut
 
 # with open('test.json', 'r') as f:
 #     data = json.load(f)
