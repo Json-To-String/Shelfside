@@ -1,6 +1,6 @@
-# Shelfside Board Game Recommender
+# Shelfside 
 
 Based off of the YouTube Channel: https://www.youtube.com/@Shelfside
 Website: https://www.shelfside.co/
 
-Given Shelfside's Ashton and Daniel's reviews on Boardgames, we have a recommendation engine to show you games that you might like!
+Take the Shelfside 10 Board Game Personality quiz: https://shelfside-10-personalities.streamlit.app/
