@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import streamlit as st
 
 class Handler():
 
@@ -72,7 +73,22 @@ class Handler():
         self.question_dict = dict(map(lambda i,j : (i,j),
                                 self.question_list, self.question_weights))
 
+    def update_questions(self):
+        ## Main Question Loop
+        for i in range(len(self.question_list)):
+            quest = self.question_list[i]
+            weight = self.question_weights[i]
+            answer = st.radio(f'Question {i + 1}: {quest}',
+                                self.question_options,
+                                horizontal = True,
+                                index = len(self.question_options)//2)
 
+            for key in weight:
+
+                ## use weights to update session attributes here
+                st.session_state[key] += weight[key] * self.question_mapping[answer]
+
+            st.divider()
 
 class TestClass():
     def __init__(self):

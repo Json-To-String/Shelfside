@@ -4,6 +4,7 @@ import numpy as np
 import time
 import plotly.express as px
 import json
+import utils.utils as ut
 
 # with open('test.json', 'r') as f:
 #     data = json.load(f)
@@ -12,18 +13,18 @@ import json
 st.session_state
 df = st.session_state
 
-persona_map = {
-    'Blue' : 'Host',
-    'Red' : 'Warhawk',
-    'Clear' : ,
-    'Black',
-    'White',
-    'Green',
-    'Yellow',
-    'Purple',
-    'Natural',
-    'Parchment'
-}
+# persona_map = {
+#     'Blue' : 'Host',
+#     'Red' : 'Warhawk',
+#     'Clear' : ,
+#     'Black',
+#     'White',
+#     'Green',
+#     'Yellow',
+#     'Purple',
+#     'Natural',
+#     'Parchment'
+# }
 ### tendencies
 # how likely this persona is to host
 hosting = {
