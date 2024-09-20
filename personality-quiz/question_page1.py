@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-
+import utils.utils
 ###################
 # Question page 1 #
 ###################
@@ -95,6 +95,11 @@ st.set_page_config(
         'About': "# This is a header. This is an *extremely* cool app!"
     }
 )
+
+# tools = utils.utils.TestClass()
+# print(tools.addText('Here is some more text'))
+# print(f'Testing to keep variables: {tools.test_text}')
+
 st.title('ShelfSide - The 10 Board Game Personalities Test')
 st.header('Let’s start with some questions about board gaming in general…')
 
