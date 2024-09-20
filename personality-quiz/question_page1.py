@@ -22,17 +22,17 @@ st.title('ShelfSide - The 10 Board Game Personalities Test')
 st.header('Let’s start with some questions about board gaming in general…')
 
 page_handler = ut.Handler()
+#
+# # initialized personas in streamlit state
+# for persona in page_handler.personas:
+#     # if persona not in st.session_state:
+#     page_handler.page_results[persona] = 0
 
-# initialized personas in streamlit state
-for persona in page_handler.personas:
-    # if persona not in st.session_state:
-    st.session_state[persona] = 0
 
 # st.session_state
-
+# page_handler.page_results
 page_handler.get_questions('personality-quiz/questions1_outside_game_night.txt')
-
-page_handler.update_questions()
+page_handler.display_questions(page_num = 1)
 
 ## Hacky css solution to get question labels bigger
 st.markdown(

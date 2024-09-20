@@ -15,7 +15,6 @@ page_handler = ut.Handler()
 page_handler.get_questions('personality-quiz/questions3_mechanical_sociala.txt')
 page_handler.update_questions()
 
-#
 ## Hacky css solution to get question labels bigger
 st.markdown(
     """<style>

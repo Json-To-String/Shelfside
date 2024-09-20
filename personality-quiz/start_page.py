@@ -19,6 +19,11 @@ st.set_page_config(
         'About': "# "
     }
 )
+
+for i in range(5):
+    st.session_state[f'page{i+1}_results'] = 0
+
+st.session_state
 with st.container(border=True):
 
     st.image('res/shelfside_logo.png', width=100)
