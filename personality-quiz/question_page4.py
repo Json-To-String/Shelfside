@@ -13,7 +13,8 @@ st.header('Ok! Now let’s make the questions trickier for the home stretch!')
 page_handler = ut.Handler()
 
 page_handler.get_questions('personality-quiz/questions4_mechanical_socialb.txt')
-page_handler.update_questions()
+# page_handler.update_questions()
+page_handler.display_questions(page_num = 4)
 
 ## Hacky css solution to get question labels bigger
 st.markdown(
