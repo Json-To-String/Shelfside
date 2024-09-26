@@ -15,15 +15,6 @@ page_handler = ut.Handler()
 page_handler.get_questions('personality-quiz/questions3_mechanical_sociala.txt')
 page_handler.display_questions(page_num = 3)
 
-## Hacky css solution to get question labels bigger
-st.markdown(
-    """<style>
-div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
-    font-size: 32px;
-}
-    </style>
-    """, unsafe_allow_html=True)
-
 with st.container(border=True):
     st.page_link("personality-quiz/question_page4.py", label="Next Page!")
 
