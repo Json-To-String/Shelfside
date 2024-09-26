@@ -80,6 +80,27 @@ class Handler():
 
     def display_questions(self, page_num):
 
+    # with st.form('page_form'):
+    ## Main Question Loop
+        for i in range(len(self.question_list)):
+            quest = self.question_list[i]
+            # weight = self.question_weights[i]
+
+            quest_key = f'page{page_num}_question{i}'
+
+            # self.question_keys.append(quest_key) ## potentiall superfluous
+
+            answer = st.radio(f'Question {i + 1}: {quest}',
+                                self.question_options,
+                                horizontal = True,
+                                key = quest_key,
+                                index = len(self.question_options) // 2)
+
+            st.divider()
+
+
+    def display_questions_old(self, page_num):
+
         with st.form('page_form'):
         ## Main Question Loop
             for i in range(len(self.question_list)):
@@ -96,13 +117,6 @@ class Handler():
                                     key = quest_key,
                                     index = len(self.question_options) // 2)
 
-                #
-                #
-                # for key in weight:
-                #
-                #     ## use weights to update session attributes here
-                #     st.session_state[key] += weight[key] * self.question_mapping[answer]
-
                 st.divider()
 
             # Every form must have a submit button.
@@ -110,7 +124,6 @@ class Handler():
             if submitted:
                 self.store_answers(page_num)
                 st.write('Answers stored, click the button below to move on!')
-
 
     def store_answers(self, page_num):
 
@@ -132,8 +145,6 @@ class Handler():
 
         st.session_state[f'page{page_num}_results'] = self.page_results
 
-
-#
 # class TestClass():
 #     def __init__(self):
 #         self.test_text = ''
