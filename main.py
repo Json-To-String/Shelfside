@@ -12,6 +12,8 @@ pg = st.navigation([
                    st.Page('personality-quiz/question_page4.py'),
                    st.Page('personality-quiz/question_page5.py'),
                    st.Page('personality-quiz/results_page.py')
+                   # st.Page('personality-quiz/recommend_page.py')
+                   # st.Page('personality-quiz/results_page.py')
                ])
 
 pg.run()

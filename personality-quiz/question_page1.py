@@ -7,17 +7,17 @@ import utils.utils as ut
 # Question page 1 #
 ###################
 
-st.set_page_config(
-    page_title="ShelfSide - The 10 Board Game Personalities Test",
-    page_icon="🧊",
-    # layout="wide",
-    initial_sidebar_state="collapsed",
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': ""
-    }
-)
+# st.set_page_config(
+#     page_title="ShelfSide - The 10 Board Game Personalities Test",
+#     page_icon="🧊",
+#     # layout="wide",
+#     initial_sidebar_state="collapsed",
+#     menu_items={
+#         'Get Help': 'https://www.extremelycoolapp.com/help',
+#         'Report a bug': "https://www.extremelycoolapp.com/bug",
+#         'About': ""
+#     }
+# )
 
 st.title('ShelfSide - The 10 Board Game Personalities Test')
 st.header('Let’s start with some questions about board gaming in general…')

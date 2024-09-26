@@ -16,7 +16,6 @@ page_handler.get_questions('personality-quiz/questions5_during_games_social.txt'
 # page_handler.update_questions()
 page_handler.display_questions(page_num = 5)
 
-
 ## Hacky css solution to get question labels bigger
 st.markdown(
     """<style>

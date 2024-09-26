@@ -13,7 +13,6 @@ st.header('Let’s throw your friends in the mix and see how you answer!')
 page_handler = ut.Handler()
 
 page_handler.get_questions('personality-quiz/questions3_mechanical_sociala.txt')
-# page_handler.update_questions()
 page_handler.display_questions(page_num = 3)
 
 ## Hacky css solution to get question labels bigger
