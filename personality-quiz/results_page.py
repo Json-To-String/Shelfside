@@ -145,7 +145,7 @@ with st.container(border=True):
     top3_rename = get_top_three(df_renamed)
 
     # st.metric('Your top two personas: ', top2[0], top2[1])
-    st.bar_chart(df_renamed)
+    # st.bar_chart(df_renamed)
 
     # Create a bar chart with Altair
     chart = alt.Chart(df0).mark_bar().encode(
@@ -162,8 +162,6 @@ with st.container(border=True):
 
     # Display the chart in Streamlit
     st.altair_chart(chart, use_container_width=True)
-
-
 
     st.title(f'You are mostly a: {top3_rename[0]}! with elements of being a {top3_rename[1]} and a {top3_rename[2]}')
     with open('personality-quiz/personas.json', 'r') as f:
