@@ -7,6 +7,8 @@ import json
 import utils.utils as ut
 from collections import Counter
 from collections import defaultdict
+import altair as alt
+
 
 # with open('test.json', 'r') as f:
 #     data = json.load(f)
@@ -33,10 +35,22 @@ persona_map = {
     'Parchment' : 'Storyteller'
 }
 
-df_renamed = {persona_map.get(k, k): v for k, v in df.items()}
+hex_colors = {
+    'Blue': '#1f77b4',
+    'Red': '#d62728',
+    'Clear': '#7f7f7f',
+    'Black': '#2c2c2c',
+    'White': '#e6e6e6',
+    'Green': '#2ca02c',
+    'Yellow': '#ff7f0e',
+    'Purple': '#9467bd',
+    'Natural': '#8c564b',
+    'Parchment': '#bcbd22'
+}
 
-# print(renamed_data)
-# df_renamed = df.rename(columns=persona_map)
+df_renamed = {persona_map.get(k, k): v for k, v in df.items()}
+df0 = pd.DataFrame(list(df_renamed.items()), columns=['Persona', 'Score'])
+
 
 ### tendencies
 # how likely this persona is to host
@@ -132,6 +146,24 @@ with st.container(border=True):
 
     # st.metric('Your top two personas: ', top2[0], top2[1])
     st.bar_chart(df_renamed)
+
+    # Create a bar chart with Altair
+    chart = alt.Chart(df0).mark_bar().encode(
+        x='Persona',
+        y='Score',
+        color=alt.Color(
+            'Persona',
+            scale=alt.Scale(domain=list(persona_map.values()),
+            range=list(hex_colors.values())))
+    ).properties(
+        width=600,  # Customize chart width
+        height=400  # Customize chart height
+    )
+
+    # Display the chart in Streamlit
+    st.altair_chart(chart, use_container_width=True)
+
+
 
     st.title(f'You are mostly a: {top3_rename[0]}! with elements of being a {top3_rename[1]} and a {top3_rename[2]}')
     with open('personality-quiz/personas.json', 'r') as f:
