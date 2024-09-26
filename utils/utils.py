@@ -31,6 +31,8 @@ class Handler():
         ## playing with the idea of list of dictionaries for weights
         self.question_weights = []
 
+        self.page_results = {}
+
     def get_questions(self, textfile):
         """
         Called when needing to access questions
@@ -73,22 +75,41 @@ class Handler():
         self.question_dict = dict(map(lambda i,j : (i,j),
                                 self.question_list, self.question_weights))
 
-    def update_questions(self):
-        ## Main Question Loop
+    def display_questions(self, page_num):
+
+        with st.form('page_form'):
+            ## Main Question Loop
+            for i in range(len(self.question_list)):
+                quest = self.question_list[i]
+                weight = self.question_weights[i]
+                answer = st.radio(f'Question {i + 1}: {quest}',
+                                    self.question_options,
+                                    horizontal = True,
+                                    key = f'page{page_num}_question{i}',
+                                    index = len(self.question_options)//2)
+
+                #
+                #
+                # for key in weight:
+                #
+                #     ## use weights to update session attributes here
+                #     st.session_state[key] += weight[key] * self.question_mapping[answer]
+
+                st.divider()
+            # Every form must have a submit button.
+            submitted = st.form_submit_button('Submit')
+            if submitted:
+                self.store_answers(page_num)
+                st.write('Answers stored, click the button below to move on!')
+
+
+    def store_answers(self, page_num):
+
         for i in range(len(self.question_list)):
-            quest = self.question_list[i]
-            weight = self.question_weights[i]
-            answer = st.radio(f'Question {i + 1}: {quest}',
-                                self.question_options,
-                                horizontal = True,
-                                index = len(self.question_options)//2)
+            key = f'page{page_num}_question{i}'
+            print(key)
 
-            for key in weight:
 
-                ## use weights to update session attributes here
-                st.session_state[key] += weight[key] * self.question_mapping[answer]
-
-            st.divider()
 
 class TestClass():
     def __init__(self):

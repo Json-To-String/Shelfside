@@ -13,7 +13,7 @@ st.header('Now it’s time for game night! What is your mental approach?')
 page_handler = ut.Handler()
 
 page_handler.get_questions('personality-quiz/questions2_during_games_mechanical.txt')
-page_handler.update_questions()
+page_handler.display_questions(page_num = 2)
 
 ## Hacky css solution to get question labels bigger
 st.markdown(

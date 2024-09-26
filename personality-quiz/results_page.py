@@ -5,26 +5,39 @@ import time
 import plotly.express as px
 import json
 import utils.utils as ut
+from collections import Counter
+from collections import defaultdict
 
 # with open('test.json', 'r') as f:
 #     data = json.load(f)
 #     print(data['Blue']['Strengths'])
 
-st.session_state
-df = st.session_state
+df = defaultdict(int)
+dictList = [st.session_state[f'page{i+1}_results'] for i in range(4)]
 
-# persona_map = {
-#     'Blue' : 'Host',
-#     'Red' : 'Warhawk',
-#     'Clear' : ,
-#     'Black',
-#     'White',
-#     'Green',
-#     'Yellow',
-#     'Purple',
-#     'Natural',
-#     'Parchment'
-# }
+for d in dictList:
+    for key, value in d.items():
+        df[key] += value
+df = dict(df)
+
+persona_map = {
+    'Blue' : 'Host',
+    'Red' : 'Warhawk',
+    'Clear' : 'Collector',
+    'Black' : 'Chaos Agent',
+    'White' : 'Mediator',
+    'Green' : 'Aesthetic',
+    'Yellow' : 'Jester',
+    'Purple' : 'Befriender',
+    'Natural' : 'Purist',
+    'Parchment' : 'Storyteller'
+}
+
+df_renamed = {persona_map.get(k, k): v for k, v in df.items()}
+
+# print(renamed_data)
+# df_renamed = df.rename(columns=persona_map)
+
 ### tendencies
 # how likely this persona is to host
 hosting = {
@@ -115,30 +128,33 @@ with st.container(border=True):
     top2 = get_top_two(df)
     top3 = get_top_three(df)
 
-    # st.metric('Your top two personas: ', top2[0], top2[1])
-    st.bar_chart(df)
-    # st.write('TODO: 1) Strengths and Weaknesses from your top two AND quotes AND tendencies')
+    top3_rename = get_top_three(df_renamed)
 
-    st.title(f'You are a: {top3[0]}! with elements of {top3[1]} and {top3[2]}')
+    # st.metric('Your top two personas: ', top2[0], top2[1])
+    st.bar_chart(df_renamed)
+
+    st.title(f'You are mostly a: {top3_rename[0]}! with elements of being a {top3_rename[1]} and a {top3_rename[2]}')
     with open('personality-quiz/personas.json', 'r') as f:
         data = json.load(f)
         for i in range(3):
-            persona = top3[i]
-            blurb = data[persona]['Blurb']
 
-            st.header(f'Persona {i+1}: {persona}')
+            color_persona = top3[i]
+            name_persona = persona_map[color_persona]
+            blurb = data[color_persona]['Blurb']
+
+            st.header(f'Persona {i+1}: {name_persona}')
             st.write(f'{blurb}')
 
             st.subheader('Strengths: ')
-            for strength in data[persona]['Strengths']:
+            for strength in data[color_persona]['Strengths']:
                 st.write(f'{strength}')
 
             st.subheader('Weaknesses: ')
-            for weakness in data[persona]['Weaknesses']:
+            for weakness in data[color_persona]['Weaknesses']:
                 st.write(f'{weakness}')
 
-            st.subheader(f'Quotes from a {persona}')
-            for quote in data[persona]['Quotes']:
+            st.subheader(f'Quotes from a {name_persona}')
+            for quote in data[color_persona]['Quotes']:
                 st.write(f'{quote}')
 
 
