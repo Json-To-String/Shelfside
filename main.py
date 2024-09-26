@@ -42,3 +42,11 @@ pg.run()
 # # Dynamically run the current page
 # current_page = pages[st.session_state.current_page_idx]
 # exec(open(current_page).read())
+
+st.markdown(
+    """<style>
+div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
+    font-size: 32px;
+}
+    </style>
+    """, unsafe_allow_html=True)

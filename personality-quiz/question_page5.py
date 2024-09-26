@@ -13,17 +13,7 @@ st.header('Almost there! We’ll end with 5 questions solely about hanging out w
 page_handler = ut.Handler()
 
 page_handler.get_questions('personality-quiz/questions5_during_games_social.txt')
-# page_handler.update_questions()
 page_handler.display_questions(page_num = 5)
-
-## Hacky css solution to get question labels bigger
-st.markdown(
-    """<style>
-div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
-    font-size: 32px;
-}
-    </style>
-    """, unsafe_allow_html=True)
 
 with st.container(border=True):
     st.page_link("personality-quiz/results_page.py", label="Calculate My Results!")
