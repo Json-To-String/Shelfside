@@ -31,7 +31,10 @@ class Handler():
         ## playing with the idea of list of dictionaries for weights
         self.question_weights = []
 
-        self.page_results = {}
+        self.question_keys = []
+
+        self.page_results = {persona: None for persona in self.personas}
+
 
     def get_questions(self, textfile):
         """
@@ -78,15 +81,20 @@ class Handler():
     def display_questions(self, page_num):
 
         with st.form('page_form'):
-            ## Main Question Loop
+        ## Main Question Loop
             for i in range(len(self.question_list)):
                 quest = self.question_list[i]
-                weight = self.question_weights[i]
+                # weight = self.question_weights[i]
+
+                quest_key = f'page{page_num}_question{i}'
+
+                # self.question_keys.append(quest_key) ## potentiall superfluous
+
                 answer = st.radio(f'Question {i + 1}: {quest}',
                                     self.question_options,
                                     horizontal = True,
-                                    key = f'page{page_num}_question{i}',
-                                    index = len(self.question_options)//2)
+                                    key = quest_key,
+                                    index = len(self.question_options) // 2)
 
                 #
                 #
@@ -96,6 +104,7 @@ class Handler():
                 #     st.session_state[key] += weight[key] * self.question_mapping[answer]
 
                 st.divider()
+
             # Every form must have a submit button.
             submitted = st.form_submit_button('Submit')
             if submitted:
@@ -105,17 +114,31 @@ class Handler():
 
     def store_answers(self, page_num):
 
+        # self.page_results = {persona: None for persona in self.personas}
+
         for i in range(len(self.question_list)):
-            key = f'page{page_num}_question{i}'
-            print(key)
+            quest_key = f'page{page_num}_question{i}'
+            # quest = self.question_list[i]
+            answer = st.session_state.get(quest_key, None)
+            weight = self.question_weights[i]
+
+            # st.write(answer)
+            if answer is not None:
+                for persona in weight:
+                    if self.page_results[persona] is None:
+                        self.page_results[persona] = 0
+
+                    self.page_results[persona] += weight[persona] * self.question_mapping[answer]
+
+        st.session_state[f'page{page_num}_results'] = self.page_results
 
 
-
-class TestClass():
-    def __init__(self):
-        self.test_text = ''
-
-    def addText(self, text_to_add):
-        print(f'Before {self.test_text}')
-        self.test_text += text_to_add
-        print(f'after {self.test_text}')
+#
+# class TestClass():
+#     def __init__(self):
+#         self.test_text = ''
+#
+#     def addText(self, text_to_add):
+#         print(f'Before {self.test_text}')
+#         self.test_text += text_to_add
+#         print(f'after {self.test_text}')
