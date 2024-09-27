@@ -25,3 +25,11 @@ div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
 }
     </style>
     """, unsafe_allow_html=True)
+
+st.markdown('''
+<style>
+.stApp [data-testid="stToolbar"]{
+    display:none;
+}
+</style>
+''', unsafe_allow_html=True)
