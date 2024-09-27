@@ -35,4 +35,7 @@ with st.container(border=True):
         -Are you likely to come up with a wacky new strategy?
             ''')
     st.text('< Coming Soon: Art and Game Recommendations >')
-    st.page_link("personality-quiz/question_page1.py", label="Start!")
+    col1, col2, col3 = st.columns(3, vertical_alignment = 'center')
+
+    with col2:
+        st.page_link("personality-quiz/question_page1.py", label="Start!")
