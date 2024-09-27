@@ -6,6 +6,7 @@ Website: https://www.shelfside.co/
 Take the Shelfside 10 Board Game Personality quiz: https://shelfside-10-personalities.streamlit.app/
 
 Personality Quiz organization:
+```
 ├── README.md
 ├── .gitignore
 ├── requirements.txt
@@ -16,3 +17,4 @@ Personality Quiz organization:
 │   ├── questions*.txt
 ├── utils/
 │   └── utils.py
+```
