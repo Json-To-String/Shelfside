@@ -90,7 +90,7 @@ class Handler():
 
             # self.question_keys.append(quest_key) ## potentiall superfluous
 
-            answer = st.radio(f'Question {i + 1}: {quest}',
+            answer = st.radio(f'{quest}',
                                 self.question_options,
                                 horizontal = False,
                                 key = quest_key,
