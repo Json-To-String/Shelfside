@@ -24,7 +24,7 @@ with st.form('page_form'):
     page_handler.display_questions(page_num)
 
     # Every form must have a submit button.
-    submitted = st.form_submit_button('Submit')
+    submitted = st.form_submit_button('Submit', use_container_width=True)
     if submitted:
         page_handler.store_answers(page_num)
         st.write('Answers stored, click the button below to move on!')
