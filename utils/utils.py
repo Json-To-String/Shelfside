@@ -92,7 +92,7 @@ class Handler():
 
             answer = st.radio(f'Question {i + 1}: {quest}',
                                 self.question_options,
-                                horizontal = True,
+                                horizontal = False,
                                 key = quest_key,
                                 index = len(self.question_options) // 2)
 
