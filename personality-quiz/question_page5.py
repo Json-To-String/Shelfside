@@ -13,7 +13,7 @@ st.title('Almost there! We’ll end with 5 questions solely about hanging out wi
 
 progress_text = "5/5"
 my_bar = st.progress(0, text=progress_text)
-my_bar.progress(80, text=progress_text)
+my_bar.progress(100, text=progress_text)
 
 page_num = 5
 page_handler = ut.Handler()
