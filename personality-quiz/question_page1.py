@@ -7,8 +7,10 @@ import utils.utils as ut
 # Question page 1 #
 ###################
 
-st.title('ShelfSide - The 10 Board Game Personalities Test')
-st.header('Let’s start with some questions about board gaming in general…')
+# st.title('ShelfSide - The 10 Board Game Personalities Test')
+# st.header('Let’s start with some questions about board gaming in general…')
+
+st.title('Let’s start with some questions about board gaming in general…')
 
 progress_text = "Test Progress"
 my_bar = st.progress(0, text=progress_text)
@@ -35,6 +37,6 @@ with st.form('page_form'):
             with col2:
                 st.page_link("personality-quiz/question_page2.py", label="Next Page!", use_container_width=True)
 
-# 
+#
 # st.write('for testing: ')
 # st.session_state

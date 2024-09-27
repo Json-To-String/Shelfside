@@ -7,8 +7,9 @@ import utils.utils as ut
 # Question page 2 #
 ##################
 
-st.title('ShelfSide - The 10 Board Game Personalities Test')
-st.header('Now it’s time for game night! What is your mental approach?')
+# st.title('ShelfSide - The 10 Board Game Personalities Test')
+# st.header('Now it’s time for game night! What is your mental approach?')
+st.title('Now it’s time for game night! What is your mental approach?')
 
 progress_text = "Test Progress"
 my_bar = st.progress(0, text=progress_text)
@@ -37,6 +38,6 @@ with st.form('page_form'):
                 st.page_link("personality-quiz/question_page3.py", label="Next Page!", use_container_width=True)
 
 
-# 
+#
 # st.write('for testing: ')
 # st.session_state
