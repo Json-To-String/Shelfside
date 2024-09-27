@@ -11,7 +11,7 @@ import utils.utils as ut
 # st.header('Now it’s time for game night! What is your mental approach?')
 st.title('Now it’s time for game night! What is your mental approach?')
 
-progress_text = "Test Progress"
+progress_text = "Page 2/5"
 my_bar = st.progress(0, text=progress_text)
 my_bar.progress(20, text=progress_text)
 

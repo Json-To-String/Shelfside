@@ -11,7 +11,7 @@ import utils.utils as ut
 # st.header('Ok! Now let’s make the questions trickier for the home stretch!')
 st.title('Ok! Now let’s make the questions trickier for the home stretch!')
 
-progress_text = "Test Progress"
+progress_text = "Page 4/5"
 my_bar = st.progress(0, text=progress_text)
 my_bar.progress(60, text=progress_text)
 

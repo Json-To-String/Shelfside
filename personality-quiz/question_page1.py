@@ -12,7 +12,7 @@ import utils.utils as ut
 
 st.title('Let’s start with some questions about board gaming in general…')
 
-progress_text = "Test Progress"
+progress_text = "Page 1/5"
 my_bar = st.progress(0, text=progress_text)
 
 page_num = 1
