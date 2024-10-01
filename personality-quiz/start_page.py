@@ -14,8 +14,8 @@ st.set_page_config(
     # layout="wide",
     initial_sidebar_state="collapsed",
     menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'Get Help': '',
+        'Report a bug': "",
         'About': "# "
     }
 )
@@ -26,16 +26,18 @@ for i in range(5):
 # st.session_state
 with st.container(border=True):
 
-    st.image('res/shelfside_logo.png', width=100)
-    st.title('ShelfSide - The 10 Board Game Personalities Test')
-    st.header('Find out your enemies and allies during game night!')
-    st.text('''
-        -Which board game designer/influencer are you most like?
-        -How much of a sore loser are you?
-        -Are you likely to come up with a wacky new strategy?
-            ''')
-    st.text('< Coming Soon: Art and Game Recommendations >')
     col1, col2, col3 = st.columns(3, vertical_alignment = 'center')
-
+    with col1:
+        st.image('res/shelfside_logo.png', width=100)
+        st.title('ShelfSide')
+    st.subtitle('The 10 Board Game Personalities Test')
     with col2:
+        st.header('Find out your enemies and allies during game night!')
+        st.text('''
+            -Which board game designer/influencer are you most like?
+            -How much of a sore loser are you?
+            -Are you likely to come up with a wacky new strategy?
+                ''')
+        st.text('< Coming Soon: Art and Game Recommendations >')
+
         st.page_link("personality-quiz/question_page1.py", label="Start!")
