@@ -115,7 +115,8 @@ class Handler():
                                     self.question_options,
                                     horizontal = True,
                                     key = quest_key,
-                                    index = len(self.question_options) // 2)
+                                    # index = len(self.question_options) // 2)
+                                    index = None)
 
                 st.divider()
 
