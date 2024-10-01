@@ -14,8 +14,8 @@ st.set_page_config(
     # layout="wide",
     initial_sidebar_state="collapsed",
     menu_items={
-        'Get Help': '',
-        'Report a bug': "",
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
         'About': "# "
     }
 )
