@@ -28,7 +28,8 @@ with st.container(border=True):
 
     col1, col2 = st.columns(2, vertical_alignment = 'center')
     with col1:
-        st.image('res/shelfside_logo.png', width=100)
+        st.logo('res/shelfside_logo.png')
+        # st.image('res/shelfside_logo.png', width=100)
         st.header('The 10 Board Game Personalities Test')
         st.subheader('Find out your enemies and allies during game night!')
     with col2:
