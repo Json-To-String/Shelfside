@@ -29,9 +29,9 @@ with st.container(border=True):
     col1, col2 = st.columns(2, vertical_alignment = 'center')
     with col1:
         st.image('res/shelfside_logo.png', width=100)
-        st.title('ShelfSide')
         st.header('The 10 Board Game Personalities Test')
     with col2:
+        st.title('ShelfSide')
         st.subheader('Find out your enemies and allies during game night!')
         st.text('''
             -Which board game designer/influencer are you most like?
