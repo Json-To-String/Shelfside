@@ -10,7 +10,7 @@ from streamlit_extras.switch_page_button import switch_page
 
 st.set_page_config(
     page_title="ShelfSide - The 10 Board Game Personalities Test",
-    page_icon="🧊",
+    page_icon="res/shelfside_logo.png",
     # layout="wide",
     initial_sidebar_state="collapsed",
     menu_items={
@@ -28,8 +28,7 @@ with st.container(border=True):
 
     col1, col2 = st.columns(2, vertical_alignment = 'center')
     with col1:
-        st.logo('res/shelfside_logo.png')
-        # st.image('res/shelfside_logo.png', width=100)
+        st.image('res/shelfside_logo.png', width=100)
         st.header('The 10 Board Game Personalities Test')
         st.subheader('Find out your enemies and allies during game night!')
     with col2:

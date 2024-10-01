@@ -27,7 +27,7 @@ with st.form('page_form'):
     submitted = st.form_submit_button('Submit', use_container_width=True)
     if submitted:
         page_handler.store_answers(page_num)
-        st.write('Answers stored, click the button below to move on!')
+        st.success('Answers stored, click the button below to move on!')
 
         with st.container(border=True):
             col1, col2 = st.columns(2, vertical_alignment = 'center')
