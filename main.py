@@ -18,6 +18,7 @@ pg = st.navigation([
 
 pg.run()
 
+## Bigger font for questions
 st.markdown(
     """<style>
 div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
@@ -26,6 +27,7 @@ div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
     </style>
     """, unsafe_allow_html=True)
 
+## hide navbar???
 st.markdown('''
 <style>
 .stApp [data-testid="stToolbar"]{
