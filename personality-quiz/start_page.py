@@ -8,17 +8,17 @@ from streamlit_extras.switch_page_button import switch_page
 # Start page #
 ##############
 
-st.set_page_config(
-    page_title="ShelfSide - The 10 Board Game Personalities Test",
-    page_icon="res/shelfside_logo.png",
-    # layout="wide",
-    initial_sidebar_state="collapsed",
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# "
-    }
-)
+# st.set_page_config(
+#     page_title="ShelfSide - The 10 Board Game Personalities Test",
+#     page_icon="res/shelfside_logo.png",
+#     # layout="wide",
+#     initial_sidebar_state="collapsed",
+#     menu_items={
+#         'Get Help': 'https://www.extremelycoolapp.com/help',
+#         'Report a bug': "https://www.extremelycoolapp.com/bug",
+#         'About': "# "
+#     }
+# )
 
 for i in range(5):
     st.session_state[f'page{i+1}_results'] = 0
@@ -38,6 +38,7 @@ with st.container(border=True):
             -How much of a sore loser are you?
             -Are you likely to come up with a wacky new strategy?
                 ''')
+        st.text('Note: Your answers may vary based off of which game or game group you’re playing with, try to average out your responses!')
         st.text('< Coming Soon: Art and Game Recommendations >')
 
         st.page_link("personality-quiz/question_page1.py", label="Start!")
