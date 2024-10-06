@@ -16,15 +16,15 @@ st.set_page_config(
 )
 # here is where the user can switch between pages (only run in home or main.py)
 pg = st.navigation([
-                   st.Page('personality-quiz/start_page.py'),
-                   st.Page('personality-quiz/question_page1.py'),
-                   st.Page('personality-quiz/question_page2.py'),
-                   st.Page('personality-quiz/question_page3.py'),
-                   st.Page('personality-quiz/question_page4.py'),
-                   st.Page('personality-quiz/question_page5.py'),
-                   st.Page('personality-quiz/results_page.py'),
-                   st.Page('personality-quiz/relationship_page.py')
-                   # st.Page('personality-quiz/recommend_page.py')
+                   st.Page('personality-quiz/00_start_page.py'),
+                   st.Page('personality-quiz/01_question_page1.py'),
+                   st.Page('personality-quiz/02_question_page2.py'),
+                   st.Page('personality-quiz/03_question_page3.py'),
+                   st.Page('personality-quiz/04_question_page4.py'),
+                   st.Page('personality-quiz/05_question_page5.py'),
+                   st.Page('personality-quiz/06_results_page.py'),
+                   st.Page('personality-quiz/07_relationship_page.py'),
+                   st.Page('personality-quiz/08_recommend_page.py')
                    # st.Page('personality-quiz/results_page.py')
                ])
 
