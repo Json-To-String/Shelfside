@@ -115,10 +115,11 @@ new_strategy = {
         'Parchment':70
 
 }
-
+@st.cache_data
 def get_top_two(A):
     return(sorted(A, key=A.get, reverse=True)[:2])
 
+@st.cache_data
 def get_top_three(A):
     '''
     Podium???
@@ -144,6 +145,7 @@ with st.container(border=True):
     top3 = get_top_three(df)
 
     top3_rename = get_top_three(df_renamed)
+    top2_rename = get_top_two(df_renamed)
 
     # st.metric('Your top two personas: ', top2[0], top2[1])
     # st.bar_chart(df_renamed)
@@ -164,12 +166,14 @@ with st.container(border=True):
     # Display the chart in Streamlit
     st.altair_chart(chart, use_container_width=True)
 
-    st.title(f'You are mostly a: {top3_rename[0]}! with elements of being a {top3_rename[1]} and a {top3_rename[2]}')
-    with open('personality-quiz/personas.json', 'r') as f:
+    # st.title(f'You are mostly a: {top3_rename[0]}! with elements of being a {top3_rename[1]} and a {top3_rename[2]}')
+    st.title(f'You are mostly a: {top2_rename[0]}! with elements of being a {top2_rename[1]}')
+    with open('personality-quiz/personas0.json', 'r') as f:
         data = json.load(f)
-        for i in range(3):
 
-            color_persona = top3[i]
+        for i in range(2):
+
+            color_persona = top2[i]
             name_persona = persona_map[color_persona]
             blurb = data[color_persona]['Blurb']
 
@@ -188,10 +192,26 @@ with st.container(border=True):
             for quote in data[color_persona]['Quotes']:
                 st.write(f'{quote}')
 
+    st.session_state['Top3'] = top3
+    st.session_state['Top3_rename'] = top3_rename
+
+    st.session_state['Top2'] = top2
+    st.session_state['Top2_rename'] = top2_rename
+
+
+    with st.container(border=True):
+        # col1, col2 = st.columns(2, vertical_alignment = 'center')
+        # with col1:
+        #     st.page_link("personality-quiz/start_page.py", label="Back to start!", use_container_width=True)
+        #
+        # with col2:
+        st.page_link("personality-quiz/relationship_page.py", label="See your game night allies and enemies!", use_container_width=True)
+
+
 
     # st.write('TODO: 2) Who you get along with and who you dont get along with ')
-    # st.write('TODO: 3) Based off of your top two, ShelfSide recommends these games ')
-    # st.write('TODO: 4) Who are you like from the industry/ShelfSide (plug socials/YT) + share with your friends ')
+    # st.write('TODO: 3) Who are you like from the industry/ShelfSide (plug socials/YT) ')
+    # st.write('TODO: 4) Based off of your top two personas, ShelfSide recommends these games + share with your friends')
 
     # for key in st.session_state:
     #     print(key)
