@@ -166,31 +166,43 @@ with st.container(border=True):
     # Display the chart in Streamlit
     st.altair_chart(chart, use_container_width=True)
 
+
+    color1 = top2[0]
+    color2 = top2[1]
+
     # st.title(f'You are mostly a: {top3_rename[0]}! with elements of being a {top3_rename[1]} and a {top3_rename[2]}')
     st.title(f'You are mostly a: {top2_rename[0]}! with elements of being a {top2_rename[1]}')
-    with open('personality-quiz/personas0.json', 'r') as f:
-        data = json.load(f)
+    with (
+        open('personality-quiz/personas0.json', 'r') as a,
+        open('personality-quiz/color_combos0.json', 'r') as b
+        ):
+        data_A = json.load(a)
+        data_B = json.load(b)
 
         for i in range(2):
 
             color_persona = top2[i]
             name_persona = persona_map[color_persona]
-            blurb = data[color_persona]['Blurb']
+            blurb = data_A[color_persona]['Blurb']
 
-            st.header(f'Persona {i+1}: {name_persona}')
+            st.header(f'The {name_persona}:')
             st.write(f'{blurb}')
 
-            st.subheader('Strengths: ')
-            for strength in data[color_persona]['Strengths']:
+            st.subheader('*Strengths:* ')
+            for strength in data_A[color_persona]['Strengths']:
                 st.write(f'{strength}')
 
-            st.subheader('Weaknesses: ')
-            for weakness in data[color_persona]['Weaknesses']:
+            st.subheader('*Weaknesses:* ')
+            for weakness in data_A[color_persona]['Weaknesses']:
                 st.write(f'{weakness}')
 
-            st.subheader(f'Quotes from a {name_persona}')
-            for quote in data[color_persona]['Quotes']:
+            st.subheader(f'*Quotes from a {name_persona}*')
+            for quote in data_A[color_persona]['Quotes']:
                 st.write(f'{quote}')
+
+
+        st.header(f'Based off of your specific combination ({top2_rename[0]} and {top2_rename[1]})')
+        st.write(data_B[color1][color2])
 
     st.session_state['Top3'] = top3
     st.session_state['Top3_rename'] = top3_rename
@@ -205,9 +217,7 @@ with st.container(border=True):
         #     st.page_link("personality-quiz/start_page.py", label="Back to start!", use_container_width=True)
         #
         # with col2:
-        st.page_link("personality-quiz/07_relationship_page.py", label="See your game night allies and enemies!", use_container_width=True)
-
-
+        st.page_link("personality-quiz/07_relationship_page.py", label=f"See the {top2_rename[0]}'s game night allies and enemies!", use_container_width=True)
 
     # st.write('TODO: 2) Who you get along with and who you dont get along with ')
     # st.write('TODO: 3) Who are you like from the industry/ShelfSide (plug socials/YT) ')
