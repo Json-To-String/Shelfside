@@ -1,0 +1,122 @@
+{
+  "Blue":
+  {
+     "Red": "You want people to return to game night, and a little bit of competitive fun helps!" ,
+     "Clear": "You probably buy more big cool board games than your friends’ have time for!" ,
+     "Black": "As their host, you’re in the perfect position to cause some chaos, and read the room appropriately." ,
+     "White": "An exceptionally considerate host, who may request to only host cooperative game nights." ,
+     "Green": "You might find an urge to plan smaller game nights to play your more relaxing games." ,
+     "Yellow": "You seek to set the stage to tell the best jokes… all at your abode!" ,
+     "Purple": "You believe in the magic of friends to make game night a blast!" ,
+     "Natural": "When you’re hosting game night, everyone always gets to play the best designed games!" ,
+     "Parchment": "You definitely sprinkle in some role-playing games amidst the game nights!"
+  },
+  "Red":
+  {
+    "Blue": "You love competition so much that you find yourself hosting game night… and possibly turning that into a tournament of some kind." ,
+    "Clear": "You love competitive games, and have a collection that screams that." ,
+    "Black": "You believe that some chaos makes the competition even more fun!" ,
+    "White": "You’re a courteous competitor, who may want to compete over team games." ,
+    "Green": "You can have an imaginative, relaxed approach to winning." ,
+    "Yellow": "Putting your effort towards winning is cool, but dominating while cracking a joke is even better." ,
+    "Purple": "What’s the point of competition without a bunch of friends to face off against?" ,
+    "Natural": "You’re going to win at the best games ever created!" ,
+    "Parchment": "You can’t wait to tell people about the story of how you won."
+  },
+  "Clear":
+  {
+    "Blue": "You buy way more huge board games than your friends have time for!" ,
+    "Red": "Your knowledge of winning strategies is cool, but you know that your memorization of board game valuation is cooler." ,
+    "Black": "You know the true value of a lot of chaotic games." ,
+    "White": "You know the true value of a lot of cooperative games." ,
+    "Green": "You own and rarely enjoy a couple of your chill games." ,
+    "Yellow": "You can imagine so many untold jokes within your shrink-wrapped collection!" ,
+    "Purple": "You must be playing other people’s games, cause yours are still in shrink!" ,
+    "Natural": "Not to fear about your unplayed shelf, since many of them will continue to be simply the best games ever!" ,
+    "Parchment": "All of these cool games tell an amazing story… if you get around to playing them."
+  },
+  "Black":
+  {
+    "Blue": "You love the chaos, but can you act this chaotic when it’s your board game night?" ,
+    "Red": "Sometimes you use chaos to disguise your real intentions of overwhelming victory!" ,
+    "Clear": "You wonder if you’ll use a chaotic play style for your shrink-wrapped game… when you get around to playing it, of course!" ,
+    "White": "Chaos is good, but you don’t want to step on anyone’s toes." ,
+    "Green": "Causing chaos is peak gaming, but sometimes you want to play something more chill." ,
+    "Yellow": "The hilarity just instantly comes to you after causing some chaos!" ,
+    "Purple": "Chaos is great in a big crowd, with so many more minds to mess with!" ,
+    "Natural": "You love to shake up games, but you know which games are too well designed to break." ,
+    "Parchment": "You’ll sit back after an epic finish, regaling others of your chaotic plays!"
+  },
+  "White":
+  {
+    "Blue": "You relish in working together.. and coming together for game night is also a type of cooperation to enjoy!" ,
+    "Red": "You’re competitive over cooperative games, against the game or against others!" ,
+    "Clear": "It’d be great to cooperate on your unplayed coops, but it’s really up to what the group wants." ,
+    "Black": "Sometimes you just want to spice cooperation up with chaos… as long as no one gets hurt." ,
+    "Green": "You mostly like to work together, but would be totally fine with playing competitively on your own boards!" ,
+    "Yellow": "You admire cooperation, and telling jokes can make the team gel even better!" ,
+    "Purple": "You delight in cooperation, whether it be with old friends or new." ,
+    "Natural": "If you’d have it your way, you’d like to mostly play the best cooperative games." ,
+    "Parchment": "You would love to tell a story… about how the team pulled through!"
+  },
+  "Green":
+  {
+    "Blue": "You really enjoy a chill time for board games, and can find yourself inviting others over to make it happen." ,
+    "Red": "You’re easily immersed in your board. but you sometimes feel an irresistible itch to win." ,
+    "Clear": "You love peaceful games, but what isn’t as settling is your unplayed collection." ,
+    "Black": "You’re a very uncommon combination as you enjoy peaceful games but then don’t mind some chaos in between." ,
+    "White": "You’re very courteous and peace-loving." ,
+    "Yellow": "You’ll find yourself looking up from your board to crack a joke, then returning to its serenity." ,
+    "Purple": "You have a knack for getting along with anyone, but sometimes you’d rather just enjoy the game in front of you." ,
+    "Natural": "You know the best peaceful games have been the ones that have been meticulously designed and heavily vetted." ,
+    "Parchment": "You’re one of the most imaginative personalities: you’re in it for a chill, grounded time with a cool story to boot."
+  },
+  "Yellow":
+  {
+    "Blue": "It can sometimes be easier for you to be the clown when you set up game night!" ,
+    "Red": "You hope others can take a good joke, and some good competition." ,
+    "Clear": "You love to jest, but others know the best joke of all is your pile of unplayed games." ,
+    "Black": "You easily follow up your game-altering plays with well-timed jokes!" ,
+    "White": "You being hilarious is fun for everyone, as long as you don’t step on anyone’s toes." ,
+    "Green": "Sometimes you want to take a break from the wise-crackin’ to be swept up by the game’s chillness." ,
+    "Purple": "It’s easy for you to tell a joke to anyone, new or old at the table!" ,
+    "Natural": "Your class clown aspect can really shine if the game is actually good." ,
+    "Parchment": "You do the silly plays, which create a silly story, which lead to even more jokes!"
+  },
+  "Purple":
+  {
+    "Blue": "You’re THE social butterfly, often hosting game nights for your ever increasing invite list." ,
+    "Red": "Others know better to be fooled by your friendly exterior, because you can still be quite serious about outcomes." ,
+    "Clear": "You probably have a ton of friends, but not enough outlets for your pile of unplayed games!" ,
+    "Black": "You can seamlessly weave in chaos with both new and old friends at the table!" ,
+    "White": "While you’re here for what the party wants to play, team games are your jam!" ,
+    "Green": "You wouldn’t mind alternating the bombastic game sessions with a more subdued night of socializing." ,
+    "Yellow": "You’re probably the most performative one at the table, able to break the ice with anyone new!" ,
+    "Natural": "You’re mostly here for the people, but you’d really prefer it if you got to play a GOOD game while you’re at it." ,
+    "Parchment": "You don’t shut up about past stories you all made together at game night!"
+  },
+  "Natural":
+  {
+    "Blue": "You have the best games, and so when you send an invite to play, you’re all gonna play the best!" ,
+    "Red": "You really understand the games with the perfect amount of conflict." ,
+    "Clear": "You’re really serious about games… but maybe you’re not playing them as much as you’d like." ,
+    "Black": "You love something carefully designed, but it’s also ok to let loose and cause some chaos!" ,
+    "White": "Your big draw to board games is likely due to how they’re an excellent way to work together!" ,
+    "Green": "You tend to easily impress others with your knowledge of peaceful games!" ,
+    "Yellow": "You can be stern about design… but what’s the fun without a couple of jokes to blow off some steam?" ,
+    "Purple": "You’re fascinated by social interactions in games, and aren’t opposed to a bigger group to test your theories." ,
+    "Parchment": "You relish researching to find the best mechanics for the best story."
+  },
+  "Parchment":
+  {
+    "Blue": "You love a good story, which can happen more often if you host game night!" ,
+    "Red": "Offense may create some of your best stories: attack attack attack!" ,
+    "Clear": "You’re prone to daydreaming about board game stories of old, when you could just play your shrink wrapped campaigns." ,
+    "Black": "Your board game stories may be definitely more on the chaotic side…" ,
+    "White": "Creating a story together is wholesome, specifically as a team is best!" ,
+    "Green": "The story of how your personal board came along is your go-to gaming enjoyment." ,
+    "Yellow": "You love to inject narration to the story… that can also be said for the laughs." ,
+    "Purple": "Your great story can often be enhanced by more characters around the table!" ,
+    "Natural": "A fantastic story is always fun for you to weave, but the night is best if the mechanics came together with story perfectly."
+  }
+}
