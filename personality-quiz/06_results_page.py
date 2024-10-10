@@ -201,6 +201,8 @@ with st.container(border=True):
             for quote in data_A[color_persona]['Quotes']:
                 st.write(f'{quote}')
 
+            st.divider()
+
 
         st.header(f'Based off of your specific combination ({top2_rename[0]} and {top2_rename[1]})')
         st.write(data_B[color1][color2])
