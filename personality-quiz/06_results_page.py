@@ -172,10 +172,7 @@ with st.container(border=True):
 
     # st.title(f'You are mostly a: {top3_rename[0]}! with elements of being a {top3_rename[1]} and a {top3_rename[2]}')
     st.title(f'You are mostly a: {top2_rename[0]}! with elements of being a {top2_rename[1]}')
-    with (
-        open('personality-quiz/personas0.json', 'r') as a,
-        open('personality-quiz/color_combos0.json', 'r') as b
-        ):
+    with open('personality-quiz/personas0.json', 'r') as a, open('personality-quiz/color_combos0.json', 'r') as b:
         data_A = json.load(a)
         data_B = json.load(b)
 
@@ -183,6 +180,10 @@ with st.container(border=True):
 
             color_persona = top2[i]
             name_persona = persona_map[color_persona]
+
+            test_image1 = f'res/test_{color_persona.lower()}.png'
+            st.image(test_image1)
+
             blurb = data_A[color_persona]['Blurb']
 
             st.header(f'The {name_persona}:')
