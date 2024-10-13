@@ -1,0 +1,136 @@
+@font-face {
+  font-family: RealText;
+  src: url(Fonts/RealTextBold.otf);
+}
+
+/* head */
+.head {
+    background-color: rgb(43, 43, 43);
+    width: 100%;
+    text-align: center; 
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    z-index: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo and text */
+.shelfside { 
+    padding-top: 15%;
+    display: flex;
+    align-items: center; 
+    padding-left: 15%;
+}
+
+.logo{
+    margin-right: 10px; 
+    height: auto; 
+}
+
+.head h1, h2 {
+    font-family: RealText;
+    color: white;
+    position: static;
+    margin: 0;
+}
+
+.head h2 {
+    padding-top: 3%;
+    padding-bottom: 25%;
+}
+
+
+/* Button */
+.container{
+    text-align: center;
+    padding-top:400px;
+}
+
+.button-17 {
+  align-items: center;
+  appearance: none;
+  background-color: #e13c33;
+  border-radius: 50px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #ffffff; 
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-size: 25px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 32px 50px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+}
+
+.button-17:hover {
+  background: #e1554e;
+  color: #000000;
+}
+
+.button-17:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button-17:focus {
+  outline: none;
+  background: #e13c33;
+}
+
+.button-17:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button-17:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button-17:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.button-17:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+ /* mobile view */
+@media only screen and (max-width: 950px) and (max-height: 450px) {
+
+    .shelfside { 
+      padding-top: 5%;
+  }
+
+    .container{
+      text-align: center;
+      padding-top: 250px;
+  }
+
+    .head h2 {
+      padding-top: 5%;
+      padding-bottom: 5%;
+  }
+}
