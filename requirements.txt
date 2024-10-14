@@ -1,9 +1,7 @@
 numpy
 pandas
 requests
-pandas
 bs4
 theFuzz
 streamlit
-streamlit-extras
 matplotlib
