@@ -9,10 +9,11 @@ from collections import Counter
 from collections import defaultdict
 import altair as alt
 
-
 # with open('test.json', 'r') as f:
 #     data = json.load(f)
 #     print(data['Blue']['Strengths'])
+
+results_page = ut.Handler()
 
 df = defaultdict(int)
 dictList = [st.session_state[f'page{i+1}_results'] for i in range(4)]
@@ -20,101 +21,12 @@ dictList = [st.session_state[f'page{i+1}_results'] for i in range(4)]
 for d in dictList:
     for key, value in d.items():
         df[key] += value
+
 df = dict(df)
 
-persona_map = {
-    'Blue' : 'Host',
-    'Red' : 'Warhawk',
-    'Clear' : 'Collector',
-    'Black' : 'Chaos Agent',
-    'White' : 'Mediator',
-    'Green' : 'Aesthetic',
-    'Yellow' : 'Jester',
-    'Purple' : 'Befriender',
-    'Natural' : 'Purist',
-    'Parchment' : 'Storyteller'
-}
-
-hex_colors = {
-    'Blue': '#1f77b4',
-    'Red': '#d62728',
-    'Clear': '#7f7f7f',
-    'Black': '#2c2c2c',
-    'White': '#e6e6e6',
-    'Green': '#2ca02c',
-    'Yellow': '#ff7f0e',
-    'Purple': '#9467bd',
-    'Natural': '#8c564b',
-    'Parchment': '#bcbd22'
-}
-
-df_renamed = {persona_map.get(k, k): v for k, v in df.items()}
+df_renamed = {results_page.persona_map.get(k, k): v for k, v in df.items()}
 df0 = pd.DataFrame(list(df_renamed.items()), columns=['Persona', 'Score'])
 
-
-### tendencies
-# how likely this persona is to host
-hosting = {
-
-    'Blue':100,
-    'Red':20,
-    'Clear':30,
-    'Black':10,
-    'White':60,
-    'Green':70,
-    'Yellow':5,
-    'Purple':50,
-    'Natural':80,
-    'Parchment':90
-
-}
-
-# how likely this persona is to research a new game
-research_new_game = {
-
-        'Blue':90,
-        'Red':50,
-        'Clear':80,
-        'Black':60,
-        'White':50,
-        'Green':70,
-        'Yellow':40,
-        'Purple':40,
-        'Natural':100,
-        'Parchment':90
-
-}
-# how much of a sore loser this persona is
-sore_loser = {
-
-        'Blue':10,
-        'Red':99,
-        'Clear':30,
-        'Black':50,
-        'White':70,
-        'Green':20,
-        'Yellow':20,
-        'Purple':20,
-        'Natural':40,
-        'Parchment':30
-
-}
-
-# how likely this persona is to come up with a wacky, unheard of strategy
-new_strategy = {
-
-        'Blue':20,
-        'Red':60,
-        'Clear':60,
-        'Black':95,
-        'White':60,
-        'Green':60,
-        'Yellow':70,
-        'Purple':60,
-        'Natural':50,
-        'Parchment':70
-
-}
 @st.cache_data
 def get_top_two(A):
     return(sorted(A, key=A.get, reverse=True)[:2])
@@ -156,8 +68,8 @@ with st.container(border=True):
         y='Score',
         color=alt.Color(
             'Persona',
-            scale=alt.Scale(domain=list(persona_map.values()),
-            range=list(hex_colors.values())))
+            scale=alt.Scale(domain=list(results_page.persona_map.values()),
+            range=list(results_page.hex_colors.values())))
     ).properties(
         width=600,  # Customize chart width
         height=400  # Customize chart height
@@ -179,7 +91,7 @@ with st.container(border=True):
         for i in range(2):
 
             color_persona = top2[i]
-            name_persona = persona_map[color_persona]
+            name_persona = results_page.persona_map[color_persona]
 
             test_image1 = f'res/test_{color_persona.lower()}.png'
             st.image(test_image1)
@@ -215,16 +127,9 @@ with st.container(border=True):
 
 
     with st.container(border=True):
-        # col1, col2 = st.columns(2, vertical_alignment = 'center')
-        # with col1:
-        #     st.page_link("personality-quiz/start_page.py", label="Back to start!", use_container_width=True)
-        #
-        # with col2:
+
         st.page_link("personality-quiz/07_relationship_page.py", label=f"See the {top2_rename[0]}'s game night allies and enemies!", use_container_width=True)
 
     # st.write('TODO: 2) Who you get along with and who you dont get along with ')
     # st.write('TODO: 3) Who are you like from the industry/ShelfSide (plug socials/YT) ')
     # st.write('TODO: 4) Based off of your top two personas, ShelfSide recommends these games + share with your friends')
-
-    # for key in st.session_state:
-    #     print(key)

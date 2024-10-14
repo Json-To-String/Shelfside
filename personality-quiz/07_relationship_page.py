@@ -2,14 +2,12 @@ import streamlit as st
 import json
 import utils.utils as ut
 
-
 top2 = st.session_state['Top2']
 top2_rename = st.session_state['Top2_rename']
 
 color_persona = top2[0]
 name_persona = top2_rename[0]
 page_handler = ut.Handler()
-
 
 with st.container(border=True):
 

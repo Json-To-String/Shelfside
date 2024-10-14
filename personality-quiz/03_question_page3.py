@@ -7,8 +7,6 @@ import utils.utils as ut
 # Question page 3 #
 ##################
 
-# st.title('ShelfSide - The 10 Board Game Personalities Test')
-# st.header('Let’s throw your friends in the mix and see how you answer!')
 st.title('Let’s throw your friends in the mix and see how you answer!')
 
 progress_text = "Page 3/5"
@@ -27,7 +25,6 @@ with st.form('page_form'):
     submitted = st.form_submit_button('Submit', use_container_width=True, type='primary')
     if submitted:
         page_handler.store_answers(page_num)
-        st.success('Answers stored, click the button below to move on!')
         st.switch_page('personality-quiz/04_question_page4.py')
 
         # with st.container(border=True):
@@ -37,7 +34,3 @@ with st.form('page_form'):
         #
         #     with col2:
         #         st.page_link("personality-quiz/04_question_page4.py", label="Next Page!", use_container_width=True)
-
-#
-# st.write('for testing: ')
-# st.session_state
