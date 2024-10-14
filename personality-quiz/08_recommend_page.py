@@ -19,21 +19,26 @@ persona_name2 = top2_rename[1]
 
 with st.container(border=True):
 
-    # st.metric('Your top two personas: ', top2[0], top2[1])
     st.title(f'Based off of your specific combination ({top2_rename[0]} and {top2_rename[1]})')
-    st.title(f'Shelfside thinks: ')
 
     with open('personality-quiz/personas0.json', 'r') as a:
 
         data_A = json.load(a)
 
-        st.header(f'Your board game shelf is most likely to include: ')
+        st.header(f'A BGG Top 100 Game we think you own: ')
         st.write(data_A[color_persona1]["Collection"]["Most Likely to Include"])
 
-        st.header(f'Other games a {top2_rename[0]} + {top2_rename[1]} might like: ')
+        st.header(f'Other BGG Top 100 games a {top2_rename[0]} + {top2_rename[1]} would enjoy: ')
+
         games_1 = data_A[color_persona1]["Collection"]["Other Games"][:3]
         games_2 = data_A[color_persona2]["Collection"]["Other Games"][:2]
+
         for x in games_1:
             st.write(x)
         for y in games_2:
             st.write(y)
+
+with st.container(border=True):
+
+    st.write('Coming soon: results download button')
+    st.page_link("personality-quiz/00_start_page.py", label="Retake the Test!", use_container_width=True)

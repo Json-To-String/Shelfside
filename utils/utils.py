@@ -21,6 +21,19 @@ class Handler():
             'Parchment' : 'Storyteller'
         }
 
+        self.hex_colors = {
+            'Blue': '#1f77b4',
+            'Red': '#d62728',
+            'Clear': '#7f7f7f',
+            'Black': '#2c2c2c',
+            'White': '#e6e6e6',
+            'Green': '#2ca02c',
+            'Yellow': '#ff7f0e',
+            'Purple': '#9467bd',
+            'Natural': '#8c564b',
+            'Parchment': '#bcbd22'
+        }
+        
         self.question_options = [
                                 'Highly Disagree',
                                 'Disagree',
