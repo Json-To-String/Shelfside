@@ -9,7 +9,7 @@ import utils.utils as ut
 
 # st.title('ShelfSide - The 10 Board Game Personalities Test')
 # st.header('Almost there! We’ll end with 5 questions solely about hanging out with your buddies on game night.')
-st.title('Almost there! We’ll end with 5 questions solely about hanging out with your buddies on game night.')
+st.title('Almost there! We’ll end with 5 questions solely about hanging out with your friends on game night.')
 
 progress_text = "Page 5/5"
 my_bar = st.progress(0, text=progress_text)
