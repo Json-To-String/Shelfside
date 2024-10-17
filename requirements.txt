@@ -4,4 +4,5 @@ requests
 bs4
 theFuzz
 streamlit
+streamlit-extras
 matplotlib
