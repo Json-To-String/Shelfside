@@ -22,13 +22,13 @@ with st.container(border=True):
     st.title('ShelfSide')
     st.header('The 10 Board Game Personalities Test')
     st.subheader('Find out your enemies and allies during game night!')
-    st.text('''
+    st.subheader('''
         -Which board game designer/influencer are you most like?
         -How much of a sore loser are you?
         -Are you likely to come up with a wacky new strategy?
             ''')
-    st.text('Note: Your answers may vary based off of which game or game group you’re playing with, try to average out your responses!')
-    st.text('< Coming Soon: Art and Game Recommendations >')
+    st.subheader('Note: Your answers may vary based off of which game or game group you’re playing with, try to average out your responses!')
+    st.subheader('< Coming Soon: Art and Game Recommendations >')
 with st.form('page_form'):
 
     # page_handler.display_questions(page_num)
