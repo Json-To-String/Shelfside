@@ -23,11 +23,11 @@ with st.container(border=True):
     st.header('The 10 Board Game Personalities Test')
     st.subheader('Find out your enemies and allies during game night!')
     st.text('''
-        -Which board game \ndesigner/influencer are you most like?
-        -How much of a \nsore loser are you?
-        -Are you likely to come \nup with a wacky new strategy?
+        -Which board game designer/influencer are you most like?
+        -How much of a sore loser are you?
+        -Are you likely to come up with a wacky new strategy?
             ''')
-    st.text('Note: Your answers may vary \nbased off of which game or game group you’re playing with, try to average out your responses!')
+    st.text('Note: Your answers may vary based off of which game or game group you’re playing with, try to average out your responses!')
     st.text('< Coming Soon: Art and Game Recommendations >')
 
     st.page_link("personality-quiz/01_question_page1.py", label="Start!")
