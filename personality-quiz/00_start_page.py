@@ -29,8 +29,16 @@ with st.container(border=True):
             ''')
     st.text('Note: Your answers may vary based off of which game or game group you’re playing with, try to average out your responses!')
     st.text('< Coming Soon: Art and Game Recommendations >')
+with st.form('page_form'):
 
-    st.page_link("personality-quiz/01_question_page1.py", label="Start!")
+    # page_handler.display_questions(page_num)
+
+    # Every form must have a submit button.
+    submitted = st.form_submit_button('Start!', use_container_width=True, type='primary')
+    if submitted:
+        # page_handler.store_answers(page_num)
+        st.switch_page('personality-quiz/01_question_page1.py')
+    # st.page_link("personality-quiz/01_question_page1.py", label="Start!")
 
 # components.html(
 #     """
