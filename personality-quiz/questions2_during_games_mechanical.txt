@@ -6,7 +6,7 @@ When the game is more complicated than what I’m used to, I find myself feeling
 ( Blue 2, Red -3, Clear 0, Black -2, White 2, Green -1, Yellow -1, Purple 3, Natural -2, Parchment -1)
 Winning is everything, no matter what.
 ( Blue -2.5, Red 3, Clear -2, Black -2.5, White 0, Green -2, Yellow -3, Purple -2, Natural -2.5, Parchment -1.5)
-I love beating my high score from a previous game (during games mechanical)
+I love beating my high score from a previous game
 ( Blue 0, Red 3, Clear 1, Black -3, White 1, Green 2.5, Yellow -3, Purple 0, Natural 2, Parchment 1)
 How likely are you to read the rules while someone is explaining?
 ( Blue -3, Red 2, Clear -1, Black 1.5, White -3, Green 1.5, Yellow -2, Purple -3, Natural 3, Parchment 2)
