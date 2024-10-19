@@ -21,12 +21,15 @@ with st.container(border=True):
     st.image('res/shelfside_logo.png', width=100)
     st.title('ShelfSide')
     st.header('The 10 Board Game Personalities Test')
-    st.subheader('Find out your enemies and allies during game night!')
-    st.subheader('''
-        -Which board game designer/influencer are you most like?
-        -How much of a sore loser are you?
-        -Are you likely to come up with a wacky new strategy?
-            ''')
+    st.subheader('- Find out your enemies and allies during game night!')
+    # st.subheader('''
+    #     -Which board game designer/influencer are you most like?
+    #     -How much of a sore loser are you?
+    #     -Are you likely to come up with a wacky new strategy?
+    #         ''')
+    st.subheader('- Which board game designer/influencer are you most like?')
+    st.subheader('- How much of a sore loser are you?')
+    st.subheader('- Are you likely to come up with a wacky new strategy?')
     st.subheader('Note: Your answers may vary based off of which game or game group you’re playing with, try to average out your responses!')
     st.subheader('< Coming Soon: Art and Game Recommendations >')
 with st.form('page_form'):
