@@ -26,16 +26,3 @@ with st.form('page_form'):
     if submitted:
         page_handler.store_answers(page_num)
         st.switch_page('personality-quiz/03_question_page3.py')
-        #
-        # with st.container(border=True):
-        #     col1, col2 = st.columns(2, vertical_alignment = 'center')
-        #     with col1:
-        #         st.page_link("personality-quiz/01_question_page1.py", label="Prev Page!", use_container_width=True)
-        #
-        #     with col2:
-        #         st.page_link("personality-quiz/03_question_page3.py", label="Next Page!", use_container_width=True)
-
-
-
-# st.write('for testing: ')
-# st.session_state

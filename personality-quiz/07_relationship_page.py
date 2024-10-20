@@ -41,31 +41,16 @@ with st.container(border=True):
             name = page_handler.persona_map[color]
             st.subheader(f"The {name}")
             st.write(f"“{quote}“")
-    #     for i in range(3):
-    #
-    #         color_persona = top3[i]
-    #         name_persona = persona_map[color_persona]
-    #         blurb = data[color_persona]['Blurb']
-    #
-    #         st.header(f'Persona {i+1}: {name_persona}')
-    #         st.write(f'{blurb}')
-    #
-    #         st.subheader('Strengths: ')
-    #         for strength in data[color_persona]['Strengths']:
-    #             st.write(f'{strength}')
-    #
-    #         st.subheader('Weaknesses: ')
-    #         for weakness in data[color_persona]['Weaknesses']:
-    #             st.write(f'{weakness}')
-    #
-    #         st.subheader(f'Quotes from a {name_persona}')
-    #         for quote in data[color_persona]['Quotes']:
-    #             st.write(f'{quote}')
 
-    with st.container(border=True):
-        # col1, col2 = st.columns(2, vertical_alignment = 'center')
-        # with col1:
-        #     st.page_link("personality-quiz/start_page.py", label="Back to start!", use_container_width=True)
-        #
-        # with col2:
-        st.page_link("personality-quiz/08_recommend_page.py", label=f"Find out what games a {top2_rename[0]} might like!", use_container_width=True)
+
+    # with st.container(border=True):
+
+    #     st.page_link("personality-quiz/08_recommend_page.py", label=f"Find out what games a {top2_rename[0]} might like!", use_container_width=True)
+
+    with st.form('page_form'):
+
+        # Every form must have a submit button.
+        submitted = st.form_submit_button(f"Find out what games a {top2_rename[0]} might like!",
+                                         use_container_width=True, type='primary')
+        if submitted:
+            st.switch_page('personality-quiz/08_recommend_page.py')

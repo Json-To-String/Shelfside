@@ -26,11 +26,3 @@ with st.form('page_form'):
     if submitted:
         page_handler.store_answers(page_num)
         st.switch_page('personality-quiz/06_results_page.py')
-
-        # with st.container(border=True):
-        #     col1, col2 = st.columns(2, vertical_alignment = 'center')
-        #     with col1:
-        #         st.page_link("personality-quiz/04_question_page4.py", label="Prev Page!", use_container_width=True)
-        #
-        #     with col2:
-        #         st.page_link("personality-quiz/06_results_page.py", label="Calculate My Results!", use_container_width=True)

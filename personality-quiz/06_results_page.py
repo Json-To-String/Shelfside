@@ -126,10 +126,14 @@ with st.container(border=True):
     st.session_state['Top2_rename'] = top2_rename
 
 
-    with st.container(border=True):
+    # with st.container(border=True):
 
-        st.page_link("personality-quiz/07_relationship_page.py", label=f"See the {top2_rename[0]}'s game night allies and enemies!", use_container_width=True)
+    #     st.page_link("personality-quiz/07_relationship_page.py", label=f"See the {top2_rename[0]}'s game night allies and enemies!", use_container_width=True)
 
-    # st.write('TODO: 2) Who you get along with and who you dont get along with ')
-    # st.write('TODO: 3) Who are you like from the industry/ShelfSide (plug socials/YT) ')
-    # st.write('TODO: 4) Based off of your top two personas, ShelfSide recommends these games + share with your friends')
+    with st.form('page_form'):
+
+        # Every form must have a submit button.
+        submitted = st.form_submit_button(f"See the {top2_rename[0]}'s game night allies and enemies!",
+                                         use_container_width=True, type='primary')
+        if submitted:
+            st.switch_page('personality-quiz/07_relationship_page.py')
