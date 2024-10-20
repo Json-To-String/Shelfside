@@ -23,5 +23,5 @@ Personality Quiz organization:
         Download ZIP
     </button>
 </a>
-[!Download](https://img.shields.io/badge/Download-Repo-blue)](https://github.com/Json-To-String/Shelfside/archive/refs/heads/main.zip)
-[!Download](https://img.shields.io/badge/Download-Repo-blue)](https://github.com/your-username/your-repo/archive/refs/heads/main.zip)
+[![GitHub release](https://img.shields.io/github/v/release/Json-To-String/Shelfside)](https://github.com/Json-To-String/Shelfside/releases/latest/download)
+
