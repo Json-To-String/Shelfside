@@ -18,4 +18,5 @@ Personality Quiz organization:
 ├── utils/
 │   └── utils.py
 ```
-![image](https://github.com/user-attachments/assets/a107893f-d45a-40fe-89ca-c5f752cab4db)
+
+![shelfside_qr_code](https://github.com/user-attachments/assets/dd6c16c4-95a4-4ac9-ad5c-4c5a6d4e777f)
