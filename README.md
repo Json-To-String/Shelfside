@@ -18,3 +18,4 @@ Personality Quiz organization:
 ├── utils/
 │   └── utils.py
 ```
+![image](https://github.com/user-attachments/assets/a107893f-d45a-40fe-89ca-c5f752cab4db)
