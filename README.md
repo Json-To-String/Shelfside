@@ -20,3 +20,4 @@ Personality Quiz organization:
 ```
 
 ![shelfside_qr_code](https://github.com/user-attachments/assets/dd6c16c4-95a4-4ac9-ad5c-4c5a6d4e777f)
+<img src="[shelfside_qr_code](https://github.com/user-attachments/assets/dd6c16c4-95a4-4ac9-ad5c-4c5a6d4e777f)" width="500" height="600">
