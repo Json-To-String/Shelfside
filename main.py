@@ -47,3 +47,5 @@ st.markdown('''
 }
 </style>
 ''', unsafe_allow_html=True)
+
+st.set_option("client.showSidebarNavigation", False)
