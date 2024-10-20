@@ -18,3 +18,8 @@ Personality Quiz organization:
 ├── utils/
 │   └── utils.py
 ```
+<a href="https://github.com/Json-To-String/Shelfside/archive/refs/heads/main.zip" download>
+    <button style="padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">
+        Download ZIP
+    </button>
+</a>
