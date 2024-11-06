@@ -296,4 +296,4 @@ with st.container(border=True):
 with st.container(border=True):
 
     st.write('Coming soon: results download button')
-    st.page_link("personality-quiz/00_start_page.py", label="Retake the Test!", use_container_width=True)
+    st.page_link("pages/00_start_page.py", label="Retake the Test!", use_container_width=True)

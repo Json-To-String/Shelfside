@@ -15,7 +15,7 @@ my_bar.progress(100, text=progress_text)
 
 page_num = 5
 page_handler = ut.Handler()
-page_handler.get_questions('personality-quiz/questions5_during_games_social.txt')
+page_handler.get_questions('pages/questions5_during_games_social.txt')
 
 with st.form('page_form'):
 
@@ -25,4 +25,4 @@ with st.form('page_form'):
     submitted = st.form_submit_button('Calculate My Results!', use_container_width=True, type='primary')
     if submitted:
         page_handler.store_answers(page_num)
-        st.switch_page('personality-quiz/06_results_page.py')
+        st.switch_page('pages/06_results_page.py')

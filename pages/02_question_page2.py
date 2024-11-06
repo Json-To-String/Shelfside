@@ -4,18 +4,18 @@ import numpy as np
 import utils.utils as ut
 
 ##################
-# Question page 3 #
+# Question page 2 #
 ##################
 
-st.title('Let’s throw your friends in the mix and see how you answer!')
+st.title('Now it’s time for game night! What is your mental approach?')
 
-progress_text = "Page 3/5"
+progress_text = "Page 2/5"
 my_bar = st.progress(0, text=progress_text)
-my_bar.progress(40, text=progress_text)
+my_bar.progress(20, text=progress_text)
 
-page_num = 3
+page_num = 2
 page_handler = ut.Handler()
-page_handler.get_questions('personality-quiz/questions3_mechanical_sociala.txt')
+page_handler.get_questions('pages/questions2_during_games_mechanical.txt')
 
 with st.form('page_form'):
 
@@ -25,4 +25,4 @@ with st.form('page_form'):
     submitted = st.form_submit_button('Submit', use_container_width=True, type='primary')
     if submitted:
         page_handler.store_answers(page_num)
-        st.switch_page('personality-quiz/04_question_page4.py')
+        st.switch_page('pages/03_question_page3.py')

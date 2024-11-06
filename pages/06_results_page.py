@@ -136,4 +136,4 @@ with st.container(border=True):
         submitted = st.form_submit_button(f"See the {top2_rename[0]}'s game night allies and enemies!",
                                          use_container_width=True, type='primary')
         if submitted:
-            st.switch_page('personality-quiz/07_relationship_page.py')
+            st.switch_page('pages/07_relationship_page.py')
