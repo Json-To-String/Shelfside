@@ -1,20 +1,18 @@
-I rarely second guess myself when making ordinary moves
-( Blue -1, Red 0, Clear 0, Black 1, White -1.5, Green 0, Yellow -1, Purple 0.5, Natural -2, Parchment 0.5)
-I feel the most comfortable with a long term strategy
+I rarely second guess myself when making ordinary moves.
+( Blue -1, Red -2, Clear 0, Black 1, White -1, Green 0, Yellow -1, Purple 0.5, Natural -2, Parchment 0.5)
+I feel most comfortable with a long term strategy.
 ( Blue 0, Red 1, Clear 0, Black -1, White 0, Green 2, Yellow -1, Purple -1, Natural 2, Parchment 1.5)
-When the game is too complicated, I quickly feel overwhelmed
+When the game is more complicated than what I’m used to, I find myself feeling overwhelmed.
 ( Blue 2, Red -3, Clear 0, Black -2, White 1.5, Green -1, Yellow -1, Purple 3, Natural -2, Parchment -1)
-I always play to win
+I always play to win.
 ( Blue -2.5, Red 3, Clear -2, Black -2.5, White 0, Green -2, Yellow -3, Purple -2, Natural -2.5, Parchment -1.5)
-I enjoy beating my high score from a previous game
-( Blue 0, Red -0.5, Clear 1, Black -3, White 1, Green 2.5, Yellow -3, Purple 0, Natural 2, Parchment 1)
-How likely are you to read the rules while someone is explaining?
-( Blue -3, Red 1.5, Clear -1, Black 1.5, White -2.5, Green 1.5, Yellow -2, Purple -3, Natural 3, Parchment 2)
-I can adapt to a lot of information at once mid-game
-( Blue 0, Red 2, Clear 0, Black 2, White 0, Green 0, Yellow 1.5, Purple -2, Natural 2, Parchment 1)
-When doing certain phases of the game, they must be done from start to finish every time
-( Blue -1, Red 2.5, Clear 0, Black 1, White 0, Green 0, Yellow -2, Purple -3, Natural 3, Parchment 0)
-If we misinterpret a crucial rule, the game doesn’t count
-( Blue -2, Red -2, Clear 1.5, Black -2, White -1.5, Green 1, Yellow -3, Purple -3, Natural 3, Parchment -1)
-Games often don’t go according to my plan - and that’s okay
+I love beating my high score from a previous game.
+( Blue 0, Red 0, Clear 0, Black -3, White 1, Green 2.5, Yellow -3, Purple 0, Natural 2, Parchment 1)
+I am likely to read the rulebook when someone else is explaining the rules.
+( Blue -3, Red 2, Clear -1, Black 1.5, White -2, Green 1.5, Yellow -2, Purple -3, Natural 3, Parchment 2)
+I can adapt to a lot of information at once mid-game.
+( Blue 0, Red 3, Clear 0, Black 1, White -1, Green 0, Yellow 1.5, Purple -2, Natural 2, Parchment 1)
+If we misinterpret a crucial rule, the game doesn’t count.
+( Blue -2, Red -2, Clear 1.5, Black -2, White 2, Green 1, Yellow -3, Purple -3, Natural 3, Parchment -1)
+Games often don’t go according to my plan - and that’s okay.
 ( Blue 1.5, Red -2, Clear 0, Black 2, White 0, Green -2, Yellow 2, Purple 1, Natural -2, Parchment 1)

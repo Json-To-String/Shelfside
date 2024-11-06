@@ -8,6 +8,32 @@ class Handler():
         self.personas = ['Blue', 'Red', 'Clear', 'Black', 'White', 'Green',
                         'Yellow', 'Purple', 'Natural', 'Parchment']
 
+        self.persona_map = {
+            'Blue' : 'Host',
+            'Red' : 'Warhawk',
+            'Clear' : 'Collector',
+            'Black' : 'Chaos Agent',
+            'White' : 'Mediator',
+            'Green' : 'Aesthetic',
+            'Yellow' : 'Jester',
+            'Purple' : 'Befriender',
+            'Natural' : 'Purist',
+            'Parchment' : 'Storyteller'
+        }
+
+        self.hex_colors = {
+            'Blue': '#1f77b4',
+            'Red': '#d62728',
+            'Clear': '#7f7f7f',
+            'Black': '#2c2c2c',
+            'White': '#e6e6e6',
+            'Green': '#2ca02c',
+            'Yellow': '#ff7f0e',
+            'Purple': '#9467bd',
+            'Natural': '#8c564b',
+            'Parchment': '#bcbd22'
+        }
+        
         self.question_options = [
                                 'Highly Disagree',
                                 'Disagree',
@@ -115,7 +141,8 @@ class Handler():
                                     self.question_options,
                                     horizontal = True,
                                     key = quest_key,
-                                    index = len(self.question_options) // 2)
+                                    # index = len(self.question_options) // 2)
+                                    index = None)
 
                 st.divider()
 
@@ -144,6 +171,15 @@ class Handler():
                     self.page_results[persona] += weight[persona] * self.question_mapping[answer]
 
         st.session_state[f'page{page_num}_results'] = self.page_results
+
+
+# class Post_Quiz():
+#
+#     def __init__(self):
+#
+#         self.top2 = {}
+#
+
 
 # class TestClass():
 #     def __init__(self):

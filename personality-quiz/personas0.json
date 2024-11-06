@@ -1,0 +1,443 @@
+{
+  "Blue": {
+    "Nicknames": "The Host",
+    "Blurb": "Gregarious planner who spreads their gaming enthusiasm to all.",
+    "Art Ideas": "Maybe around a table, kindly smiling, holding a snack in one hand, rules in the other.",
+    "Attributes": ["Extroverted", "Planner", "Type A", "Mediator", "Teacher", "Patient"],
+    "Strengths": [
+      "Different personalities seem to get along with each other around them",
+      "Great at planning and hosting events",
+      "Finds and makes new friends easily"
+    ],
+    "Weaknesses": [
+      "Seems flip-floppy on board game tastes in trying to agree with the group",
+      "Doesn’t take competition too seriously sometimes",
+      "Will invite over sometimes too many people or those you don’t like"
+    ],
+    "Quotes": [
+      "Let’s play at my place this weekend!",
+      "I found a great new board game snack!",
+      "Oh, I know the perfect board game for you!"
+    ],
+    "Likeliness to Host Game Night": 100,
+    "How Likely to Research a New Game": 90,
+    "How Likely to be a Sore Loser": 10,
+    "How Likely to Come Up with a Wacky, Unheard of Strategy": 20,
+    "Collection": {
+      "Most Likely to Include": "Dune Imperium",
+      "Other Games": [
+        "Dune Uprising (Patched version of Dune Imperium!) ",
+        "Twilight Imperium: Fourth Edition (Big space opera game for 3-6 that appeals to Ameritrash and Euro players alike)",
+        "Brass Birmingham (Feels good 2-4 player Euro that is BGG #1!)",
+        "Spirit Island (Tons of cooperation without quarterbacking) ",
+        "Gloomhaven/Frosthaven  (The Euro Dungeon-crawler to host many many game nights as you complete the campaign!)",
+        "Gloomhaven: Jaws of the Lion (A more accessible version of Gloomhaven that even non-board gamers can easily start)"
+      ]
+    },
+    "Fond Of": [
+      "Natural: You always have so many new games to bring over!",
+      "Purple: You’re like social lubricant!"
+    ],
+    "May Have Trouble Understanding": [
+      "Red: Why are you so aggro mate, take it easy!",
+      "Black: Why are you making this even harder for everyone?!"
+    ]
+  },
+  "Red": {
+    "Nicknames": "War Hawk, The Aggressor",
+    "Blurb": "Dialed-in competitor who energizes everyone with any challenge.",
+    "Art Ideas": "Looks like a hawk, screeching or yelling. Aggressive stance, holding cards or dice. Slightly angry.",
+    "Attributes": ["Loud", "Outspoken", "High risk, high reward mentality", "Rager", "Leaver"],
+    "Strengths": [
+      "Making everything a competition can make things more lively",
+      "Somehow can come up with a winning strategy at the last moment",
+      "Very exciting teammate (if you’re winning)"
+    ],
+    "Weaknesses": [
+      "Uncompromising teammate (when you’re losing)",
+      "Can be too loud and blunt to a fault with a big ego",
+      "Might take a little bit too long on their turns if their offense falters",
+      "Can break games in always wanting to impatiently attack"
+    ],
+    "Quotes": [
+      "The best defense is a good offense.",
+      "So when’s the part I get to kill stuff?",
+      "You should have seen their face when I knocked them out!"
+    ],
+    "Likeliness to Host Game Night": 20,
+    "How Likely to Research a New Game": 50,
+    "How Likely to be a Sore Loser": 99,
+    "How Likely to Come Up with a Wacky, Unheard of Strategy": 60,
+    "Collection": {
+      "Most Likely to Include": "Blood Rage (Quickly draft your hand for cool monsters and aggressive quests, then pillage other viking clans before the world explodes!)",
+      "Other Games": [
+        "Twilight Imperium: Fourth Edition (Area control that encourages attacking but isn’t so mean your friends will quit) ",
+        "Root (Area control to secure the forest in your best asymmetrical way!)",
+        "Food Chain Magnate (A bird’s eye view of Middle Earth lets you move the armies or good or evil around meticulously)",
+        "War of the Ring: Second Edition (Be the most ruthless fast food chain owner, slashing prices and opening restaurants in new locations)",
+        "Star Wars: Rebellion (Mind game the empire, or wipe out the rebel scum in this intense 1v1 game of cat and mouse)",
+        "Eclipse: Second Dawn for the Galaxy (Upgrade your ships in a rock paper scissors against your opponent, then secure areas across the galaxy!) "
+      ]
+    },
+    "Fond Of": [
+      "Natural: They understand the game as much as me!",
+      "Parchment: They share my same urge to just attack!!"
+    ],
+    "May Have Trouble Understanding": [
+      "Blue/White: Why are they so concerned about hurting someone’s feelings, it’s just a game.",
+      "Green: They won’t let me do anything fun, including playing fun games!"
+    ]
+  },
+  "Clear": {
+    "Nicknames": "Shrinkwrap Collector, Collector",
+    "Blurb": "Always looking for new games, when you can just turn around and look at your bookshelf.",
+    "Art Ideas": "Studious, carefully poring over miniatures or a game in shrink wrap. Calm face. Maybe on laptop.",
+    "Attributes": ["Wealthy", "Quiet", "Studious", "Researcher", "Stereotypically nerdy"],
+    "Strengths": [
+      "Somehow knows the value of every board game, new or used",
+      "Is very respectful with others’ games",
+      "Somehow knows half of the rules of random games they’ve never played"
+    ],
+    "Weaknesses": [
+      "A know it all about games but sometimes haven’t played them",
+      "Can prefer resale value over gameplay",
+      "Spends too much time at work on Kickstarter/Gamefound"
+    ],
+    "Quotes": [
+      "Oh, I just got a shipment notification.",
+      "Ehh, don’t worry, I’ll just resell it on eBay!",
+      "My shelf of shame weirdly keeps getting bigger."
+    ],
+    "Likeliness to Host Game Night": 30,
+    "How Likely to Research a New Game": 80,
+    "How Likely to be a Sore Loser": 30,
+    "How Likely to Come Up with a Wacky, Unheard of Strategy": 60,
+    "Collection": {
+      "Most Likely to Include": "Tainted Grail: The Fall of Avalon",
+      "Other Games": [
+        "Kingdom Death: Monster (Do you have all of the exclusive minis yet?)",
+        "War of the Ring: Second Edition (There are an insane amount of expansions, and you can play it solo)",
+        "Eclipse 2nd Dawn for the Galaxy (Will always be relevant because of hardcore LoTR fans)",
+        "Spirit Island (No kidding, the deluxe kickstarter version ships are sick)",
+        "Nemesis (Alien minis, in space!)"
+      ]
+    },
+    "Fond Of": [
+      "Natural: Your knowledge of board games may eclipse mine, and I respect that.",
+      "Green: You’re strangely very considerate of my game."
+    ],
+    "May Have Trouble Understanding": [
+      "Purple: You’ll eventually understand the epicness of a campaign game.",
+      "Black: I finally get to play this game, and this is what you do?"
+    ]
+  },
+  "Black": {
+    "Nicknames": "The Chaotic, The Chaos Agent",
+    "Blurb": "An agent of chaos who would like to play their style… for fun of course!",
+    "Art Ideas": "Mischievous grin, has some sneaky pose. Maybe rubbing hands together in a scheming way, or celebrating manically.",
+    "Attributes": ["Fixates over random things", "Joker-esque"],
+    "Strengths": [
+      "Playing a game with them is never predictable",
+      "Will find an insanely clever play no one has ever thought of",
+      "Always engaged, even if losing"
+    ],
+    "Weaknesses": [
+      "Playing a game with them is never predictable!",
+      "Other people sometimes just don’t “get” them",
+      "Can issue ultimatums if can’t do their “cool play”",
+      "Wanting to pursue a weird play can sometimes break the game"
+    ],
+    "Quotes": [
+      "The rules don’t explicitly say I can’t do that!",
+      "What do you mean it’s against the spirit of the game?",
+      "BAHHAHAHAHAHA"
+    ],
+    "Likeliness to Host Game Night": 10,
+    "How Likely to Research a New Game": 60,
+    "How Likely to be a Sore Loser": 50,
+    "How Likely to Come Up with a Wacky, Unheard of Strategy": 95,
+    "Collection": {
+      "Most Likely to Include": "Root",
+      "Other Games": [
+        "Nemesis (Are you gonna screw over your crewmates? It all depends on the agendas, cards, and noise made!)",
+        "Mansions of Madness: Second Edition (Will you go insane facing the Eldritch Horrors through app driven gameplay, leading to a primal urge to light the world on fire?)",
+        "Twilight Imperium: Fourth Edition (The chaotic plays are through the roof, and yet you can’t break the game in a way that others will quit on you)"
+      ]
+    },
+    "Fond Of": [
+      "Red: You really understand what it means to do SOMETHING in a game.",
+      "Yellow: It’s so easy to riff off of you!"
+    ],
+    "May Have Trouble Understanding": [
+      "Blue: Awww, why can’t I do that?",
+      "Natural: Why do ya gotta be a hardass about design?",
+      "Green: Hey, ever think about doing a fun play?"
+    ]
+  },
+  "White": {
+    "Nicknames": "The Mediator, The Angel, The Innocent, The Support",
+    "Blurb": "Caring, thoughtful supporter of others, who tries to make every game cooperative.",
+    "Art Ideas": "White robes, maybe a halo around their head. Protecting people behind them, or holding an olive branch in a collaborative stance. Calm face, big eyes.",
+    "Attributes": ["Introverted", "Thoughtful", "Empathetic", "Not competitive", "Selfless"],
+    "Strengths": [
+      "Always makes sure others are feeling comfortable and safe",
+      "Very likely to keep playing, even when losing, to make sure others are having fun",
+      "Great teammate that never talks over others"
+    ],
+    "Weaknesses": [
+      "Doesn’t take the initiative play, to a fault",
+      "Takes offense on some of the rather harmless plays",
+      "Won’t shut up about saying sorry"
+    ],
+    "Quotes": [
+      "We can do it if we all work together!",
+      "Pay attention, he’s talking!",
+      "That was so mean!"
+    ],
+    "Likeliness to Host Game Night": 60,
+    "How Likely to Research a New Game": 50,
+    "How Likely to be a Sore Loser": 70,
+    "How Likely to Come Up with a Wacky, Unheard of Strategy": 60,
+    "Collection": {
+      "Most Likely to Include": "Gloomhaven: Jaws of the Lion (An extremely accessible version of  Gloomhaven with many intuitive classes). ",
+      "Other Games": [
+        "Sky Team (Work with 1 buddy closely to make sure you land a plane!)",
+        "The Crew: The Quest for Planet Nine (Trick-take without talking, to do simple space missions together!)",
+        "Oathsworn: Into the Deepwood (A serious boss battler as you go through a campaign with your friends!)",
+        "Frosthaven  (Upgrade your outpost and explore all the asymmetric classes together!)",
+        "Pandemic: Season 1 (Save the world from diseases as 1 medical group, and the world will change depending on how well you do!)"
+      ]
+    },
+    "Fond Of": [
+      "Green: You’re so polite about everything!",
+      "Blue: I, and everyone, are really thankful for bringing this all together!"
+    ],
+    "May Have Trouble Understanding": [
+      "Black: I don’t understand why that’s funny.",
+      "Red: Why even play the game if you’re gonna be so mean?",
+      "Parchment: But you don’t have to attack to make a cool story!"
+    ]
+  },
+  "Green": {
+    "Nicknames": "The Aesthetic",
+    "Blurb": "Immersed relaxer who just wants to take in the sights and sounds of this board game’s world.",
+    "Art Ideas": "Very concentrated into own board that has nature stuff on it.",
+    "Attributes": ["Solo/2 player gamer", "Introverted", "Can make up their own dream world", "Head in the clouds"],
+    "Strengths": [
+      "Seemingly has every single popular nature game",
+      "Doesn’t mind preparing for game night by running through a game by themselves",
+      "Doesn’t really complain during games",
+      "Easily immersed in theme with a strong imagination"
+    ],
+    "Weaknesses": [
+      "Easily makes assumptions on the rules based off of theme",
+      "Can be a quiet, misunderstood teammate",
+      "Non-confrontational nature makes some multiplayer games difficult to play"
+    ],
+    "Quotes": [
+      "Awww, these are so cute together!",
+      "Well I thought it worked like that because that’s nature!",
+      "Oh I’m not sure who’s winning, but my board is so good this game!"
+    ],
+    "Likeliness to Host Game Night": 70,
+    "How Likely to Research a New Game": 70,
+    "How Likely to be a Sore Loser": 20,
+    "How Likely to Come Up with a Wacky, Unheard of Strategy": 60,
+    "Collection": {
+      "Most Likely to Include": "Wingspan",
+      "Other Games": [
+        "Everdell (Manage lots of critter personalities via cards, while also doing some worker placement between seasons)",
+        "Lost Ruins of Arnak (explore an island as a researcher, while also moving up a research track! Deckbuilding and worker placement)",
+        "Ark Nova (Make a cool zoo!)",
+        "Caverna: The Cave Farmers (Dwarven livin’, including farming, raising livestock, and building your cave)",
+        "Cascadia (A streamlined puzzling together of habitats and wildlife!)",
+        "Castles of Burgundy (Quietly expand your castle estate by playing dice and grabbing hexes!)",
+        "Mage Knight (Journey across the land as a hero laden with abilities, spells, and more!)"
+      ]
+    },
+    "Fond Of": [
+      "Natural: I also have those games!",
+      "Parchment: Agreed, that is totally what these meeples would do."
+    ],
+    "May Have Trouble Understanding": [
+      "Red: Why can’t you just leave my farm in peace?",
+      "Black: This is not how woodland critters would act!",
+      "Purple: Sometimes its good to just take it easy!"
+    ]
+  },
+  "Yellow": {
+    "Nicknames": "The Jester, The Clown",
+    "Blurb": "Effortlessly hilarious whether it's their turn or not.",
+    "Art Ideas": "Literally just a person dressed in a clown or jester costume. Probably dancing around or telling a joke.",
+    "Attributes": ["Your mom played a 2 player game with me last night."],
+    "Strengths": [
+      "Seems to always have something funny to say",
+      "Keeps things lighthearted for everyone",
+      "Enjoys high skill + high expression"
+    ],
+    "Weaknesses": [
+      "Great at distracting others and derailing the game",
+      "Makes the game longer than it needs to be, the game IS the joke",
+      "Is a different person if no one laughs at their jokes"
+    ],
+    "Quotes": [
+      "Wait wait can we all take a moment to understand how this actually happened!?",
+      "Why don’t you pick my card for me?",
+      "Your mom plays a 2 player game with me.",
+      "Are you joking? Cause I am!"
+    ],
+    "Likeliness to Host Game Night": 5,
+    "How Likely to Research a New Game": 40,
+    "How Likely to be a Sore Loser": 20,
+    "How Likely to Come Up with a Wacky, Unheard of Strategy": 70,
+    "Collection": {
+      "Most Likely to Include": "Decrypto",
+      "Other Games": [
+        "Mansions of Madness: Second Edition(The theme of firing machine guns into horrors can be amusing, but also people turning insane is the funniest of all)",
+        "Battlestar Galactica (Which of the frakkin’ Cylons will betray you? Should you just launch nukes?)",
+        "Food Chain Magnate (Your fast food chain can be run jankily: have a company run by teenager management trainees, or send kids to pick up beer for your company!)",
+        "Hegemony: Lead Your Class to Victory (It’s Working Class vs. Middle Class vs. Government vs. Capitalists, I’m sure you’ll come up with jokes)",
+        "Nemesis (It’s Aliens, but in a backstabby board game)",
+        "Cthulhu Death May Die (Push your heroes to the brink of death and unlock even more hilarious zany powers!)"
+      ]
+    },
+    "Fond Of": [
+      "Purple: Yo! Glad the life of the party could make it again!",
+      "Black: I just got inspired by you, you genius!"
+    ],
+    "May Have Trouble Understanding": [
+      "Natural: No, we’re trying to have fun, ok?",
+      "White: It wasn’t meant to be mean, it was a joke! Promise!"
+    ]
+  },
+  "Purple": {
+    "Nicknames": "The Social Butterfly, The Befriender",
+    "Blurb": "Energized through their many friends, new and old, around the table.",
+    "Art Ideas": "Someone talking in an animated way, big confident stance, eyes lit up.",
+    "Strengths": [
+      "Comfortable playing with anyone at game night",
+      "Seems to always get you more players in a snap if needed",
+      "Somehow makes party games even more fun"
+    ],
+    "Weaknesses": [
+      "Sometimes just wants to play party games, or do another activity!",
+      "Loves to start unrelated conversations to derail the middle of the game",
+      "Overpowering presence to quieter personalities"
+    ],
+    "Quotes": [
+      "I can play on someone’s team if need be!",
+      "How’s it going? Any plans for the weekend?",
+      "Oh, is there anyone else coming?"
+    ],
+    "Likeliness to Host Game Night": 50,
+    "How Likely to Research a New Game": 40,
+    "How Likely to be a Sore Loser": 20,
+    "How Likely to Come Up with a Wacky, Unheard of Strategy": 60,
+    "Collection": {
+      "Most Likely to Include": "Decrypto",
+      "Other Games": [
+        "7 Wonders (up to 7 players and quite easy to learn, everyone is always involved)",
+        "Lords of Waterdeep (Super accessible worker placement with interaction through blocking spaces and playing intrigue cards!)",
+        "Dune Uprising (Worker placement and deckbuilding for up to 4 players, with even more reason to participate in conflict than its predecessor!)",
+        "Mechs vs. Minions (Programming cooperation, but based off of League of Legends!)",
+        "Nemesis (Tons of talking as you justify why you’re doing sus things)"
+      ]
+    },
+    "Fond Of": [
+      "Yellow: You’re just on fire with the jokes!",
+      "Blue: Yeah of course bring your friends over!"
+    ],
+    "May Have Trouble Understanding": [
+      "Red: Winning is cool, but are you ok?",
+      "Natural: Oh, I didn’t really think of it that way, I usually just play for fun."
+    ]
+  },
+  "Natural": {
+    "Nicknames": "The Snob, The Purist",
+    "Blurb": "Well-researched and focused, who seems to know about why that game works so well.",
+    "Art Ideas": "Some guy wearing very noticeable glasses, poring over a rulebook.",
+    "Attributes": ["Professor"],
+    "Strengths": [
+      "Will gladly learn and teach a game, and doesn’t get rules wrong",
+      "Very clear about what they like and don’t like in games",
+      "Incredible knowledge of why mechanics are good, and board game history"
+    ],
+    "Weaknesses": [
+      "May throw a hissy fit if someone else gets rules wrong",
+      "May refuse to play some games that are too ‘low-brow’",
+      "Bad at explaining games to non-board gamers"
+    ],
+    "Quotes": [
+      "This game was one of the first to ever do this mechanic!",
+      "Yeah I just don’t play games like that, sorry.",
+      "Can I see the rulebook again?"
+    ],
+    "Likeliness to Host Game Night": 80,
+    "How Likely to Research a New Game": 100,
+    "How Likely to be a Sore Loser": 40,
+    "How Likely to Come Up with a Wacky, Unheard of Strategy": 50,
+    "Collection": {
+      "Most Likely to Include": "Puerto Rico",
+      "Other Games": [
+        "Food Chain Magnate (Zero randomness open information cutthroat gaming)",
+        "Agricola (One of the classic worker placements, with appropriate meanness and drafting)",
+        "Power Grid (The OG Euro to see how well you’re powering cities with power!)",
+        "Through the Ages: A New Story of Civilization (Build a civilization through only tableau)",
+        "Brass Lancashire (Came before Brass Birmingham, and is more complicated)",
+        "Terra Mystica (Came before Gaia Project)",
+        "Five Tribes: The Djinns of Naqala (Mancala in a more complicated board game with tons of powers)",
+        "Terraforming Mars (THE high skill ceiling tableau builder)"
+      ]
+    },
+    "Fond Of": [
+      "Green: Great farm! You seem to have played this game a lot.",
+      "Clear: Oh you have this one! I almost bought it as well."
+    ],
+    "May Have Trouble Understanding": [
+      "Red: Understand that by attacking in this way, you are throwing out the point of the game.",
+      "Black: Understand that by attacking in this way, the game cannot function."
+    ]
+  },
+  "Parchment": {
+    "Nicknames": "The Storyteller",
+    "Blurb": "A lover of games that create a shared, memorable story for everyone.",
+    "Attributes": ["Likes attacking for theme’s sake", "Warhammer fan", "Classic ameritrash player", "Roleplayer"],
+    "Strengths": [
+      "Keeps an entertaining narrative going for even boring or bad games",
+      "Easily digests rules because already has such an interest in",
+      "Able to bring up a historical/fictional comparison to many gameplay moments"
+    ],
+    "Weaknesses": [
+      "Sometimes just attacks for kicks",
+      "Can be *extremely* picky on games"
+    ],
+    "Quotes": [
+      "Splendid, this is exactly how they would have fought.",
+      "Oh, I’m definitely picking them, they look cool.",
+      "I just love it when the flavor text makes the game more intuitive."
+    ],
+    "Likeliness to Host Game Night": 90,
+    "How Likely to Research a New Game": 90,
+    "How Likely to be a Sore Loser": 30,
+    "How Likely to Come Up with a Wacky, Unheard of Strategy": 70,
+    "Collection": {
+      "Most Likely to Include": "Twilight Struggle",
+      "Other Games": [
+        "Hegemony (It’s literally IRL class warfare)",
+        "War of the Ring: Second Edition (“For Frodo”, as the armies of good and evil clash across the fortresses of Middle Earth, all to facilitate the Ring going to Mount Doom)",
+        "Lords of Waterdeep (You’re inside the world of Waterdeep, picking up quests to send warriors and clerics to venture onto! Which quests will you specialize in?)",
+        "Star Wars Rebellion (Where will the rebel scum hide their base this time, as Luke and Darth Vader can lead their forces to victory?)",
+        "Root (Which woodland critters will emerge victorious, with their unique government structures?)",
+        "Pax Pamir: Second Edition (Modern day Afghanistan is torn between European interests after the collapse of the Durrani empire)"
+      ]
+    },
+    "Fond Of": [
+      "Black: I never thought it could play out in this way, and you did it!",
+      "Green: Indeed, that is how a farmer would act!"
+    ],
+    "May Have Trouble Understanding": [
+      "White: It’s fine to be nice, but sometimes you need a little drama.",
+      "Red: Hang on, I don’t think they would be THAT crazy in attacking…"
+    ]
+  }
+}
