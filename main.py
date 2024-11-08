@@ -21,24 +21,28 @@ pg = st.navigation([
 
 pg.run()
 
+css_file_path = 'css/assets/styles.css'  # Make sure this path is correct
+
+# Read the contents of the CSS file
+with open(css_file_path) as f:
+    css = f.read()
+
+# Inject the CSS into the Streamlit app
+st.markdown(f'<style>{css}</style>', 
+            unsafe_allow_html=True)
+
+# ## Bigger font for questions
+# st.markdown(
+#     """<style>
+# div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
+#     font-size: 26px;
+# }
+#     </style>
+#     """, unsafe_allow_html=True)
+
+# ## hide navbar???
+# st.markdown('''
+
+# ''', unsafe_allow_html=True)
 
 
-## Bigger font for questions
-st.markdown(
-    """<style>
-div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
-    font-size: 26px;
-}
-    </style>
-    """, unsafe_allow_html=True)
-
-## hide navbar???
-st.markdown('''
-<style>
-.stApp [data-testid="stToolbar"]{
-    display:none;
-}
-</style>
-''', unsafe_allow_html=True)
-
-st.set_option("client.showSidebarNavigation", False)

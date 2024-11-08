@@ -1,6 +1,6 @@
 @font-face {
-  font-family: RealText;
-  src: url(Fonts/RealTextBold.otf);
+  font-family: 'RealText';
+  src: url('css/assets/fonts/RealTextBold.otf');
 }
 
 /* head */
@@ -22,7 +22,7 @@
     padding-top: 15%;
     display: flex;
     align-items: center; 
-    padding-left: 15%;
+    padding-left: 25%;
 }
 
 .logo{
@@ -30,12 +30,13 @@
     height: auto; 
 }
 
-.head h1, h2 {
-    font-family: RealText;
-    color: white;
-    position: static;
-    margin: 0;
+.head h1, .head h2 {
+  font-family: 'RealText', sans-serif; /* Bebas Neue for h1 and h2 */
+  color: white;
+  position: static;
+  margin: 0;
 }
+
 
 .head h2 {
     padding-top: 3%;
