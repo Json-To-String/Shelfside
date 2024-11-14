@@ -13,6 +13,7 @@ import altair as alt
 #     data = json.load(f)
 #     print(data['Blue']['Strengths'])
 
+
 results_page = ut.Handler()
 
 df = defaultdict(int)
@@ -43,15 +44,15 @@ with st.container(border=True):
 
     # st.button("Calculate my results!")
 
-    progress_text = "Math in progress..."
-    my_bar = st.progress(0, text=progress_text)
+    # progress_text = "Math in progress..."
+    # my_bar = st.progress(0, text=progress_text)
 
-    for percent_complete in range(100):
-        time.sleep(0.01)
-        my_bar.progress(percent_complete + 1, text=progress_text)
-    time.sleep(1)
-    my_bar.empty()
-    st.balloons()
+    # for percent_complete in range(100):
+    #     time.sleep(0.01)
+    #     my_bar.progress(percent_complete + 1, text=progress_text)
+    # time.sleep(1)
+    # my_bar.empty()
+    # st.balloons()
 
     top2 = get_top_two(df)
     top3 = get_top_three(df)
@@ -84,6 +85,88 @@ with st.container(border=True):
 
     # st.title(f'You are mostly a: {top3_rename[0]}! with elements of being a {top3_rename[1]} and a {top3_rename[2]}')
     st.title(f'You are mostly a: {top2_rename[0]}! with elements of being a {top2_rename[1]}')
+
+    # st.markdown(f"""
+    #     <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; align-items: center;">
+    #         <span class="personality-badge chaos-badge">Chaos Agent</span>
+    #         <span style="font-size: 1.2em;">with elements of</span>
+    #         <span class="personality-badge jester-badge">Jester</span>
+    #     </div>
+    # """, unsafe_allow_html=True)
+    # st.markdown('</div>', unsafe_allow_html=True)        
+    # Custom CSS for styling
+
+# st.markdown("""
+#     <style>
+#     /* Card-like containers */
+#     .stCardBox {
+#         background-color: white;
+#         padding: 20px;
+#         border-radius: 10px;
+#         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+#         margin-bottom: 20px;
+#     }
+    
+#     /* Gradient backgrounds */
+#     .main-result {
+#         background: linear-gradient(135deg, #f3e8ff 0%, #e0f2fe 100%);
+#         padding: 20px;
+#         border-radius: 10px;
+#         text-align: center;
+#         margin-bottom: 20px;
+#     }
+    
+#     /* Badge styling */
+#     .personality-badge {
+#         display: inline-block;
+#         padding: 5px 15px;
+#         border-radius: 15px;
+#         color: white;
+#         font-weight: bold;
+#         margin: 5px;
+#     }
+    
+#     .chaos-badge {
+#         background-color: #9333ea;
+#     }
+    
+#     .jester-badge {
+#         background-color: #f59e0b;
+#     }
+    
+#     /* Quote styling */
+#     .quote-box {
+#         background-color: #f8f9fa;
+#         padding: 10px 15px;
+#         border-left: 4px solid;
+#         margin: 10px 0;
+#         border-radius: 4px;
+#     }
+    
+#     .chaos-quote {
+#         border-left-color: #9333ea;
+#     }
+    
+#     .jester-quote {
+#         border-left-color: #f59e0b;
+#     }
+    
+#     /* List styling */
+#     .custom-list {
+#         margin-left: 20px;
+#     }
+    
+#     /* Responsive container */
+#     @media (min-width: 768px) {
+#         .two-column {
+#             display: flex;
+#             gap: 20px;
+#         }
+#     }
+#     </style>
+#     """, unsafe_allow_html=True)
+    
+    
     with open('personality-quiz/personas0.json', 'r') as a, open('personality-quiz/color_combos0.json', 'r') as b:
         data_A = json.load(a)
         data_B = json.load(b)
