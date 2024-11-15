@@ -17,7 +17,7 @@ class Handler():
             'Green' : 'Aesthetic',
             'Yellow' : 'Jester',
             'Purple' : 'Befriender',
-            'Natural' : 'Purist',
+            'Natural' : 'Snob',
             'Parchment' : 'Storyteller'
         }
 
