@@ -7,8 +7,6 @@ import json
 import utils.bggFetcher as bf
 import xml.etree.ElementTree as ET
 
-
-##########
 import requests
 from bs4 import BeautifulSoup
 import re
