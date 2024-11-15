@@ -143,9 +143,9 @@ def display_game_card(game_info: Dict, game_blurb: str):
         
         with cols[0]:
             if game_info['thumbnail']:
-                st.image(game_info['thumbnail'], use_column_width=True)
+                st.image(game_info['thumbnail'], use_container_width=True)
             else:
-                st.image("https://placehold.co/200x200?text=No+Image", use_column_width=True)
+                st.image("https://placehold.co/200x200?text=No+Image", use_container_width=True)
         
         with cols[1]:
             st.subheader(game_info['name'])
@@ -173,9 +173,9 @@ def display_game_card_no_blurb(game_info: Dict):
         
         with cols[0]:
             if game_info['thumbnail']:
-                st.image(game_info['thumbnail'], use_column_width=True)
+                st.image(game_info['thumbnail'], use_container_width=True)
             else:
-                st.image("https://placehold.co/200x200?text=No+Image", use_column_width=True)
+                st.image("https://placehold.co/200x200?text=No+Image", use_container_width=True)
         
         with cols[1]:
             st.subheader(game_info['name'])
