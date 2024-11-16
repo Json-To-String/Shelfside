@@ -257,28 +257,21 @@ persona_name2 = top2_rename[1]
 bgg = BGGFetcher()
 with st.container(border=True):
 
-    st.title(f'Based off of your specific combination ({top2_rename[0]} and {top2_rename[1]})')
+    st.title(f'3 board games we recommend for you!')
 
-    with open('personality-quiz/personas0.json', 'r') as a:
+    with open('personality-quiz/personas0.json', 'r', encoding='utf-8') as a:
 
         data_A = json.load(a)
         most_likely_game = data_A[color_persona1]["Collection"]["Most Likely to Include"]
-        games_1 = data_A[color_persona1]["Collection"]["Other Games"][:3]
-        games_2 = data_A[color_persona2]["Collection"]["Other Games"][:2]
-
-        st.header(f'A BGG Top 100 Game we think you own: ')
+        # games_1 = data_A[color_persona1]["Collection"]["Other Games"][:3]
+        # games_2 = data_A[color_persona2]["Collection"]["Other Games"][:2]
+        games_1 = data_A[color_persona1]["Collection"]["Other Games"][:1]
+        games_2 = data_A[color_persona2]["Collection"]["Other Games"][:1]
+        # st.header(f'A BGG Top 100 Game we think you own: ')
         # st.write(most_likely_game)
 
         game_info = bgg.get_game_info(most_likely_game)
         display_game_card_no_blurb(game_info)
-        # st.markdown("---")
-
-        st.header(f'Other BGG Top 100 games a {top2_rename[0]} + {top2_rename[1]} would enjoy: ')
-
-        # for x in games_1:
-        #     st.write(x)
-        # for y in games_2:
-        #     st.write(y)
 
         # Combine and display all recommended games
         with st.spinner("Loading game recommendations..."):
@@ -289,9 +282,16 @@ with st.container(border=True):
 
                 game_info = bgg.get_game_info(name)
                 display_game_card(game_info, flavor)
-                # st.markdown("---")
 
-with st.container(border=True):
+# with st.container(border=True):
 
-    st.write('Coming soon: results download button')
-    st.page_link("personality-quiz/00_start_page.py", label="Retake the Test!", use_container_width=True)
+#     st.write('Coming soon: results download button')
+#     st.page_link("personality-quiz/00_start_page.py", label="Retake the Test!", use_container_width=True)
+
+with st.form('page_form'):
+
+    # Every form must have a submit button.
+    submitted = st.form_submit_button(f"Retake the Test!",
+                                        use_container_width=True, type='primary')
+    if submitted:
+        st.switch_page('personality-quiz/00_start_page.py')
