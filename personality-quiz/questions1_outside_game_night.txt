@@ -4,7 +4,7 @@ I consult my friends first before I buy a game.
 ( Blue 2, Red -1, Clear -2, Black 0, White 3, Green -2, Yellow 1, Purple 2, Natural -3, Parchment 1.5)
 When I walk into a board game store, I have no idea what to buy.
 ( Blue -2, Red -0.5, Clear 0, Black 1, White 0.5, Green -2, Yellow 3, Purple 1, Natural -2.5, Parchment -2)
-If the game is worth it, I’m willing to spend some more money.
+If the game is worth it, Im willing to spend some more money.
 ( Blue 3, Red 0, Clear 3, Black 0, White 0, Green 3, Yellow -2, Purple -2, Natural 3, Parchment 2)
 I have my own dedicated space for games and board gaming.
 ( Blue 3, Red 0, Clear 2, Black -1, White 0, Green 2.5, Yellow -2, Purple 1, Natural 3, Parchment 1.5)
