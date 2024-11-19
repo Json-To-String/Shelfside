@@ -55,7 +55,7 @@ with st.container(border=True):
 
 with st.container(border=True):
     st.header("People in the industry you're like")
-    
+    st.text("<< Coming Soon! >>")
 
     with st.form('page_form'):
 

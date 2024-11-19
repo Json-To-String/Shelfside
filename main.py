@@ -34,7 +34,7 @@ pg.run()
 st.markdown(
     """<style>
 div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
-    font-size: 26px;
+    font-size: 18px;
 }
     </style>
     """, unsafe_allow_html=True)

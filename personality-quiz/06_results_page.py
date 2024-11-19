@@ -90,10 +90,19 @@ with st.container(border=True):
     st.session_state['Top2'] = top2
     st.session_state['Top2_rename'] = top2_rename
 
+
+    with st.form('download_form'):
+
+        dl_button = st.form_submit_button(f"Save your results! (Coming Soon)",
+                                            use_container_width=True, type='secondary')
+        if dl_button:
+            st.text('...')
+        
+
     with st.form('page_form'):
 
         # Every form must have a submit button.
-        submitted = st.form_submit_button(f"Friends and Enemies!",
+        submitted = st.form_submit_button(f"Friends and enemies!",
                                          use_container_width=True, type='primary')
         if submitted:
             st.switch_page('personality-quiz/07_relationship_page.py')
