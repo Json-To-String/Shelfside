@@ -21,7 +21,7 @@ with st.container(border=True):
         st.image(persona_image1, width=200)
 
         # Section for "Get Along With" personalities
-        st.subheader("Personalities They Get Along With")
+        st.subheader("How you might talk to the personalities you get along with:")
         for x in fond_of:
             line = x.split(':')
             color = line[0]
@@ -34,10 +34,10 @@ with st.container(border=True):
                     im = f'res/test_{color.lower()}.png'
                     st.image(im, width=100)
                 with col2:
-                    st.write(f"{quote}")
+                    st.write(f'"{quote}"')
 
         # Section for "May Have Trouble Understanding" personalities
-        st.subheader("Personalities They May Misunderstand")
+        st.subheader("How you might talkt to the personalities you may misunderstand:")
         for y in misunderstand:
             line = y.split(':')
             color = line[0]
@@ -50,12 +50,10 @@ with st.container(border=True):
                     im = f'res/test_{color.lower()}.png'
                     st.image(im, width=100)
                 with col2:
-                    st.write(f"{quote}")
+                    st.write(f'"{quote}"')
 
 
 with st.container(border=True):
-    st.header("People in the industry you're like")
-    st.text("<< Coming Soon! >>")
 
     with st.form('page_form'):
 

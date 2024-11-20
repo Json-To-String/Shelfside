@@ -9,6 +9,9 @@ import streamlit.components.v1 as components
 # Start page #
 ##############
 
+# for key in st.session_state.keys():
+#     del st.session_state[key]
+
 for i in range(5):
     st.session_state[f'page{i+1}_results'] = 0
 

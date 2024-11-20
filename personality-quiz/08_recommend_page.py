@@ -263,12 +263,8 @@ with st.container(border=True):
 
         data_A = json.load(a)
         most_likely_game = data_A[color_persona1]["Collection"]["Most Likely to Include"]
-        # games_1 = data_A[color_persona1]["Collection"]["Other Games"][:3]
-        # games_2 = data_A[color_persona2]["Collection"]["Other Games"][:2]
         games_1 = data_A[color_persona1]["Collection"]["Other Games"][:1]
         games_2 = data_A[color_persona2]["Collection"]["Other Games"][:1]
-        # st.header(f'A BGG Top 100 Game we think you own: ')
-        # st.write(most_likely_game)
 
         game_info = bgg.get_game_info(most_likely_game)
         display_game_card_no_blurb(game_info)
@@ -283,8 +279,10 @@ with st.container(border=True):
                 game_info = bgg.get_game_info(name)
                 display_game_card(game_info, flavor)
 
-# with st.container(border=True):
+with st.container(border=True):
 
+    st.header("People in the industry you're like")
+    st.text("<< Coming Soon! >>")
 #     st.write('Coming soon: results download button')
 #     st.page_link("personality-quiz/00_start_page.py", label="Retake the Test!", use_container_width=True)
 
@@ -294,4 +292,6 @@ with st.form('page_form'):
     submitted = st.form_submit_button(f"Retake the Test!",
                                         use_container_width=True, type='primary')
     if submitted:
+        for key in st.session_state.keys():
+            del st.session_state[key]
         st.switch_page('personality-quiz/00_start_page.py')
