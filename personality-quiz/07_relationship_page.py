@@ -34,10 +34,11 @@ with st.container(border=True):
                     im = f'res/test_{color.lower()}.png'
                     st.image(im, width=100)
                 with col2:
-                    st.write(f'"{quote}"')
+                    # quotes had some leading whitespace
+                    st.write(f'"{quote.strip()}"')
 
         # Section for "May Have Trouble Understanding" personalities
-        st.subheader("How you might talkt to the personalities you may misunderstand:")
+        st.subheader("How you might talk to the personalities you may misunderstand:")
         for y in misunderstand:
             line = y.split(':')
             color = line[0]
@@ -57,8 +58,12 @@ with st.container(border=True):
 
     with st.form('page_form'):
 
-        # Every form must have a submit button.
-        submitted = st.form_submit_button(f"3 games for you!",
+        results = st.form_submit_button(f"⏪ Back to results!",
                                          use_container_width=True, type='primary')
-        if submitted:
+        if results:
+            st.switch_page('personality-quiz/06_results_page.py')
+
+        recommend = st.form_submit_button(f"3 games for you! ⏩",
+                                         use_container_width=True, type='primary')
+        if recommend:
             st.switch_page('personality-quiz/08_recommend_page.py')

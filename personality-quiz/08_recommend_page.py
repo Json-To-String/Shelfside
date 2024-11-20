@@ -289,9 +289,19 @@ with st.container(border=True):
 with st.form('page_form'):
 
     # Every form must have a submit button.
-    submitted = st.form_submit_button(f"Retake the Test!",
+    results = st.form_submit_button(f"⏮️ Back to results!",
                                         use_container_width=True, type='primary')
-    if submitted:
+    if results:
+        st.switch_page('personality-quiz/06_results_page.py')
+
+    relationships = st.form_submit_button(f"⏪ Back to relationships!",
+                                        use_container_width=True, type='primary')
+    if relationships:
+        st.switch_page('personality-quiz/07_relationship_page.py')
+
+    retake = st.form_submit_button(f"Retake the Test! :repeat:",
+                                        use_container_width=True, type='primary')
+    if retake:
         for key in st.session_state.keys():
             del st.session_state[key]
         st.switch_page('personality-quiz/00_start_page.py')
