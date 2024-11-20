@@ -55,17 +55,23 @@ with st.container(border=True):
             st.header(f'The {name_persona}:')
             st.write(f'{blurb}')
 
-            st.subheader('*Strengths:* ')
-            for strength in data_A[color_persona]['Strengths']:
-                st.write(f'{strength}')
+            with st.container(border=True):
 
-            st.subheader('*Weaknesses:* ')
-            for weakness in data_A[color_persona]['Weaknesses']:
-                st.write(f'{weakness}')
+                st.subheader('*Strengths:* ')
+                for strength in data_A[color_persona]['Strengths']:
+                    st.write(f'{strength}')
 
-            st.subheader(f'*Quotes from a {name_persona}*')
-            for quote in data_A[color_persona]['Quotes']:
-                st.write(f'{quote}')
+            with st.container(border=True):
+
+                st.subheader('*Weaknesses:* ')
+                for weakness in data_A[color_persona]['Weaknesses']:
+                    st.write(f'{weakness}')
+
+            with st.container(border=True):
+
+                st.subheader(f'*Quotes from a {name_persona}*')
+                for quote in data_A[color_persona]['Quotes']:
+                    st.write(f'"{quote}"')
 
             st.divider()
 
@@ -102,7 +108,7 @@ with st.container(border=True):
     with st.form('page_form'):
 
         # Every form must have a submit button.
-        submitted = st.form_submit_button(f"Friends and enemies!",
+        submitted = st.form_submit_button(f"Friends and enemies! ⏩",
                                          use_container_width=True, type='primary')
         if submitted:
             st.switch_page('personality-quiz/07_relationship_page.py')
