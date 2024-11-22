@@ -57,13 +57,17 @@ with st.container(border=True):
 with st.container(border=True):
 
     with st.form('page_form'):
+        # Buttons section
+        col1, col2 = st.columns(2)
+        with col1:
+            results = st.form_submit_button(f"⏪ Back to results!",
+                                            use_container_width=True, type='primary')
+            if results:
+                st.switch_page('personality-quiz/06_results_page.py')
 
-        results = st.form_submit_button(f"⏪ Back to results!",
-                                         use_container_width=True, type='primary')
-        if results:
-            st.switch_page('personality-quiz/06_results_page.py')
-
-        recommend = st.form_submit_button(f"3 games for you! ⏩",
-                                         use_container_width=True, type='primary')
-        if recommend:
-            st.switch_page('personality-quiz/08_recommend_page.py')
+        with col2:
+        
+            recommend = st.form_submit_button(f"3 games for you! ⏩",
+                                            use_container_width=True, type='primary')
+            if recommend:
+                st.switch_page('personality-quiz/08_recommend_page.py')
