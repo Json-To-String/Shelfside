@@ -283,8 +283,6 @@ with st.container(border=True):
 
     st.header("People in the industry you're like")
     st.text("<< Coming Soon! >>")
-#     st.write('Coming soon: results download button')
-#     st.page_link("personality-quiz/00_start_page.py", label="Retake the Test!", use_container_width=True)
 
 with st.form('page_form'):
     col1, col2 = st.columns(2)

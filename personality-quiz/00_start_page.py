@@ -97,40 +97,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# # # Update the HTML img src to use base64 encoding
-# # import base64
-
-# # def get_image_base64(image_path):
-# #     with open(image_path, "rb") as image_file:
-# #         encoded_string = base64.b64encode(image_file.read()).decode()
-# #     return f"data:image/png;base64,{encoded_string}"
-
-# # logo_base64 = get_image_base64("res/shelfside_logo.png")
-
-# # Main content
-# st.markdown("""
-#     <div class="main-title">
-#         <img src="./app/static/shelfside_logo.png" alt="Shelfside" width="200" height=200>
-#         <h1>ShelfSide</h1>
-#         <h2>The 10 Board Game Personalities Test</h2>
-#     </div>
-    
-#     <div class="feature-list">
-#         <h3>- Find out your enemies and allies during game night!</h3>
-#         <h3>- Which board game designer/influencer are you most like?</h3>
-#         <h3>- How much of a sore loser are you?</h3>
-#         <h3>- Are you likely to come up with a wacky new strategy?</h3>
-#     </div>
-    
-#     <div class="note-text">
-#         Note: Your answers may vary based off of which game or game group you're playing with, try to average out your responses!
-#     </div>
-    
-#     <div class="coming-soon">
-#         &lt; Coming Soon: Art and Game Recommendations &gt;
-#     </div>
-# """, unsafe_allow_html=True)
-
 # Custom CSS
 st.markdown("""
     <style>
@@ -254,14 +220,7 @@ st.markdown("""
         <h3>How much of a sore loser are you?</h3>
         <h3>Are you likely to come up with a wacky new strategy?</h3>
     </div>
-    
-    <div class="note-text">
-        Note: Your answers may vary based off of which game or game group you're playing with, try to average out your responses!
-    </div>
-    
-    <div class="coming-soon">
-        &lt; Coming Soon: Art and Game Recommendations &gt;
-    </div>
+
 """, unsafe_allow_html=True)
 
 # Start button form
