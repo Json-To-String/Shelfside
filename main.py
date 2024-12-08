@@ -9,8 +9,8 @@ st.set_page_config(
     # layout="wide",
     initial_sidebar_state="collapsed",
     menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'Get Help': 'https://github.com/Json-To-String/Shelfside/issues',
+        'Report a bug': "https://github.com/Json-To-String/Shelfside/issues",
         'About': "# "
     }
 )
@@ -25,7 +25,6 @@ pg = st.navigation([
                    st.Page('personality-quiz/06_results_page.py'),
                    st.Page('personality-quiz/07_relationship_page.py'),
                    st.Page('personality-quiz/08_recommend_page.py')
-                   # st.Page('personality-quiz/results_page.py')
                ])
 
 pg.run()

@@ -97,11 +97,19 @@ with st.container():
             
             with col1:
                 art = f'res/test_{color_persona.lower()}.png'
-                st.image(art, use_container_width=True)
+                st.image(art, width = 400, use_container_width=True)
                 with st.container(border=True):
                     st.markdown(f"<p style='font-size: 1.1rem; line-height: 1.6;'>{data_A[color_persona]['Blurb']}</p>",
                               unsafe_allow_html=True)
-
+                # # Quotes section
+                # with st.container(border=True):
+                #     st.markdown(f"### 💭 Quotes from a {name_persona}")
+                #     for quote in data_A[color_persona]['Quotes']:
+                #         st.markdown(f"""
+                #             <div class="quote-container">
+                #                 "{quote}"
+                #             </div>
+                #         """, unsafe_allow_html=True)
             with col2:
                 st.markdown(f"<h2 class='persona-header'>The {name_persona}</h2>", unsafe_allow_html=True)
 
@@ -117,15 +125,16 @@ with st.container():
                     for weakness in data_A[color_persona]['Weaknesses']:
                         st.markdown(f"• {weakness}")
 
-                # Quotes section
-                with st.container(border=True):
-                    st.markdown(f"### 💭 Quotes from a {name_persona}")
-                    for quote in data_A[color_persona]['Quotes']:
-                        st.markdown(f"""
-                            <div class="quote-container">
-                                "{quote}"
-                            </div>
-                        """, unsafe_allow_html=True)
+            # Quotes section
+            with st.container(border=True):
+                st.markdown(f"### 💭 Quotes from a {name_persona}")
+                quotes = data_A[color_persona]['Quotes']
+                for quote in quotes[:3]:
+                    st.markdown(f"""
+                        <div class="quote-container">
+                            "{quote}"
+                        </div>
+                    """, unsafe_allow_html=True)
 
         st.divider()
 
