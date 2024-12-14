@@ -13,12 +13,17 @@ with st.container(border=True):
     with open('personality-quiz/personas0.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
 
+        # relation_image = "res/BlogImageTest.png"
+        # # relation_image = "res/BlogImageMOBILETest.png"
+        # st.text(relation_image)
+        # st.image(relation_image)
+
         fond_of = data[color_persona]["Fond Of"]
         misunderstand = data[color_persona]["May Have Trouble Understanding"]
 
         st.title(f'Your Result: The {top2_rename[0]}!')
         persona_image1 = f'res/test_{color_persona.lower()}.png'
-        st.image(persona_image1, width=200)
+        st.image(persona_image1, width=300)
 
         # Section for "Get Along With" personalities
         st.subheader("How you might talk to the personalities you get along with:")
@@ -32,7 +37,7 @@ with st.container(border=True):
                 col1, col2 = st.columns([1, 2])
                 with col1:
                     im = f'res/test_{color.lower()}.png'
-                    st.image(im, width=100)
+                    st.image(im, width=200)
                 with col2:
                     # quotes had some leading whitespace
                     st.write(f'"{quote.strip()}"')
@@ -49,7 +54,7 @@ with st.container(border=True):
                 col1, col2 = st.columns([1, 2])
                 with col1:
                     im = f'res/test_{color.lower()}.png'
-                    st.image(im, width=100)
+                    st.image(im, width=200)
                 with col2:
                     st.write(f'"{quote}"')
 
