@@ -23,40 +23,53 @@ with st.container(border=True):
 
         st.title(f'Your Result: The {top2_rename[0]}!')
         persona_image1 = f'res/test_{color_persona.lower()}.png'
-        st.image(persona_image1, width=300)
+        st.image(persona_image1, width=400)
 
         # Section for "Get Along With" personalities
-        st.subheader("How you might talk to the personalities you get along with:")
-        for x in fond_of:
-            line = x.split(':')
-            color = line[0]
-            quote = line[-1]
-            name = page_handler.persona_map[color]
-            
-            with st.expander(f"The {name}"):
-                col1, col2 = st.columns([1, 2])
-                with col1:
-                    im = f'res/test_{color.lower()}.png'
-                    st.image(im, width=200)
-                with col2:
-                    # quotes had some leading whitespace
+
+        col1, col2 = st.columns(2)
+        with col1:
+            col1.subheader("How you might talk to the personalities you get along with:")
+            for x in fond_of:
+                line = x.split(':')
+                color = line[0]
+                quote = line[-1]
+                name = page_handler.persona_map[color]
+                
+                # with st.expander(f"The {name}"):
+                    # col1, col2 = st.columns([1, 2])
+                    # with col1:
+                    #     im = f'res/test_{color.lower()}.png'
+                    #     st.image(im, width=200)
+                    # with col2:
+                    #     # quotes had some leading whitespace
+                    #     st.write(f'"{quote.strip()}"')
+
+                im = f'res/test_{color.lower()}.png'
+                st.image(im, width=200)
+                with st.expander(f"The {name}"):
                     st.write(f'"{quote.strip()}"')
 
-        # Section for "May Have Trouble Understanding" personalities
-        st.subheader("How you might talk to the personalities you may misunderstand:")
-        for y in misunderstand:
-            line = y.split(':')
-            color = line[0]
-            quote = line[-1]
-            name = page_handler.persona_map[color]
-            
-            with st.expander(f"The {name}"):
-                col1, col2 = st.columns([1, 2])
-                with col1:
-                    im = f'res/test_{color.lower()}.png'
-                    st.image(im, width=200)
-                with col2:
-                    st.write(f'"{quote}"')
+        with col2:
+            # Section for "May Have Trouble Understanding" personalities
+            col2.subheader("How you might talk to the personalities you may misunderstand:")
+            for y in misunderstand[:2]:
+                line = y.split(':')
+                color = line[0]
+                quote = line[-1]
+                name = page_handler.persona_map[color]
+                
+                # with st.expander(f"The {name}"):
+                    # col1, col2 = st.columns([1, 2])
+                    # with col1:
+                    #     im = f'res/test_{color.lower()}.png'
+                    #     st.image(im, width=200)
+                    # with col2:
+                    #     st.write(f'"{quote}"')
+                im = f'res/test_{color.lower()}.png'
+                st.image(im, width=200)
+                with st.expander(f"The {name}"):
+                    st.write(f'"{quote.strip()}"')
 
 
 with st.container(border=True):
