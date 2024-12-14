@@ -28,7 +28,8 @@ class Handler():
             'Black': '#2c2c2c',
             'White': '#e6e6e6',
             'Green': '#2ca02c',
-            'Yellow': '#ff7f0e',
+            # 'Yellow': '#ff7f0e',
+            'Yellow': '#ffff00',
             'Purple': '#9467bd',
             'Natural': '#8c564b',
             'Parchment': '#bcbd22'

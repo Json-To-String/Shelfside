@@ -8,6 +8,7 @@ import utils.utils as ut
 from collections import Counter
 from collections import defaultdict
 import altair as alt
+import matplotlib.pyplot as plt
 
 
 # Add custom CSS for better styling
@@ -93,11 +94,11 @@ with st.container():
             color_persona = top2[i]
             name_persona = results_page.persona_map[color_persona]
 
-            col1, col2 = st.columns([1, 2], gap="large")
+            col1, col2 = st.columns(2, gap="large")
             
             with col1:
                 art = f'res/test_{color_persona.lower()}.png'
-                st.image(art, width = 400, use_container_width=True)
+                st.image(art, width = 600, use_container_width=True)
                 with st.container(border=True):
                     st.markdown(f"<p style='font-size: 1.1rem; line-height: 1.6;'>{data_A[color_persona]['Blurb']}</p>",
                               unsafe_allow_html=True)
@@ -168,6 +169,31 @@ with st.container():
             )
 
             st.altair_chart(chart, use_container_width=True)
+
+
+            df0['Score_Renormed'] = np.abs(df0['Score'].min()) + df0['Score']
+            fig1, ax1 = plt.subplots()
+            hex_dict = results_page.hex_colors
+            # st.write(hex_dict.values())
+            explode_dist = 0.00
+            explode_list = [explode_dist for x in df0['Score_Renormed']]
+            renormed_list = df0['Score_Renormed'].to_list()
+            max_index = renormed_list.index(max(renormed_list))
+
+            explode_list[max_index] += 0.2
+
+            ax1.pie(
+                df0['Score_Renormed'], 
+                labels=df0['Persona'],
+                autopct='%1.2f%%',
+                explode=explode_list,
+                colors=hex_dict.values(),
+                wedgeprops = {"edgecolor" : "black", 
+                      'linewidth': .5, 
+                      'antialiased': True}
+                )
+
+            st.pyplot(fig1)
 
         st.session_state['Top2'] = top2
         st.session_state['Top2_rename'] = top2_rename
