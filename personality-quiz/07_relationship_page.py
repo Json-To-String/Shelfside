@@ -13,12 +13,10 @@ with st.container(border=True):
     with open('personality-quiz/personas0.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-        # relation_image = "res/BlogImageMOBILETest.png"
-        relation_image = "res/BlogImageTest.png"
-        # relation_image = "res/HeroImageTest.png"
-        # relation_image = "res/BlogImageMOBILETest.png"
-        st.text(relation_image)
-        st.image(relation_image)
+        # relation_image = "res/BlogImageTest.png"
+        # # relation_image = "res/BlogImageMOBILETest.png"
+        # st.text(relation_image)
+        # st.image(relation_image)
 
         fond_of = data[color_persona]["Fond Of"]
         misunderstand = data[color_persona]["May Have Trouble Understanding"]
