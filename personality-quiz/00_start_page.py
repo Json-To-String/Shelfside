@@ -207,6 +207,77 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+<style>
+@media (max-width: 768px) {
+    /* Ensure full width and padding on mobile */
+    .stApp {
+        max-width: 100% !important;
+        padding: 0 10px !important;
+    }
+
+    /* Adjust main title */
+    .main-title {
+        padding: 1rem !important;
+        border-radius: 10px !important;
+    }
+
+    .main-title img {
+        width: 120px !important;
+        height: auto !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .main-title h1 {
+        font-size: 1.5rem !important;
+        margin: 0.5rem 0 !important;
+    }
+
+    .main-title h2 {
+        font-size: 1rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    /* Feature list adjustments */
+    .feature-list {
+        padding: 1rem !important;
+        margin: 1rem 0 !important;
+    }
+
+    .feature-list h3 {
+        font-size: 0.9rem !important;
+        margin: 0.5rem 0 !important;
+    }
+
+    .feature-list h3:before {
+        font-size: 1rem !important;
+        margin-right: 5px !important;
+    }
+
+    /* Button styling */
+    .stButton > button {
+        padding: 0.5rem 1rem !important;
+        font-size: 1rem !important;
+        margin-top: 1rem !important;
+    }
+
+    /* Note and coming soon sections */
+    .note-text,
+    .coming-soon {
+        padding: 0.75rem !important;
+        margin: 1rem 0 !important;
+        font-size: 0.9rem !important;
+    }
+
+    /* Ensure content doesn't overflow */
+    * {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+</style>
+""", unsafe_allow_html=True)
+
 # Main content
 st.markdown("""
     <div class="main-title">
