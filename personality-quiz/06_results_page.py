@@ -98,7 +98,8 @@ with st.container():
             
             with col1:
                 art = f'res/test_{color_persona.lower()}.png'
-                st.image(art, width = 600, use_container_width=True)
+                # st.image(art, width = 600, use_container_width=True)
+                st.image(art, width = 400)
                 with st.container(border=True):
                     st.markdown(f"<p style='font-size: 1.1rem; line-height: 1.6;'>{data_A[color_persona]['Blurb']}</p>",
                               unsafe_allow_html=True)
