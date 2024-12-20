@@ -12,21 +12,21 @@
     "Weaknesses": [
       "Seems flip-floppy on board game tastes in trying to agree with the group",
       "Doesn’t take competition too seriously sometimes",
-      "Will invite over sometimes too many people or those you don’t like"
+      "Will invite over sometimes too many people or some others don’t like"
     ],
     "Quotes": [
       "Let’s play at my place this weekend!",
       "I found a great new board game snack!",
       "Oh, I know the perfect board game for you!"
     ],
-    "Likeliness to Host Game Night": 100,
-    "How Likely to Research a New Game": 90,
-    "How Likely to be a Sore Loser": 10,
-    "How Likely to Come Up with a Wacky, Unheard of Strategy": 20,
+    "How often will host game night": "Always",
+    "How frequently will research a new game": "Almost always",
+    "How often is a sore loser": "Almost never",
+    "How often to come up with a wacky, unheard of strategy": "Occasionally",
     "Collection": {
-      "Most Likely to Include": "Dune Imperium",
+      "Most Likely to Include": "Dune: Imperium",
       "Other Games": [
-        "Dune Uprising (Patched version of Dune Imperium!) ",
+        "Dune Imperium Uprising (Patched version of Dune Imperium!) ",
         "Twilight Imperium: Fourth Edition (Big space opera game for 3-6 that appeals to Ameritrash and Euro players alike)",
         "Brass Birmingham (Feels good 2-4 player Euro that is BGG #1!)",
         "Spirit Island (Tons of cooperation without quarterbacking) ",
@@ -55,21 +55,20 @@
     ],
     "Weaknesses": [
       "Uncompromising teammate (when you’re losing)",
-      "Can be too loud and blunt to a fault with a big ego",
-      "Might take a little bit too long on their turns if their offense falters",
-      "Can break games in always wanting to impatiently attack"
+      "Sometimes can be too loud and blunt to a fault with a big ego",
+      "Might take a little bit too long on their turns if their offense falters"
     ],
     "Quotes": [
       "The best defense is a good offense.",
       "So when’s the part I get to kill stuff?",
-      "You should have seen their face when I knocked them out!"
+      "Yep, I'll win again"
     ],
-    "Likeliness to Host Game Night": 20,
-    "How Likely to Research a New Game": 50,
-    "How Likely to be a Sore Loser": 99,
-    "How Likely to Come Up with a Wacky, Unheard of Strategy": 60,
+    "How often will host game night": "Rarely",
+    "How frequently will research a new game": "Moderately",
+    "How often is a sore loser": "Always",
+    "How often to come up with a wacky, unheard of strategy": "Occasionally",
     "Collection": {
-      "Most Likely to Include": "Blood Rage (Quickly draft your hand for cool monsters and aggressive quests, then pillage other viking clans before the world explodes!)",
+      "Most Likely to Include": "Blood Rage",
       "Other Games": [
         "Twilight Imperium: Fourth Edition (Area control that encourages attacking but isn’t so mean your friends will quit) ",
         "Root (Area control to secure the forest in your best asymmetrical way!)",
@@ -109,10 +108,10 @@
       "Ehh, don’t worry, I’ll just resell it on eBay!",
       "My shelf of shame weirdly keeps getting bigger."
     ],
-    "Likeliness to Host Game Night": 30,
-    "How Likely to Research a New Game": 80,
-    "How Likely to be a Sore Loser": 30,
-    "How Likely to Come Up with a Wacky, Unheard of Strategy": 60,
+    "How often will host game night": "Infrequently",
+    "How frequently will research a new game": "Very often",
+    "How often is a sore loser": "Infrequently",
+    "How often to come up with a wacky, unheard of strategy": "Moderately",
     "Collection": {
       "Most Likely to Include": "Tainted Grail: The Fall of Avalon",
       "Other Games": [
@@ -153,10 +152,10 @@
       "What do you mean it’s against the spirit of the game?",
       "BAHHAHAHAHAHA"
     ],
-    "Likeliness to Host Game Night": 10,
-    "How Likely to Research a New Game": 60,
-    "How Likely to be a Sore Loser": 50,
-    "How Likely to Come Up with a Wacky, Unheard of Strategy": 95,
+    "How often will host game night": "Unlikely",
+    "How frequently will research a new game": "Moderately",
+    "How often is a sore loser": "Moderately",
+    "How often to come up with a wacky, unheard of strategy": "Always",
     "Collection": {
       "Most Likely to Include": "Root",
       "Other Games": [
@@ -195,12 +194,12 @@
       "Pay attention, he’s talking!",
       "That was so mean!"
     ],
-    "Likeliness to Host Game Night": 60,
-    "How Likely to Research a New Game": 50,
-    "How Likely to be a Sore Loser": 70,
-    "How Likely to Come Up with a Wacky, Unheard of Strategy": 60,
+    "How often will host game night": "Occasionally",
+    "How frequently will research a new game": "Moderately",
+    "How often is a sore loser": "Occasionally",
+    "How often to come up with a wacky, unheard of strategy": "Moderately",
     "Collection": {
-      "Most Likely to Include": "Gloomhaven: Jaws of the Lion (An extremely accessible version of  Gloomhaven with many intuitive classes). ",
+      "Most Likely to Include": "Gloomhaven: Jaws of the Lion",
       "Other Games": [
         "Sky Team (Work with 1 buddy closely to make sure you land a plane!)",
         "The Crew: The Quest for Planet Nine (Trick-take without talking, to do simple space missions together!)",
@@ -240,10 +239,10 @@
       "Well I thought it worked like that because that’s nature!",
       "Oh I’m not sure who’s winning, but my board is so good this game!"
     ],
-    "Likeliness to Host Game Night": 70,
-    "How Likely to Research a New Game": 70,
-    "How Likely to be a Sore Loser": 20,
-    "How Likely to Come Up with a Wacky, Unheard of Strategy": 60,
+    "How often will host game night": "Often",
+    "How frequently will research a new game": "Often",
+    "How often is a sore loser": "Very rarely",
+    "How often to come up with a wacky, unheard of strategy": "Moderately",
     "Collection": {
       "Most Likely to Include": "Wingspan",
       "Other Games": [
@@ -287,14 +286,14 @@
       "Your mom plays a 2 player game with me.",
       "Are you joking? Cause I am!"
     ],
-    "Likeliness to Host Game Night": 5,
-    "How Likely to Research a New Game": 40,
-    "How Likely to be a Sore Loser": 20,
-    "How Likely to Come Up with a Wacky, Unheard of Strategy": 70,
+    "How often will host game night": "Almost never",
+    "How frequently will research a new game": "Moderately",
+    "How often is a sore loser": "Infrequently",
+    "How often to come up with a wacky, unheard of strategy": "Often",
     "Collection": {
       "Most Likely to Include": "Decrypto",
       "Other Games": [
-        "Mansions of Madness: Second Edition(The theme of firing machine guns into horrors can be amusing, but also people turning insane is the funniest of all)",
+        "Mansions of Madness: Second Edition (The theme of firing machine guns into horrors can be amusing, but also people turning insane is the funniest of all)",
         "Battlestar Galactica (Which of the frakkin’ Cylons will betray you? Should you just launch nukes?)",
         "Food Chain Magnate (Your fast food chain can be run jankily: have a company run by teenager management trainees, or send kids to pick up beer for your company!)",
         "Hegemony: Lead Your Class to Victory (It’s Working Class vs. Middle Class vs. Government vs. Capitalists, I’m sure you’ll come up with jokes)",
@@ -316,12 +315,12 @@
     "Blurb": "Energized through their many friends, new and old, around the table.",
     "Art Ideas": "Someone talking in an animated way, big confident stance, eyes lit up.",
     "Strengths": [
-      "Comfortable playing with anyone at game night",
-      "Seems to always get you more players in a snap if needed",
+      "Fun and socially fearless, they are comfortable playing with anyone at game night",
+      "Friend collector: Seems to always get you more players in a snap if needed",
       "Somehow makes party games even more fun"
     ],
     "Weaknesses": [
-      "Sometimes just wants to play party games, or do another activity!",
+      "Sometimes only wants to play party games, or goes too much with the flow!",
       "Loves to start unrelated conversations to derail the middle of the game",
       "Overpowering presence to quieter personalities"
     ],
@@ -330,16 +329,16 @@
       "How’s it going? Any plans for the weekend?",
       "Oh, is there anyone else coming?"
     ],
-    "Likeliness to Host Game Night": 50,
-    "How Likely to Research a New Game": 40,
-    "How Likely to be a Sore Loser": 20,
-    "How Likely to Come Up with a Wacky, Unheard of Strategy": 60,
+    "How often will host game night": "Moderately",
+    "How frequently will research a new game": "Infrequently",
+    "How often is a sore loser": "Very rarely",
+    "How often to come up with a wacky, unheard of strategy": "Moderately",
     "Collection": {
       "Most Likely to Include": "Decrypto",
       "Other Games": [
         "7 Wonders (up to 7 players and quite easy to learn, everyone is always involved)",
         "Lords of Waterdeep (Super accessible worker placement with interaction through blocking spaces and playing intrigue cards!)",
-        "Dune Uprising (Worker placement and deckbuilding for up to 4 players, with even more reason to participate in conflict than its predecessor!)",
+        "Dune: Imperium - Uprising (Worker placement and deckbuilding for up to 4 players, with even more reason to participate in conflict than its predecessor!)",
         "Mechs vs. Minions (Programming cooperation, but based off of League of Legends!)",
         "Nemesis (Tons of talking as you justify why you’re doing sus things)"
       ]
@@ -373,10 +372,10 @@
       "Yeah I just don’t play games like that, sorry.",
       "Can I see the rulebook again?"
     ],
-    "Likeliness to Host Game Night": 80,
-    "How Likely to Research a New Game": 100,
-    "How Likely to be a Sore Loser": 40,
-    "How Likely to Come Up with a Wacky, Unheard of Strategy": 50,
+    "How often will host game night": "Very often",
+    "How frequently will research a new game": "Always",
+    "How often is a sore loser": "Moderately",
+    "How often to come up with a wacky, unheard of strategy": "Moderately",
     "Collection": {
       "Most Likely to Include": "Puerto Rico",
       "Other Games": [
@@ -417,10 +416,10 @@
       "Oh, I’m definitely picking them, they look cool.",
       "I just love it when the flavor text makes the game more intuitive."
     ],
-    "Likeliness to Host Game Night": 90,
-    "How Likely to Research a New Game": 90,
-    "How Likely to be a Sore Loser": 30,
-    "How Likely to Come Up with a Wacky, Unheard of Strategy": 70,
+    "How often will host game night": "Almost always",
+    "How frequently will research a new game": "Almost always",
+    "How often is a sore loser": "Rarely",
+    "How often to come up with a wacky, unheard of strategy": "Often",
     "Collection": {
       "Most Likely to Include": "Twilight Struggle",
       "Other Games": [

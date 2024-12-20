@@ -278,7 +278,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Main content
 st.markdown("""
     <div class="main-title">
         <img src="./app/static/shelfside_logo.png" alt="Shelfside" width="200" height="200">
@@ -294,7 +293,6 @@ st.markdown("""
 
 """, unsafe_allow_html=True)
 
-# Start button form
 with st.form('page_form'):
     submitted = st.form_submit_button('Start your test!', use_container_width=True, type='primary')
     if submitted:
