@@ -41,6 +41,101 @@ class BGGFetcher:
             st.warning(f"API Error: {str(e)}")
             return None
 
+    # def get_game_info(self, game_name: str) -> Dict:
+    #     """Get game information including thumbnail"""
+    #     # Check cache first
+    #     if game_name in st.session_state.bgg_cache:
+    #         return st.session_state.bgg_cache[game_name]
+
+    #     # Search for game ID
+    #     search_content = self._fetch_api("search", {
+    #         "query": game_name,
+    #         "type": "boardgame",
+    #         "exact": 1
+    #     })
+        
+    #     if not search_content:
+    #         return self._create_empty_game_info(game_name)
+
+    #     try:
+    #         root = ET.fromstring(search_content)
+    #         game = root.find(".//item")
+            
+    #         if game is None:
+    #             # Try without exact match
+    #             search_content = self._fetch_api("search", {
+    #                 "query": game_name,
+    #                 "type": "boardgame"
+    #             })
+    #             if search_content:
+    #                 root = ET.fromstring(search_content)
+    #                 game = root.find(".//item")
+                
+    #             if game is None:
+    #                 return self._create_empty_game_info(game_name)
+
+    #         game_id = game.get("id")
+            
+    #         # Get game details
+    #         details_content = self._fetch_api("thing", {"id": game_id})
+    #         if not details_content:
+    #             return self._create_empty_game_info(game_name)
+
+    #         root = ET.fromstring(details_content)
+    #         item = root.find(".//item")
+            
+    #         if item is None:
+    #             return self._create_empty_game_info(game_name)
+
+    #         # Extract game information
+    #         game_info = {
+    #             'name': game_name,
+    #             'id': game_id,
+    #             'thumbnail': None,
+    #             'description': None,
+    #             'categories': [],
+    #             'year': None
+    #         }
+
+    #         # Get thumbnail
+    #         thumbnail = item.find(".//thumbnail")
+    #         if thumbnail is not None and thumbnail.text:
+    #             game_info['thumbnail'] = thumbnail.text
+
+    #         # Get description
+    #         description = item.find(".//description")
+    #         if description is not None and description.text:
+    #             game_info['description'] = description.text
+
+    #         # Get categories
+    #         categories = item.findall(".//link[@type='boardgamecategory']")
+    #         game_info['categories'] = [cat.get("value") for cat in categories]
+
+    #         # Get year
+    #         year = item.find(".//yearpublished")
+    #         if year is not None:
+    #             game_info['year'] = year.get("value")
+
+    #         # Cache the result
+    #         st.session_state.bgg_cache[game_name] = game_info
+    #         return game_info
+
+    #     except Exception as e:
+    #         st.warning(f"Error processing game {game_name}: {str(e)}")
+    #         return self._create_empty_game_info(game_name)
+
+
+###################################
+    def _create_empty_game_info(self, game_name: str) -> Dict:
+        return {
+            'name': game_name,
+            'id': None,
+            'thumbnail': None,
+            'description': None,
+            'categories': [],
+            'year': None
+        }
+    
     def get_game_info(self, game_name: str) -> Dict:
         """Get game information including thumbnail"""
         # Check cache first
@@ -76,8 +171,12 @@ class BGGFetcher:
 
             game_id = game.get("id")
             
-            # Get game details
-            details_content = self._fetch_api("thing", {"id": game_id})
+            # Get game details with stats
+            details_content = self._fetch_api("thing", {
+                "id": game_id,
+                "stats": 1  # Include statistics
+            })
+            
             if not details_content:
                 return self._create_empty_game_info(game_name)
 
@@ -97,10 +196,16 @@ class BGGFetcher:
                 'year': None
             }
 
-            # Get thumbnail
-            thumbnail = item.find(".//thumbnail")
-            if thumbnail is not None and thumbnail.text:
-                game_info['thumbnail'] = thumbnail.text
+            # Try multiple approaches for thumbnail
+            # First try the image tag (higher quality)
+            image = item.find(".//image")
+            if image is not None and image.text:
+                game_info['thumbnail'] = image.text
+            else:
+                # Fallback to thumbnail tag
+                thumbnail = item.find(".//thumbnail")
+                if thumbnail is not None and thumbnail.text:
+                    game_info['thumbnail'] = thumbnail.text
 
             # Get description
             description = item.find(".//description")
@@ -123,16 +228,7 @@ class BGGFetcher:
         except Exception as e:
             st.warning(f"Error processing game {game_name}: {str(e)}")
             return self._create_empty_game_info(game_name)
-
-    def _create_empty_game_info(self, game_name: str) -> Dict:
-        return {
-            'name': game_name,
-            'id': None,
-            'thumbnail': None,
-            'description': None,
-            'categories': [],
-            'year': None
-        }
+        
 
 def display_game_card(game_info: Dict, game_blurb: str):
     """Display a game card with image and details"""
@@ -279,26 +375,26 @@ with st.container(border=True):
                 game_info = bgg.get_game_info(name)
                 display_game_card(game_info, flavor)
 
-with st.container(border=True):
+# with st.container(border=True):
 
-    st.header("People in the industry you're like")
-    st.text("<< Coming Soon! >>")
+#     try:
+#         st.image(f"res/FeaturedPeople/{persona_name1.lower()}s.png")
+#     except:
+#         st.header("People in the industry you're like")
+#         st.text("<< Coming Soon! >>")
 
 with st.form('page_form'):
     col1, col2 = st.columns(2)
-
     with col1:
         results = st.form_submit_button(f"⏮️ Back to results!",
                                             use_container_width=True, type='primary')
         if results:
             st.switch_page('personality-quiz/06_results_page.py')
-
     with col2:
         relationships = st.form_submit_button(f"⏪ Back to relationships!",
                                             use_container_width=True, type='primary')
         if relationships:
             st.switch_page('personality-quiz/07_relationship_page.py')
-
     retake = st.form_submit_button(f"Retake the Test! :repeat:",
                                         use_container_width=True, type='secondary')
     if retake:

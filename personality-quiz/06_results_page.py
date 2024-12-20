@@ -103,31 +103,21 @@ with st.container():
                 with st.container(border=True):
                     st.markdown(f"<p style='font-size: 1.1rem; line-height: 1.6;'>{data_A[color_persona]['Blurb']}</p>",
                               unsafe_allow_html=True)
-                # # Quotes section
-                # with st.container(border=True):
-                #     st.markdown(f"### 💭 Quotes from a {name_persona}")
-                #     for quote in data_A[color_persona]['Quotes']:
-                #         st.markdown(f"""
-                #             <div class="quote-container">
-                #                 "{quote}"
-                #             </div>
-                #         """, unsafe_allow_html=True)
+                    
+
             with col2:
                 st.markdown(f"<h2 class='persona-header'>The {name_persona}</h2>", unsafe_allow_html=True)
 
-                # Strengths section
                 with st.container(border=True):
                     st.markdown("### 💪 Strengths")
                     for strength in data_A[color_persona]['Strengths']:
                         st.markdown(f"• {strength}")
 
-                # Weaknesses section
                 with st.container(border=True):
                     st.markdown("### 🎯 Weaknesses")
                     for weakness in data_A[color_persona]['Weaknesses']:
                         st.markdown(f"• {weakness}")
 
-            # Quotes section
             with st.container(border=True):
                 st.markdown(f"### 💭 Quotes from a {name_persona}")
                 quotes = data_A[color_persona]['Quotes']
@@ -138,15 +128,30 @@ with st.container():
                         </div>
                     """, unsafe_allow_html=True)
 
+            with st.container(border=True):
+                st.markdown(f"### 🧩 Attributes of a {name_persona}")
+                attribute_list = [
+                    "How often will host game night",
+                    "How frequently will research a new game",
+                    "How often is a sore loser",
+                    "How often to come up with a wacky, unheard of strategy"
+                    ]
+                for att in attribute_list:
+                    st.markdown(f"• {att}: {data_A[color_persona][att]}")
+
+
         st.divider()
 
-        # Personality combination insight
+        # st.markdown(f"### 🧩 Since your second highest was the {top2_rename[-1]},")
+        # with st.container(border=True):
+        #     st.markdown(f"<p style='font-size: 1.1rem; line-height: 1.6;'>{data_B[color1][color2]}</p>",
+        #                unsafe_allow_html=True)
+
         st.markdown(f"### 🔍 Since your second highest was the {top2_rename[-1]},")
         with st.container(border=True):
             st.markdown(f"<p style='font-size: 1.1rem; line-height: 1.6;'>{data_B[color1][color2]}</p>",
                        unsafe_allow_html=True)
 
-        # Chart section
         st.markdown("### 📊 Your Personality Breakdown")
         with st.container(border=True):
             chart = alt.Chart(df0).mark_bar().encode(
@@ -171,11 +176,9 @@ with st.container():
 
             st.altair_chart(chart, use_container_width=True)
 
-
             df0['Score_Renormed'] = np.abs(df0['Score'].min()) + df0['Score']
             fig1, ax1 = plt.subplots()
             hex_dict = results_page.hex_colors
-            # st.write(hex_dict.values())
             explode_dist = 0.00
             explode_list = [explode_dist for x in df0['Score_Renormed']]
             renormed_list = df0['Score_Renormed'].to_list()
@@ -199,7 +202,7 @@ with st.container():
         st.session_state['Top2'] = top2
         st.session_state['Top2_rename'] = top2_rename
 
-        # Buttons section
+
         col1, col2 = st.columns(2)
         with col1:
             with st.form('download_form'):
