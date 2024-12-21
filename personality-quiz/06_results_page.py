@@ -189,7 +189,7 @@ with st.container():
             ax1.pie(
                 df0['Score_Renormed'], 
                 labels=df0['Persona'],
-                autopct='%1.2f%%',
+                # autopct='%1.2f%%',
                 explode=explode_list,
                 colors=hex_dict.values(),
                 wedgeprops = {"edgecolor" : "black", 
