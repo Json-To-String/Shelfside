@@ -24,8 +24,24 @@
     "How often is a sore loser": "Almost never",
     "How often to come up with a wacky, unheard of strategy": "Occasionally",
     "Collection": {
-      "Most Likely to Include": "Dune: Imperium",
+      "Most Likely to Include": {
+        "name": "Dune: Imperium",
+        "bgg_id": "316554",
+        "description": "Coming soon"
+      },
       "Other Games": [
+        {
+          "name": "Dune: Imperium - Uprising",
+          "bgg_id":"397598",
+          "description": "Patched version of Dune Imperium!"
+        },
+        {
+          "name":"Twilight Imperium: Fourth Edition",
+          "bgg_id":"233078",
+          "description":"Big space opera game for 3-6 that appeals to Ameritrash and Euro players alike"
+        }
+      ],
+      "Old Other Games": [
         "Dune Imperium Uprising (Patched version of Dune Imperium!) ",
         "Twilight Imperium: Fourth Edition (Big space opera game for 3-6 that appeals to Ameritrash and Euro players alike)",
         "Brass Birmingham (Feels good 2-4 player Euro that is BGG #1!)",
@@ -68,8 +84,24 @@
     "How often is a sore loser": "Always",
     "How often to come up with a wacky, unheard of strategy": "Occasionally",
     "Collection": {
-      "Most Likely to Include": "Blood Rage",
-      "Other Games": [
+      "Most Likely to Include": {
+        "name":"Blood Rage",
+        "bgg_id":"170216",
+        "description":"Coming soon"
+      },
+      "Other Games":[
+        {
+          "name": "Twilight Imperium: Fourth Edition",
+          "bgg_id": "233078",
+          "description": "Area control that encourages attacking but isn’t so mean your friends will quit"
+        },
+        {
+          "name": "Root",
+          "bgg_id": "237182",
+          "description": "Area control to secure the forest in your best asymmetrical way!"
+        }
+      ],
+      "Old Other Games": [
         "Twilight Imperium: Fourth Edition (Area control that encourages attacking but isn’t so mean your friends will quit) ",
         "Root (Area control to secure the forest in your best asymmetrical way!)",
         "Food Chain Magnate (A bird’s eye view of Middle Earth lets you move the armies or good or evil around meticulously)",
@@ -113,8 +145,24 @@
     "How often is a sore loser": "Infrequently",
     "How often to come up with a wacky, unheard of strategy": "Moderately",
     "Collection": {
-      "Most Likely to Include": "Tainted Grail: The Fall of Avalon",
-      "Other Games": [
+      "Most Likely to Include": {
+        "name": "Tainted Grail: The Fall of Avalon",
+        "bgg_id": "264220",
+        "description": "Coming soon"
+      },
+      "Other Games":[
+        {
+          "name": "Kingdom Death: Monster",
+          "bgg_id": "55690",
+          "description": "Do you have all of the exclusive minis yet?"
+        },
+        {
+          "name": "War of the Ring: Second Edition",
+          "bgg_id": "115746",
+          "description": "There are an insane amount of expansions, and you can play it solo"
+        }
+      ],
+      "Old Other Games": [
         "Kingdom Death: Monster (Do you have all of the exclusive minis yet?)",
         "War of the Ring: Second Edition (There are an insane amount of expansions, and you can play it solo)",
         "Eclipse 2nd Dawn for the Galaxy (Will always be relevant because of hardcore LoTR fans)",
@@ -157,8 +205,31 @@
     "How often is a sore loser": "Moderately",
     "How often to come up with a wacky, unheard of strategy": "Always",
     "Collection": {
-      "Most Likely to Include": "Root",
+      "Most Likely to Include":
+      {
+        "name": "Root",
+        "bgg_id": "237182",
+        "description": "Coming soon"
+      },
       "Other Games": [
+        {
+          "name": "Nemesis",
+          "bgg_id": "167355",
+          "description": "Are you gonna screw over your crewmates? It all depends on the agendas, cards, and noise made!"
+        },
+        {
+          "name": "Mansions of Madness: Second Edition",
+          "bgg_id": "205059",
+          "description": "Will you go insane facing the Eldritch Horrors through app driven gameplay, leading to a primal urge to light the world on fire?"
+        },
+        {
+          "name": "Twilight Imperium: Fourth Edition",
+          "bgg_id": "233078",
+          "description": "The chaotic plays are through the roof, and yet you can’t break the game in a way that others will quit on you"
+        }
+
+      ],
+      "Old Other Games": [
         "Nemesis (Are you gonna screw over your crewmates? It all depends on the agendas, cards, and noise made!)",
         "Mansions of Madness: Second Edition (Will you go insane facing the Eldritch Horrors through app driven gameplay, leading to a primal urge to light the world on fire?)",
         "Twilight Imperium: Fourth Edition (The chaotic plays are through the roof, and yet you can’t break the game in a way that others will quit on you)"
@@ -199,8 +270,23 @@
     "How often is a sore loser": "Occasionally",
     "How often to come up with a wacky, unheard of strategy": "Moderately",
     "Collection": {
-      "Most Likely to Include": "Gloomhaven: Jaws of the Lion",
-      "Other Games": [
+      "Most Likely to Include": {
+        "name":"Gloomhaven: Jaws of the Lion",
+        "bgg_id":"291457",
+        "description":"Coming soon"},
+      "Other Games":[
+        {
+          "name": "Sky Team",
+          "bgg_id": "373106",
+          "description": "Work with 1 buddy closely to make sure you land a plane!"
+        },
+        {
+          "name": "The Crew: The Quest for Planet Nine",
+          "bgg_id": "284083",
+          "description": "Trick-take without talking, to do simple space missions together!"
+        }
+      ],
+      "Old Other Games": [
         "Sky Team (Work with 1 buddy closely to make sure you land a plane!)",
         "The Crew: The Quest for Planet Nine (Trick-take without talking, to do simple space missions together!)",
         "Oathsworn: Into the Deepwood (A serious boss battler as you go through a campaign with your friends!)",
@@ -244,8 +330,23 @@
     "How often is a sore loser": "Very rarely",
     "How often to come up with a wacky, unheard of strategy": "Moderately",
     "Collection": {
-      "Most Likely to Include": "Wingspan",
-      "Other Games": [
+      "Most Likely to Include": {
+        "name":"Wingspan",
+        "bgg_id":"266192",
+        "description":"Coming soon"},
+      "Other Games":[
+        {
+          "name": "Everdell",
+          "bgg_id": "199792",
+          "description": "Manage lots of critter personalities via cards, while also doing some worker placement between seasons"
+        },
+        {
+          "name": "Lost Ruins of Arnak",
+          "bgg_id": "312484",
+          "description": "Explore an island as a researcher, while also moving up a research track! Deckbuilding and worker placement"
+        }
+      ],
+      "Old Other Games": [
         "Everdell (Manage lots of critter personalities via cards, while also doing some worker placement between seasons)",
         "Lost Ruins of Arnak (explore an island as a researcher, while also moving up a research track! Deckbuilding and worker placement)",
         "Ark Nova (Make a cool zoo!)",
@@ -291,8 +392,23 @@
     "How often is a sore loser": "Infrequently",
     "How often to come up with a wacky, unheard of strategy": "Often",
     "Collection": {
-      "Most Likely to Include": "Decrypto",
-      "Other Games": [
+      "Most Likely to Include": {
+        "name":"Decrypto",
+        "bgg_id":"225694",
+        "description":"Coming soon"},
+      "Other Games":[
+        {
+          "name": "Mansions of Madness: Second Edition",
+          "bgg_id": "205059",
+          "description": "The theme of firing machine guns into horrors can be amusing, but also people turning insane is the funniest of all"
+        },
+        {
+          "name": "Battlestar Galactica: The Board Game",
+          "bgg_id": "37111",
+          "description": "Which of the frakkin’ Cylons will betray you? Should you just launch nukes?"
+        }
+      ],
+      "Old Other Games": [
         "Mansions of Madness: Second Edition (The theme of firing machine guns into horrors can be amusing, but also people turning insane is the funniest of all)",
         "Battlestar Galactica (Which of the frakkin’ Cylons will betray you? Should you just launch nukes?)",
         "Food Chain Magnate (Your fast food chain can be run jankily: have a company run by teenager management trainees, or send kids to pick up beer for your company!)",
@@ -334,8 +450,23 @@
     "How often is a sore loser": "Very rarely",
     "How often to come up with a wacky, unheard of strategy": "Moderately",
     "Collection": {
-      "Most Likely to Include": "Decrypto",
-      "Other Games": [
+      "Most Likely to Include": {
+        "name":"Decrypto",
+        "bgg_id":"225694",
+        "description":"Coming soon"},
+      "Other Games":[
+        {
+          "name": "7 Wonders",
+          "bgg_id": "68448",
+          "description": "up to 7 players and quite easy to learn, everyone is always involved"
+        },
+        {
+          "name": "Lords of Waterdeep",
+          "bgg_id": "110327",
+          "description": "Super accessible worker placement with interaction through blocking spaces and playing intrigue cards!"
+        }
+      ],
+      "Old Other Games": [
         "7 Wonders (up to 7 players and quite easy to learn, everyone is always involved)",
         "Lords of Waterdeep (Super accessible worker placement with interaction through blocking spaces and playing intrigue cards!)",
         "Dune: Imperium - Uprising (Worker placement and deckbuilding for up to 4 players, with even more reason to participate in conflict than its predecessor!)",
@@ -377,8 +508,23 @@
     "How often is a sore loser": "Moderately",
     "How often to come up with a wacky, unheard of strategy": "Moderately",
     "Collection": {
-      "Most Likely to Include": "Puerto Rico",
-      "Other Games": [
+      "Most Likely to Include": {
+        "name":"Puerto Rico",
+        "bgg_id":"3076",
+        "description":"Coming soon"},
+      "Other Games":[
+        {
+          "name": "Food Chain Magnate",
+          "bgg_id": "175914",
+          "description": "Zero randomness open information cutthroat gaming"
+        },
+        {
+          "name": "Agricola",
+          "bgg_id": "31260",
+          "description": "One of the classic worker placements, with appropriate meanness and drafting"
+        }
+      ],
+      "Old Other Games": [
         "Food Chain Magnate (Zero randomness open information cutthroat gaming)",
         "Agricola (One of the classic worker placements, with appropriate meanness and drafting)",
         "Power Grid (The OG Euro to see how well you’re powering cities with power!)",
@@ -421,8 +567,23 @@
     "How often is a sore loser": "Rarely",
     "How often to come up with a wacky, unheard of strategy": "Often",
     "Collection": {
-      "Most Likely to Include": "Twilight Struggle",
-      "Other Games": [
+      "Most Likely to Include": {
+        "name":"Twilight Struggle",
+        "bgg_id":"12333",
+        "description":"Coming soon"},
+      "Other Games":[
+        {
+          "name": "Hegemony: Lead Your Class to Victory",
+          "bgg_id": "321608",
+          "description": "It’s literally IRL class warfare"
+        },
+        {
+          "name": "War of the Ring: Second Edition",
+          "bgg_id": "115746",
+          "description": "“For Frodo”, as the armies of good and evil clash across the fortresses of Middle Earth, all to facilitate the Ring going to Mount Doom"
+        }
+      ],
+      "Old Other Games": [
         "Hegemony (It’s literally IRL class warfare)",
         "War of the Ring: Second Edition (“For Frodo”, as the armies of good and evil clash across the fortresses of Middle Earth, all to facilitate the Ring going to Mount Doom)",
         "Lords of Waterdeep (You’re inside the world of Waterdeep, picking up quests to send warriors and clerics to venture onto! Which quests will you specialize in?)",
