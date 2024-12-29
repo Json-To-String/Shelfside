@@ -16,7 +16,6 @@ with st.container(border=True):
         fond_of = data[color_persona]["Fond Of"]
         misunderstand = data[color_persona]["May Have Trouble Understanding"]
 
-        #st.title(f'Your Result: The {top2_rename[0]}!')
         persona_image1 = f'res/test_{color_persona.lower()}.png'
         favor_image = f'res/relationships/{name_persona.lower()}_favors.png'
         st.image(favor_image)
