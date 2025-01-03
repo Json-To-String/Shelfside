@@ -8,3 +8,5 @@ font="sans serif"
 [server]
 enableStaticServing = true
 
+[client]
+showErrorDetails = "type"
