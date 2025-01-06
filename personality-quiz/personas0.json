@@ -31,9 +31,9 @@
       },
       "Other Games": [
         {
-          "name": "Dune: Imperium - Uprising",
-          "bgg_id":"397598",
-          "description": "Patched version of Dune Imperium!"
+          "name": "Spirit Island",
+          "bgg_id":"162886",
+          "description": "Tons of cooperation without quarterbacking"
         },
         {
           "name":"Twilight Imperium: Fourth Edition",
@@ -550,7 +550,7 @@
     "Attributes": ["Likes attacking for theme’s sake", "Warhammer fan", "Classic ameritrash player", "Roleplayer"],
     "Strengths": [
       "Keeps an entertaining narrative going for even boring or bad games",
-      "Easily digests rules because already has such an interest in",
+      "Hungrily digests rules because already has such an interest in the theme",
       "Able to bring up a historical/fictional comparison to many gameplay moments"
     ],
     "Weaknesses": [
