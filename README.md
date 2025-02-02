@@ -27,7 +27,6 @@ We welcome contributions that help improve the quiz, whether it's adding new que
 1. **Fork the Repository**: Click the "Fork" button on the repository's GitHub page.
 2. **Clone Your Fork**:  
    ```
-   bash
    git clone https://github.com/json-to-string/shelfside-quiz.git
    ```
 3. **Create a branch**:
