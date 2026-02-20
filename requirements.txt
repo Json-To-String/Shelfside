@@ -6,3 +6,4 @@ theFuzz
 streamlit
 streamlit-extras
 matplotlib
+altair<5
