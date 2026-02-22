@@ -24,5 +24,8 @@ with st.form('page_form'):
     # Every form must have a submit button.
     submitted = st.form_submit_button('Submit', use_container_width=True, type='primary')
     if submitted:
-        page_handler.store_answers(page_num)
-        st.switch_page('personality-quiz/05_question_page5.py')
+        if not page_handler.all_answered(page_num):
+            st.error("Please answer all questions before continuing.")
+        else:
+            page_handler.store_answers(page_num)
+            st.switch_page('personality-quiz/05_question_page5.py')
