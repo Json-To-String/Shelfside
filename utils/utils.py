@@ -105,7 +105,7 @@ class Handler():
         self.question_dict = dict(map(lambda i,j : (i,j),
                                 self.question_list, self.question_weights))
 
-    def display_questions(self, page_num):
+    def display_questions(self, page_num, show_errors=False):
 
     # with st.form('page_form'):
     ## Main Question Loop
@@ -115,9 +115,22 @@ class Handler():
 
             quest_key = f'page{page_num}_question{i}'
 
+            unanswered = show_errors and st.session_state.get(quest_key) is None
+
+            if unanswered:
+                st.markdown(
+                    '<div style="border-left: 4px solid #ef4444; background-color: #fef2f2; '
+                    'padding: 6px 12px; border-radius: 4px; margin-bottom: 4px;">'
+                    '<span style="color: #dc2626; font-size: 0.85rem;">'
+                    '⚠️ Please answer this question before continuing.</span></div>',
+                    unsafe_allow_html=True
+                )
+
+            label = f'❗ {quest}' if unanswered else quest
+
             # self.question_keys.append(quest_key) ## potentiall superfluous
 
-            answer = st.radio(f'{quest}',
+            answer = st.radio(label,
                                 self.question_options,
                                 horizontal = False,
                                 key = quest_key,
