@@ -1,5 +1,6 @@
 import streamlit as st
 import json
+from pathlib import Path
 import utils.utils as ut
 
 top2 = st.session_state['Top2']
@@ -8,6 +9,13 @@ top2_rename = st.session_state['Top2_rename']
 color_persona = top2[0]
 name_persona = top2_rename[0]
 page_handler = ut.Handler()
+
+if st.button("Back to results"):
+    st.switch_page("personality-quiz/06_results_page.py")
+
+st.title("Friends & rivals")
+if st.button("See my game recommendations", width="stretch", type="primary"):
+    st.switch_page("personality-quiz/08_recommend_page.py")
 
 with st.container(border=True):
     with open('personality-quiz/personas0.json', 'r', encoding='utf-8') as f:
@@ -45,25 +53,6 @@ with st.container(border=True):
                 with st.expander(f"The {name}"):
                     st.write(f'"{quote.strip()}"')
 
-with st.container(border=True):
-
-    try:
-        st.image(f"res/FeaturedPeople/{name_persona.lower()}s.png")
-    except:
-        st.header("People in the industry you're like")
-        st.text("<< Coming Soon! >>")
-
-with st.container(border=True):
-
-    with st.form('page_form'):
-        col1, col2 = st.columns(2)
-        with col1:
-            results = st.form_submit_button(f"⏪ Back to results!",
-                                            width="stretch", type='primary')
-            if results:
-                st.switch_page('personality-quiz/06_results_page.py')
-        with col2:
-            recommend = st.form_submit_button(f"3 games for you! ⏩",
-                                            width="stretch", type='primary')
-            if recommend:
-                st.switch_page('personality-quiz/08_recommend_page.py')
+featured_people = Path(f"res/FeaturedPeople/{name_persona.lower()}s.png")
+if featured_people.is_file():
+    st.image(featured_people)
