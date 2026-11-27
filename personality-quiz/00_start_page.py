@@ -294,7 +294,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 with st.form('page_form'):
-    submitted = st.form_submit_button('Start your test!', use_container_width=True, type='primary')
+    submitted = st.form_submit_button('Start your test!', width="stretch", type='primary')
     if submitted:
         st.switch_page('personality-quiz/01_question_page1.py')
 

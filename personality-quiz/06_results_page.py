@@ -97,9 +97,7 @@ with st.container():
             col1, col2 = st.columns(2, gap="large")
             
             with col1:
-                art = f'res/test_{color_persona.lower()}.png'
-                # st.image(art, width = 600, use_container_width=True)
-                st.image(art, width = 400)
+                ut.show_persona_portrait(color_persona, name_persona, width=400)
                 with st.container(border=True):
                     st.markdown(f"<p style='font-size: 1.1rem; line-height: 1.6;'>{data_A[color_persona]['Blurb']}</p>",
                               unsafe_allow_html=True)
@@ -174,7 +172,7 @@ with st.container():
                 fontSize=16
             )
 
-            st.altair_chart(chart, use_container_width=True)
+            st.altair_chart(chart, width="stretch")
 
             df0['Score_Renormed'] = np.abs(df0['Score'].min()) + df0['Score']
             fig1, ax1 = plt.subplots()
@@ -207,13 +205,13 @@ with st.container():
         with col1:
             with st.form('download_form'):
                 st.form_submit_button("📥 Save Results (Coming Soon)",
-                                    use_container_width=True,
+                                    width="stretch",
                                     type='secondary')
 
         with col2:
             with st.form('page_form'):
                 submitted = st.form_submit_button("👥 View Friends & Rivals!",
-                                               use_container_width=True,
+                                               width="stretch",
                                                type='primary')
                 if submitted:
                     st.switch_page('personality-quiz/07_relationship_page.py')

@@ -17,7 +17,6 @@ with st.container(border=True):
         misunderstand = data[color_persona]["May Have Trouble Understanding"]
 
         #st.title(f'Your Result: The {top2_rename[0]}!')
-        persona_image1 = f'res/test_{color_persona.lower()}.png'
         favor_image = f'res/relationships/{name_persona.lower()}_favors.png'
         st.image(favor_image)
 
@@ -30,8 +29,7 @@ with st.container(border=True):
                 quote = line[-1]
                 name = page_handler.persona_map[color]
 
-                im = f'res/test_{color.lower()}.png'
-                st.image(im, width=200)
+                ut.show_persona_portrait(color, name, width=200)
                 with st.expander(f"The {name}"):
                     st.write(f'"{quote.strip()}"')
 
@@ -43,8 +41,7 @@ with st.container(border=True):
                 quote = line[-1]
                 name = page_handler.persona_map[color]
 
-                im = f'res/test_{color.lower()}.png'
-                st.image(im, width=200)
+                ut.show_persona_portrait(color, name, width=200)
                 with st.expander(f"The {name}"):
                     st.write(f'"{quote.strip()}"')
 
@@ -62,11 +59,11 @@ with st.container(border=True):
         col1, col2 = st.columns(2)
         with col1:
             results = st.form_submit_button(f"⏪ Back to results!",
-                                            use_container_width=True, type='primary')
+                                            width="stretch", type='primary')
             if results:
                 st.switch_page('personality-quiz/06_results_page.py')
         with col2:
             recommend = st.form_submit_button(f"3 games for you! ⏩",
-                                            use_container_width=True, type='primary')
+                                            width="stretch", type='primary')
             if recommend:
                 st.switch_page('personality-quiz/08_recommend_page.py')

@@ -2,6 +2,15 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 
+def show_persona_portrait(color: str, name: str, width: int) -> None:
+    """Render a bundled persona portrait from Streamlit’s static directory."""
+    st.markdown(
+        f'<img src="./app/static/test_{color.lower()}.png" '
+        f'alt="The {name}" width="{width}" style="max-width: 100%; height: auto;">',
+        unsafe_allow_html=True,
+    )
+
+
 class Handler():
 
     def __init__(self):
