@@ -163,9 +163,9 @@ def display_game_card(game_info: Dict, game_blurb: str):
         
         with cols[0]:
             if game_info['thumbnail']:
-                st.image(game_info['thumbnail'], use_container_width=True)
+                st.image(game_info['thumbnail'], width="stretch")
             else:
-                st.image("https://placehold.co/200x200?text=No+Image", use_container_width=True)
+                st.image("https://placehold.co/200x200?text=No+Image", width="stretch")
         
         with cols[1]:
             st.subheader(game_info['name'])
@@ -184,7 +184,7 @@ def display_game_card(game_info: Dict, game_blurb: str):
                 st.link_button(
                     "View on BGG", 
                     f"https://boardgamegeek.com/boardgame/{game_info['id']}", 
-                    use_container_width=True
+                    width="stretch"
                 )
 def display_game_card_no_blurb(game_info: Dict):
     """Display a game card with image and details"""
@@ -193,9 +193,9 @@ def display_game_card_no_blurb(game_info: Dict):
         
         with cols[0]:
             if game_info['thumbnail']:
-                st.image(game_info['thumbnail'], use_container_width=True)
+                st.image(game_info['thumbnail'], width="stretch")
             else:
-                st.image("https://placehold.co/200x200?text=No+Image", use_container_width=True)
+                st.image("https://placehold.co/200x200?text=No+Image", width="stretch")
         
         with cols[1]:
             st.subheader(game_info['name'])
@@ -213,7 +213,7 @@ def display_game_card_no_blurb(game_info: Dict):
                 st.link_button(
                     "View on BGG", 
                     f"https://boardgamegeek.com/boardgame/{game_info['id']}", 
-                    use_container_width=True
+                    width="stretch"
                 )
 ##########
 
@@ -327,16 +327,16 @@ with st.form('page_form'):
     col1, col2 = st.columns(2)
     with col1:
         results = st.form_submit_button(f"⏮️ Back to results!",
-                                            use_container_width=True, type='primary')
+                                            width="stretch", type='primary')
         if results:
             st.switch_page('personality-quiz/06_results_page.py')
     with col2:
         relationships = st.form_submit_button(f"⏪ Back to relationships!",
-                                            use_container_width=True, type='primary')
+                                            width="stretch", type='primary')
         if relationships:
             st.switch_page('personality-quiz/07_relationship_page.py')
     retake = st.form_submit_button(f"Retake the Test! :repeat:",
-                                        use_container_width=True, type='secondary')
+                                        width="stretch", type='secondary')
     if retake:
         for key in st.session_state.keys():
             del st.session_state[key]
