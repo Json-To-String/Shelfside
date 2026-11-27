@@ -78,17 +78,21 @@ with st.container():
     top2_rename = get_top_two(df_renamed)
     color1, color2 = top2
 
-    # Title with custom styling
-    st.markdown(f"""
-        <div class="results-title">
-            🎉 Your Result: The {top2_rename[0]}!
-        </div>
-    """, unsafe_allow_html=True)
-    
+    st.title(f"Your result: The {top2_rename[0]}")
+
     with open('personality-quiz/personas0.json', 'r', encoding='utf-8') as a, \
          open('personality-quiz/color_combos0.json', 'r', encoding='utf-8') as b:
         data_A = json.load(a)
         data_B = json.load(b)
+
+        st.markdown(data_A[color1]["Blurb"])
+        st.session_state["Top2"] = top2
+        st.session_state["Top2_rename"] = top2_rename
+
+        if st.button("See my game recommendations", width="stretch", type="primary"):
+            st.switch_page("personality-quiz/08_recommend_page.py")
+        if st.button("Explore friends & rivals", width="stretch"):
+            st.switch_page("personality-quiz/07_relationship_page.py")
 
         for i in range(1):
             color_persona = top2[i]
@@ -98,10 +102,6 @@ with st.container():
             
             with col1:
                 ut.show_persona_portrait(color_persona, name_persona, width=400)
-                with st.container(border=True):
-                    st.markdown(f"<p style='font-size: 1.1rem; line-height: 1.6;'>{data_A[color_persona]['Blurb']}</p>",
-                              unsafe_allow_html=True)
-                    
 
             with col2:
                 st.markdown(f"<h2 class='persona-header'>The {name_persona}</h2>", unsafe_allow_html=True)
@@ -196,22 +196,3 @@ with st.container():
                 )
 
             st.pyplot(fig1)
-
-        st.session_state['Top2'] = top2
-        st.session_state['Top2_rename'] = top2_rename
-
-
-        col1, col2 = st.columns(2)
-        with col1:
-            with st.form('download_form'):
-                st.form_submit_button("📥 Save Results (Coming Soon)",
-                                    width="stretch",
-                                    type='secondary')
-
-        with col2:
-            with st.form('page_form'):
-                submitted = st.form_submit_button("👥 View Friends & Rivals!",
-                                               width="stretch",
-                                               type='primary')
-                if submitted:
-                    st.switch_page('personality-quiz/07_relationship_page.py')
