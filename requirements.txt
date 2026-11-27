@@ -4,6 +4,8 @@ requests
 bs4
 theFuzz
 streamlit>=1.51.0
+# Streamlit 1.60's gzip middleware drops image response headers with Starlette 1.8+.
+starlette<1.8
 streamlit-extras
 matplotlib
 altair<5
