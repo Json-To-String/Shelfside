@@ -4,17 +4,15 @@ import numpy as np
 import time
 import plotly.express as px
 import json
-import utils.bggFetcher as bf
+from utils.bggFetcher import request_bgg_xml
 import xml.etree.ElementTree as ET
 
-import requests
 from bs4 import BeautifulSoup
 import re
 from typing import List, Dict, Optional
 from functools import lru_cache
 class BGGFetcher:
     def __init__(self):
-        self.base_url = "https://boardgamegeek.com/xmlapi2"
         if 'bgg_cache' not in st.session_state:
             st.session_state.bgg_cache = {}
 
@@ -23,14 +21,12 @@ class BGGFetcher:
     def _fetch_api(endpoint: str, params: Dict) -> Optional[str]:
         """Generic API fetcher with retry logic"""
         try:
-            base_url = "https://boardgamegeek.com/xmlapi2"
-            url = f"{base_url}/{endpoint}"
-            response = requests.get(url, params=params)
+            response = request_bgg_xml(endpoint, params)
             
             # BGG sometimes returns 202 when preparing data
             if response.status_code == 202:
                 time.sleep(2)  # Wait and retry
-                response = requests.get(url, params=params)
+                response = request_bgg_xml(endpoint, params)
             
             if response.status_code == 200:
                 return response.content

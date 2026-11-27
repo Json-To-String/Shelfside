@@ -3,24 +3,43 @@ import requests
 import xml.etree.ElementTree as ET
 from typing import Optional, Dict
 import time
+import os
+
+
+def request_bgg_xml(endpoint: str, params: dict) -> requests.Response:
+    """Send an authenticated request to the BoardGameGeek XML API."""
+    token = os.environ.get("BGG_API_TOKEN", "").strip()
+    if not token:
+        try:
+            token = st.secrets.get("BGG_API_TOKEN", "").strip()
+        except FileNotFoundError:
+            pass
+
+    if not token:
+        raise ValueError("Set BGG_API_TOKEN to load BoardGameGeek data.")
+
+    return requests.get(
+        f"https://boardgamegeek.com/xmlapi2/{endpoint}",
+        params=params,
+        headers={"Authorization": f"Bearer {token}"},
+        timeout=10,
+    )
 
 # Use Streamlit's caching for API calls
 @st.cache_data(ttl=3600)  # Cache for 1 hour
 def fetch_bgg_search(game_name: str) -> requests.Response:
     """Cached BGG search API call"""
-    search_url = "https://boardgamegeek.com/xmlapi2/search"
     params = {
         "query": game_name,
         "type": "boardgame"
     }
-    return requests.get(search_url, params=params)
+    return request_bgg_xml("search", params)
 
 @st.cache_data(ttl=3600)  # Cache for 1 hour
 def fetch_bgg_details(game_id: str) -> requests.Response:
     """Cached BGG game details API call"""
-    details_url = "https://boardgamegeek.com/xmlapi2/thing"
     params = {"id": game_id}
-    return requests.get(details_url, params=params)
+    return request_bgg_xml("thing", params)
 
 class BGGStreamlitFetcher:
     def __init__(self):

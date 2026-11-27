@@ -7,3 +7,4 @@ streamlit>=v1.36.0
 streamlit-extras
 matplotlib
 altair<5
+plotly
