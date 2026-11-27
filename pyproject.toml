@@ -1,0 +1,21 @@
+[project]
+name = "shelfside"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "altair<5",
+    "bs4",
+    "matplotlib",
+    "numpy",
+    "pandas",
+    "plotly",
+    "requests",
+    # Streamlit 1.60's gzip middleware drops image response headers with Starlette 1.8+.
+    "starlette<1.8",
+    "streamlit>=1.51.0",
+    "streamlit-extras",
+    "thefuzz",
+]
+
+[tool.uv]
+package = false

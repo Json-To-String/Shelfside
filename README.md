@@ -9,7 +9,8 @@ Personality Quiz organization:
 ```
 ├── README.md
 ├── .gitignore
-├── requirements.txt
+├── pyproject.toml
+├── uv.lock
 ├── main.py
 ├── personality-quiz/
 │   ├── question_pages*.py
@@ -33,12 +34,9 @@ We welcome contributions that help improve the quiz, whether it's adding new que
    ```bash
    git checkout -b feature-name
    ```
-4. **Install Dependencies:**
+4. Install [uv](https://docs.astral.sh/uv/getting-started/installation/), then sync the locked dependencies.
    ```bash
-   python -m venv .venv
-   .\.venv\Scripts\activate # windows
-   ./venv/bin/activate # linux
-   pip install -r requirements.txt
+   uv sync --locked
    ```
 
 ### Making Changes
@@ -48,7 +46,7 @@ We welcome contributions that help improve the quiz, whether it's adding new que
 ### Testing
 This project uses streamlit, so to view your changes and edits you'll need to run your build locally:
 ```
-streamlit run main.py
+uv run --locked streamlit run main.py
 ```
 
 
