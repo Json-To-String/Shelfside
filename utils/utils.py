@@ -148,33 +148,6 @@ class Handler():
             st.divider()
 
 
-    def display_questions_old(self, page_num):
-
-        with st.form('page_form'):
-        ## Main Question Loop
-            for i in range(len(self.question_list)):
-                quest = self.question_list[i]
-                # weight = self.question_weights[i]
-
-                quest_key = f'page{page_num}_question{i}'
-
-                # self.question_keys.append(quest_key) ## potentiall superfluous
-
-                answer = st.radio(f'Question {i + 1}: {quest}',
-                                    self.question_options,
-                                    horizontal = True,
-                                    key = quest_key,
-                                    # index = len(self.question_options) // 2)
-                                    index = None)
-
-                st.divider()
-
-            # Every form must have a submit button.
-            submitted = st.form_submit_button('Submit')
-            if submitted:
-                self.store_answers(page_num)
-                st.write('Answers stored, click the button below to move on!')
-
     def all_answered(self, page_num):
         """Returns True only if every question on this page has a non-None answer."""
         for i in range(len(self.question_list)):
