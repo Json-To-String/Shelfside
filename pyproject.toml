@@ -12,7 +12,7 @@ dependencies = [
     "requests",
     # Streamlit 1.60's gzip middleware drops image response headers with Starlette 1.8+.
     "starlette<1.8",
-    "streamlit>=1.51.0",
+    "streamlit>=1.60.0",
     "streamlit-extras",
     "thefuzz",
 ]

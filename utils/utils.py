@@ -115,51 +115,37 @@ class Handler():
                                 self.question_list, self.question_weights))
 
     def display_questions(self, page_num, show_errors=False, answers=None):
+        for i, question in enumerate(self.question_list):
+            key = f"page{page_num}_question{i}"
+            if answers is not None and key not in st.session_state:
+                st.session_state[key] = answers.get(key)
 
-    # with st.form('page_form'):
-    ## Main Question Loop
-        for i in range(len(self.question_list)):
-            quest = self.question_list[i]
-            # weight = self.question_weights[i]
-
-            quest_key = f'page{page_num}_question{i}'
-
-            if answers is not None and quest_key not in st.session_state:
-                st.session_state[quest_key] = answers.get(quest_key)
-
-            unanswered = show_errors and st.session_state.get(quest_key) is None
-
-            if unanswered:
-                st.markdown(
-                    '<div style="border-left: 4px solid #ef4444; background-color: #fef2f2; '
-                    'padding: 6px 12px; border-radius: 4px; margin-bottom: 4px;">'
-                    '<span style="color: #dc2626; font-size: 0.85rem;">'
-                    '⚠️ Please answer this question before continuing.</span></div>',
-                    unsafe_allow_html=True
+            with st.container(key=f"field_{key}"):
+                if show_errors and st.session_state.get(key) is None:
+                    st.html(
+                        f'<p class="quiz-field-error" id="{key}-error" tabindex="-1">'
+                        f'Select an answer for question {i + 1}.</p>'
+                    )
+                answer = st.radio(
+                    f"{i + 1}. {question.strip()}",
+                    self.question_options,
+                    key=key,
+                    index=None,
                 )
 
-            label = f'❗ {quest}' if unanswered else quest
-
-            # self.question_keys.append(quest_key) ## potentiall superfluous
-
-            answer = st.radio(label,
-                                self.question_options,
-                                horizontal = False,
-                                key = quest_key,
-                                index = None)
-
             if answers is not None:
-                answers[quest_key] = answer
+                answers[key] = answer
 
             st.divider()
 
+    def unanswered_questions(self, page_num):
+        return [
+            i for i in range(len(self.question_list))
+            if st.session_state.get(f"page{page_num}_question{i}") is None
+        ]
 
     def all_answered(self, page_num):
-        """Returns True only if every question on this page has a non-None answer."""
-        for i in range(len(self.question_list)):
-            if st.session_state.get(f'page{page_num}_question{i}') is None:
-                return False
-        return True
+        return not self.unanswered_questions(page_num)
 
     def store_answers(self, page_num):
 
