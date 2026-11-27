@@ -1,7 +1,6 @@
+from pathlib import Path
+
 import streamlit as st
-import pandas as pd
-import numpy as np
-import os
 
 from utils.quiz import SECTIONS, START_PAGE
 
@@ -27,7 +26,7 @@ pg = st.navigation([
                    st.Page('personality-quiz/06_results_page.py'),
                    st.Page('personality-quiz/07_relationship_page.py'),
                    st.Page('personality-quiz/08_recommend_page.py')
-               ])
+               ], position="hidden")
 
 if pg.url_path in {"results_page", "relationship_page", "recommend_page"}:
     if not all(
@@ -38,24 +37,5 @@ if pg.url_path in {"results_page", "relationship_page", "recommend_page"}:
     if pg.url_path != "results_page" and "Top2" not in st.session_state:
         st.switch_page("personality-quiz/06_results_page.py")
 
+st.html(Path(__file__).parent / "CSS" / "Style.css")
 pg.run()
-
-## Bigger font for questions
-st.markdown(
-    """<style>
-div[class*="stRadio"] > label > div[data-testid="stMarkdownContainer"] > p {
-    font-size: 18px;
-}
-    </style>
-    """, unsafe_allow_html=True)
-
-## hide navbar???
-st.markdown('''
-<style>
-.stApp [data-testid="stToolbar"]{
-    display:none;
-}
-</style>
-''', unsafe_allow_html=True)
-
-st.set_option("client.showSidebarNavigation", False)

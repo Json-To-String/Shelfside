@@ -1,2 +1,65 @@
-/* CSS */
-/* CSS Test */
+/* Shared measure, headings, and interactive states for the quiz. */
+.stMainBlockContainer {
+    width: 100%;
+    max-width: 46rem;
+    padding-inline: clamp(1rem, 4vw, 2.5rem);
+}
+
+.stMain h1 {
+    font-size: clamp(1.85rem, 5vw, 2.65rem);
+    line-height: 1.15;
+    overflow-wrap: break-word;
+}
+
+.stMain h2 {
+    font-size: clamp(1.3rem, 4vw, 1.65rem);
+    line-height: 1.25;
+    overflow-wrap: break-word;
+}
+
+.shelfside-logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.stMain :is(button, [role="button"], summary, [data-baseweb="radio"]) {
+    min-height: 2.75rem;
+}
+
+.stMain :is(button, [role="button"], a, summary):focus-visible,
+.stMain label[data-baseweb="radio"]:has(input:focus-visible) {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+}
+
+.stMain :is(button, [role="button"], a, summary, [role="radiogroup"], .quiz-error-summary) {
+    scroll-margin-block: 4rem 1rem;
+}
+
+.st-key-quiz_questions [class*="st-key-field_page"] {
+    padding: .75rem 0;
+}
+
+.st-key-quiz_questions [data-testid="stWidgetLabel"] p {
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.st-key-quiz_questions .quiz-field-error {
+    border-inline-start: 4px solid currentColor;
+    padding-inline-start: .65rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+@media (max-width: 36rem) {
+    .stMain [data-testid="stHorizontalBlock"] {
+        flex-wrap: wrap;
+    }
+
+    .stMain [data-testid="stColumn"] {
+        flex: 1 0 100%;
+        min-width: 0;
+    }
+}
