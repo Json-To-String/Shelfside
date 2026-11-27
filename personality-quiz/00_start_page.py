@@ -297,3 +297,11 @@ with st.form('page_form'):
     submitted = st.form_submit_button('Start your test!', use_container_width=True, type='primary')
     if submitted:
         st.switch_page('personality-quiz/01_question_page1.py')
+
+st.markdown("""
+    <div style="text-align: center; margin-top: 1rem;">
+        <a href="https://boardgamegeek.com/">
+            <img src="./app/static/powered_by_bgg.png" alt="Powered by BoardGameGeek" width="180">
+        </a>
+    </div>
+""", unsafe_allow_html=True)

@@ -50,3 +50,17 @@ This project uses streamlit, so to view your changes and edits you'll need to ru
 ```
 streamlit run main.py
 ```
+
+
+### BoardGameGeek recommendations
+
+To load game details and images locally, create `.streamlit/secrets.toml`
+with a token from your approved BoardGameGeek application:
+
+```toml
+BGG_API_TOKEN = "your-token"
+```
+
+You can also set `BGG_API_TOKEN` in your environment. Restart Streamlit
+after configuring the token, complete the quiz, then open Recommendations
+to check that game images load.
