@@ -136,8 +136,6 @@ class Handler():
             if answers is not None:
                 answers[key] = answer
 
-            st.divider()
-
     def unanswered_questions(self, page_num):
         return [
             i for i in range(len(self.question_list))

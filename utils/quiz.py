@@ -118,7 +118,8 @@ def show_quiz_section(section: int, next_page: str) -> None:
     show_errors = st.session_state.get(error_key, False)
     summary = st.empty()
 
-    handler.display_questions(section, show_errors=show_errors, answers=answers)
+    with st.container(key="quiz_questions"):
+        handler.display_questions(section, show_errors=show_errors, answers=answers)
     missing = handler.unanswered_questions(section)
     if show_errors and missing:
         with summary.container():
@@ -126,10 +127,12 @@ def show_quiz_section(section: int, next_page: str) -> None:
 
     total = question_count()
     answered = sum(answer is not None for answer in answers.values())
-    progress.progress(
-        answered / total,
-        text=f"Section {section} of {len(SECTIONS)} · {answered} of {total} answered",
-    )
+    with progress.container():
+        st.html(
+            f'<p role="status">Section {section} of {len(SECTIONS)} · '
+            f'{answered} of {total} answered</p>'
+        )
+        st.progress(answered / total)
 
     if st.button(
         "See my result" if last_section else "Continue",
