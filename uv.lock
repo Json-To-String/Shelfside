@@ -1811,7 +1811,7 @@ requires-dist = [
     { name = "plotly" },
     { name = "requests" },
     { name = "starlette", specifier = "<1.8" },
-    { name = "streamlit", specifier = ">=1.51.0" },
+    { name = "streamlit", specifier = ">=1.60.0" },
     { name = "streamlit-extras" },
     { name = "thefuzz" },
 ]
