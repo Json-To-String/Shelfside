@@ -1,16 +1,13 @@
-import streamlit as st
-import pandas as pd
-import numpy as np
-import time
-import plotly.express as px
 import json
-from utils.bggFetcher import request_bgg_xml
+import time
 import xml.etree.ElementTree as ET
+from typing import Dict, Optional
 
-from bs4 import BeautifulSoup
-import re
-from typing import List, Dict, Optional
-from functools import lru_cache
+import streamlit as st
+
+from utils.bggFetcher import request_bgg_xml
+
+
 class BGGFetcher:
     def __init__(self):
         if 'bgg_cache' not in st.session_state:
@@ -18,7 +15,7 @@ class BGGFetcher:
 
     @staticmethod
     @st.cache_data(ttl=3600, show_spinner=False)
-    def _fetch_api(endpoint: str, params: Dict) -> Optional[str]:
+    def _fetch_api(endpoint: str, params: Dict) -> Optional[bytes]:
         """Generic API fetcher with retry logic"""
         try:
             response = request_bgg_xml(endpoint, params)
@@ -37,7 +34,6 @@ class BGGFetcher:
             st.warning(f"API Error: {str(e)}")
             return None
 
-###################################
     def _create_empty_game_info(self, game_name: str) -> Dict:
         return {
             'name': game_name,
@@ -48,72 +44,20 @@ class BGGFetcher:
             'year': None
         }
     
-    def get_game_info(self, game_name: str, game_id: str = None) -> Dict:
-        """
-        Get game information including thumbnail.
-        
-        Args:
-            game_name (str): Name of the game
-            game_id (str, optional): BGG game ID. If provided, bypasses name search.
-        
-        Returns:
-            Dict: Game information including thumbnail, description, etc.
-        """
-        # Check cache first
+    def get_game_info(self, game_name: str, game_id: str) -> Dict:
+        """Load the recommendation's game details from its BGG ID."""
         if game_name in st.session_state.bgg_cache:
             return st.session_state.bgg_cache[game_name]
 
         try:
-            # If game_id is provided, skip search and get details directly
-            if game_id:
-                details_content = self._fetch_api("thing", {
-                    "id": game_id,
-                    "stats": 1
-                })
-                
-                if not details_content:
-                    return self._create_empty_game_info(game_name)
-                    
-                root = ET.fromstring(details_content)
-                item = root.find(".//item")
-                
-                if item is None:
-                    return self._create_empty_game_info(game_name)
-            
-            # If no game_id provided, search by name
-            else:
-                search_content = self._fetch_api("search", {
-                    "query": game_name,
-                    "type": "boardgame"
-                })
-                
-                if not search_content:
-                    return self._create_empty_game_info(game_name)
+            details_content = self._fetch_api("thing", {"id": game_id, "stats": 1})
+            if not details_content:
+                return self._create_empty_game_info(game_name)
 
-                root = ET.fromstring(search_content)
-                games = root.findall(".//item")
-                
-                if not games:
-                    return self._create_empty_game_info(game_name)
-
-                # Take first result
-                selected_game = games[0]
-                game_id = selected_game.get("id")
-                
-                # Get details for selected game
-                details_content = self._fetch_api("thing", {
-                    "id": game_id,
-                    "stats": 1
-                })
-                
-                if not details_content:
-                    return self._create_empty_game_info(game_name)
-
-                root = ET.fromstring(details_content)
-                item = root.find(".//item")
-                
-                if item is None:
-                    return self._create_empty_game_info(game_name)
+            root = ET.fromstring(details_content)
+            item = root.find(".//item")
+            if item is None:
+                return self._create_empty_game_info(game_name)
 
             # Extract game information
             game_info = {
@@ -156,7 +100,7 @@ class BGGFetcher:
             st.warning(f"Error processing game {game_name}: {str(e)}")
             return self._create_empty_game_info(game_name)
         
-def display_game_card(game_info: Dict, game_blurb: str):
+def display_game_card(game_info: Dict, game_blurb: Optional[str] = None):
     """Display a game card with image and details"""
     with st.container(border=True):
         cols = st.columns([1, 2])
@@ -169,7 +113,8 @@ def display_game_card(game_info: Dict, game_blurb: str):
         
         with cols[1]:
             st.subheader(game_info['name'])
-            st.caption(game_blurb)
+            if game_blurb is not None:
+                st.caption(game_blurb)
             if game_info['year']:
                 st.caption(f"Published: {game_info['year']}")
             
@@ -186,142 +131,25 @@ def display_game_card(game_info: Dict, game_blurb: str):
                     f"https://boardgamegeek.com/boardgame/{game_info['id']}", 
                     width="stretch"
                 )
-def display_game_card_no_blurb(game_info: Dict):
-    """Display a game card with image and details"""
-    with st.container(border=True):
-        cols = st.columns([1, 2])
-        
-        with cols[0]:
-            if game_info['thumbnail']:
-                st.image(game_info['thumbnail'], width="stretch")
-            else:
-                st.image("https://placehold.co/200x200?text=No+Image", width="stretch")
-        
-        with cols[1]:
-            st.subheader(game_info['name'])
-            if game_info['year']:
-                st.caption(f"Published: {game_info['year']}")
-            
-            if game_info['categories']:
-                st.write("Categories:", ", ".join(game_info['categories']))
-            
-            if game_info['description']:
-                with st.expander("BGG Game Description"):
-                    st.write(game_info['description'])
-            
-            if game_info['id']:
-                st.link_button(
-                    "View on BGG", 
-                    f"https://boardgamegeek.com/boardgame/{game_info['id']}", 
-                    width="stretch"
-                )
-##########
 
 
-top2 = st.session_state['Top2']
-top2_rename = st.session_state['Top2_rename']
-
-color_persona1 = top2[0]
-persona_name1 = top2_rename[0]
-
-color_persona2 = top2[1]
-persona_name2 = top2_rename[1]
-
-# def get_categories(url) -> 'List':
-#     '''
-#     Params: str: Board game url (ex: https://boardgamegeek.com/xmlapi/boardgame/{gameID})
-
-#     Returns: List: List of categories
-#     '''
-#     response = requests.get(url)
-#     soup = BeautifulSoup(response.text)
-
-#     cat_text = soup.find_all('boardgamecategory')
-#     cat_list = []
-#     for cats in cat_text:
-#         s = str(cats)
-
-#         # extract important text between <stuff> important text </stuff>
-#         c = re.sub(r'<[^>]+>', '', s)
-#         cat_list.append(c)
-
-#     return(cat_list)
-
-# def get_description(url) -> 'str':
-#     '''
-#     Params: str: Board game url (ex: https://boardgamegeek.com/xmlapi/boardgame/{gameID})
-
-#     Returns: str: string of description
-#     '''
-#     response = requests.get(url)
-#     soup = BeautifulSoup(response.text)
-
-#     cat_text = soup.find_all('description')
-
-#     return(cat_text)
-
-def parse_parenthetical(game_string):
-
-    splitted = game_string.split('(')
-    x = splitted[-1].replace(')', '')
-    splitted[-1] = x
-    return(splitted)
-
-top2 = st.session_state['Top2']
-top2_rename = st.session_state['Top2_rename']
-
-color_persona1 = top2[0]
-persona_name1 = top2_rename[0]
-
-color_persona2 = top2[1]
-persona_name2 = top2_rename[1]
-
+color_persona = st.session_state["Top2"][0]
 bgg = BGGFetcher()
 with st.container(border=True):
+    st.title("3 board games we recommend for you!")
 
-    st.title(f'3 board games we recommend for you!')
+    with open("personality-quiz/personas0.json", encoding="utf-8") as personas_file:
+        collection = json.load(personas_file)[color_persona]["Collection"]
 
-    with open('personality-quiz/personas0.json', 'r', encoding='utf-8') as a:
+    most_likely = collection["Most Likely to Include"]
+    game_info = bgg.get_game_info(most_likely["name"], most_likely["bgg_id"])
+    display_game_card(game_info)
 
-        data_A = json.load(a)
-        # most_likely_game = data_A[color_persona1]["Collection"]["Most Likely to Include"]
-        games_1 = data_A[color_persona1]["Collection"]["Other Games"][:2]
-        # games_2 = data_A[color_persona2]["Collection"]["Other Games"][:1]
+    with st.spinner("Loading game recommendations..."):
+        for game in collection["Other Games"][:2]:
+            game_info = bgg.get_game_info(game["name"], game["bgg_id"])
+            display_game_card(game_info, game["description"])
 
-        ################
-        # For most likely game
-        most_likely = data_A[color_persona1]["Collection"]["Most Likely to Include"]
-        game_info = bgg.get_game_info(most_likely["name"], most_likely["bgg_id"])
-        display_game_card_no_blurb(game_info)
-
-        # For other games
-        with st.spinner("Loading game recommendations..."):
-            # for game in games_1 + games_2:
-            for game in games_1:
-                game_info = bgg.get_game_info(game["name"], game["bgg_id"])
-                display_game_card(game_info, game["description"])
-        ############
-
-        # game_info = bgg.get_game_info(most_likely_game)
-        # display_game_card_no_blurb(game_info)
-
-        # # Combine and display all recommended games
-        # with st.spinner("Loading game recommendations..."):
-        #     for game_text in games_1 + games_2:
-        #         x = parse_parenthetical(game_text)
-        #         name = x[0]
-        #         flavor = x[-1]
-
-        #         game_info = bgg.get_game_info(name)
-        #         display_game_card(game_info, flavor)
-
-# with st.container(border=True):
-
-#     try:
-#         st.image(f"res/FeaturedPeople/{persona_name1.lower()}s.png")
-#     except:
-#         st.header("People in the industry you're like")
-#         st.text("<< Coming Soon! >>")
 
 with st.form('page_form'):
     col1, col2 = st.columns(2)
