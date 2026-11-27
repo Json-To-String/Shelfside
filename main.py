@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 import os
 
+from utils.quiz import SECTIONS, START_PAGE
+
 st.set_page_config(
     page_title="ShelfSide - The 10 Board Game Personalities Test",
     page_icon="static/shelfside_logo.png",
@@ -26,6 +28,15 @@ pg = st.navigation([
                    st.Page('personality-quiz/07_relationship_page.py'),
                    st.Page('personality-quiz/08_recommend_page.py')
                ])
+
+if pg.url_path in {"results_page", "relationship_page", "recommend_page"}:
+    if not all(
+        isinstance(st.session_state.get(f"page{section}_results"), dict)
+        for section in range(1, len(SECTIONS) + 1)
+    ):
+        st.switch_page(START_PAGE)
+    if pg.url_path != "results_page" and "Top2" not in st.session_state:
+        st.switch_page("personality-quiz/06_results_page.py")
 
 pg.run()
 

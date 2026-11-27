@@ -114,7 +114,7 @@ class Handler():
         self.question_dict = dict(map(lambda i,j : (i,j),
                                 self.question_list, self.question_weights))
 
-    def display_questions(self, page_num, show_errors=False):
+    def display_questions(self, page_num, show_errors=False, answers=None):
 
     # with st.form('page_form'):
     ## Main Question Loop
@@ -123,6 +123,9 @@ class Handler():
             # weight = self.question_weights[i]
 
             quest_key = f'page{page_num}_question{i}'
+
+            if answers is not None and quest_key not in st.session_state:
+                st.session_state[quest_key] = answers.get(quest_key)
 
             unanswered = show_errors and st.session_state.get(quest_key) is None
 
@@ -144,6 +147,9 @@ class Handler():
                                 horizontal = False,
                                 key = quest_key,
                                 index = None)
+
+            if answers is not None:
+                answers[quest_key] = answer
 
             st.divider()
 

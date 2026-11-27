@@ -9,8 +9,7 @@ import streamlit.components.v1 as components
 # Start page #
 ##############
 
-for i in range(5):
-    st.session_state[f'page{i+1}_results'] = 0
+from utils.quiz import SECTION_PAGES, SECTIONS, question_count
 
 # Custom styling
 st.markdown("""
@@ -281,22 +280,15 @@ st.markdown("""
 st.markdown("""
     <div class="main-title">
         <img src="./app/static/shelfside_logo.png" alt="Shelfside" width="200" height="200">
-        <h1>Shelfside</h1>
-        <h2>The 10 Board Game Personalities Test</h2>
+        <h1>Find your board-game personality</h1>
     </div>
-    
-    <div class="feature-list">
-        <h3>Find out your enemies and allies during game night!</h3>
-        <h3>How much of a sore loser are you?</h3>
-        <h3>Are you likely to come up with a wacky new strategy?</h3>
-    </div>
-
 """, unsafe_allow_html=True)
 
-with st.form('page_form'):
-    submitted = st.form_submit_button('Start your test!', width="stretch", type='primary')
-    if submitted:
-        st.switch_page('personality-quiz/01_question_page1.py')
+st.markdown("Discover your game-night style, who you click with, and three games to try.")
+st.caption(f"{question_count()} questions · {len(SECTIONS)} sections")
+
+if st.button("Start quiz", width="stretch", type="primary"):
+    st.switch_page(SECTION_PAGES[0])
 
 st.markdown("""
     <div style="text-align: center; margin-top: 1rem;">
