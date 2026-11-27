@@ -5,7 +5,7 @@ import os
 
 st.set_page_config(
     page_title="ShelfSide - The 10 Board Game Personalities Test",
-    page_icon="res/shelfside_logo.png",
+    page_icon="static/shelfside_logo.png",
     # layout="wide",
     initial_sidebar_state="collapsed",
     menu_items={
